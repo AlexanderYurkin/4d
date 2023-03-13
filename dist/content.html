@@ -81,9 +81,21 @@
          </div>
 
          <div class="d-flex align-items-center ms-auto">
+
+            <!-- <a href="profile.html" class="d-flex align-items-center me-3">
+
+               <?xml version="1.0" encoding="UTF-8"?>
+               <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 14" height="14px" class="me-2">
+                  <path
+                     d="M5.5,7c2.02,0,3.67-1.57,3.67-3.5S7.52,0,5.5,0,1.83,1.57,1.83,3.5c0,1.93,1.64,3.5,3.67,3.5Zm0-5.83c1.35,0,2.44,1.04,2.44,2.33s-1.1,2.33-2.44,2.33-2.44-1.04-2.44-2.33,1.1-2.33,2.44-2.33Zm0,7c-3.04,0-5.5,2.35-5.5,5.25,0,.32,.27,.58,.61,.58s.61-.26,.61-.58c0-2.26,1.92-4.08,4.28-4.08s4.28,1.83,4.28,4.08c0,.32,.28,.58,.61,.58s.61-.26,.61-.58c0-2.9-2.46-5.25-5.5-5.25Z" />
+               </svg>
+
+               Войти
+            </a> -->
+
             <a href="#" class="btn btn-danger me-3">Записаться</a>
 
-            <a href="#" class="btn btn-outline-secondary d-flex align-items-center">
+            <a href="#signModal" data-bs-toggle="modal" class="btn btn-outline-secondary d-flex align-items-center">
 
                <?xml version="1.0" encoding="UTF-8"?>
                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 14" height="14px" class="me-2">
@@ -267,7 +279,7 @@
          </li>
 
          <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#signModal" data-bs-toggle="modal">
                <span class="link-svg-wrapper">
                   <?xml version="1.0" encoding="UTF-8"?>
                   <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 14" height="13px"
@@ -683,6 +695,76 @@
       </div>
    </div>
 </footer>
+   <div class="modal fade" id="signModal" tabindex="-1" aria-labelledby="signModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-sm">
+      <div class="modal-content overflow-hidden">
+         <div class="modal-header border-0 px-sm-4 pt-sm-4 pb-0">
+            <h5 class="modal-title fw-bold" id="signModalLabel">Личный кабинет
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body position-relative p-sm-4">
+            <div class="nav-links-wrap nav-links-wrap_white">
+               <div class="nav nav-links flex-nowrap" role="tablist">
+                  <a href="#" class="nav-link text-nowrap fs-7 px-0 pt-0 me-4 active" id="signInTab"
+                     data-bs-toggle="pill" data-bs-target="#signInTabPane" role="tab" aria-controls="signInTabPane"
+                     aria-selected="false">Вход</a>
+
+                  <a href="#" class="nav-link text-nowrap fs-7 px-0 pt-0 me-4" id="signUpTab" data-bs-toggle="pill"
+                     data-bs-target="#signUpTabPane" role="tab" aria-controls="signUpTabPane"
+                     aria-selected="true">Регистрация</a>
+               </div>
+            </div>
+
+            <div class="tab-content pt-4">
+               <div class="tab-pane fade show active" id="signInTabPane" role="tabpanel" aria-labelledby="signInTab"
+                  tabindex="0">
+
+                  <form>
+                     <div class="form-floating mb-4">
+                        <input type="text" class="form-control input-phone" id="signInPhone" placeholder="Ваш телефон"
+                           pattern=".{16}" required>
+                        <label for="signInPhone">Ваш телефон</label>
+                     </div>
+
+                     <div class="form-floating mb-4">
+                        <input type="password" class="form-control" id="signInPassword" placeholder="Пароль" required>
+                        <label for="signInPassword">Пароль</label>
+                     </div>
+
+                     <button class="btn btn-danger btn-form w-100" type="submit">Войти</button>
+                  </form>
+               </div>
+
+               <div class="tab-pane fade" id="signUpTabPane" role="tabpanel" aria-labelledby="signUpTab" tabindex="0">
+
+                  <form>
+                     <div class="form-floating mb-4">
+                        <input type="text" class="form-control input-phone" id="signUpPhone" placeholder="Ваш телефон"
+                           pattern=".{16}" required>
+                        <label for="signUpPhone">Ваш телефон</label>
+                     </div>
+
+                     <div class="form-floating mb-4">
+                        <input type="password" class="form-control" id="signUpPassword" placeholder="Пароль" required>
+                        <label for="signUpPassword">Пароль</label>
+                     </div>
+
+                     <button class="btn btn-danger btn-form w-100" type="submit">Зарегистрироваться</button>
+                  </form>
+
+                  <div class="fs-9 pt-4 text-muted">Нажимая на кнопку Зарегистрироваться, вы даёте своё
+                     согласие
+                     на
+                     <a href="content.html" title="" target="_blank">обработку персональных данных</a>.
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
    <a href="#" title="Открыть калькулятор" class="calc-btn text-center position-fixed">
    <div class="calc-btn__container position-relative rounded-4">
       <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.52 16"

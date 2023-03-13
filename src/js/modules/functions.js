@@ -14,6 +14,26 @@ export function isWebp() {
    });
 }
 
+export function FormValidation() {
+   (() => {
+      'use strict'
+
+      const forms = document.querySelectorAll('.needs-validation')
+
+      Array.from(forms).forEach(form => {
+         form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+               event.preventDefault()
+               event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+         }, false)
+      })
+   })()
+}
+
+
 // ОТКЛЮЧИТЬ :FOCUS ПО КЛИКУ, НО ПОКАЗЫВАТЬ ПРИ ТАББАНГЕ С КЛАВИАТУРЫ
 
 export function FocusTabbing() {
@@ -100,4 +120,23 @@ export function calcToggle() {
       event.preventDefault();
       calc.classList.remove('active');
    };
+}
+
+// КАСТОМНЫЙ СЕЛЕКТ
+
+export function customSelect() {
+   const selected = document.querySelector(".selected");
+   const optionsContainer = document.querySelector(".options-container");
+   const optionsList = document.querySelectorAll(".option");
+
+   selected.addEventListener("click", () => {
+      optionsContainer.classList.toggle("active");
+   });
+
+   optionsList.forEach(option => {
+      option.addEventListener("click", () => {
+         selected.innerHTML = option.querySelector("label").innerHTML;
+         optionsContainer.classList.remove("active");
+      });
+   });
 }

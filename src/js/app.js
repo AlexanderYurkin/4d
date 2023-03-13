@@ -310,3 +310,5 @@ flsFunctions.ScrollToTop();
 flsFunctions.FormatNumber();
 flsFunctions.searchToggle();
 flsFunctions.calcToggle();
+flsFunctions.customSelect();
+flsFunctions.FormValidation();

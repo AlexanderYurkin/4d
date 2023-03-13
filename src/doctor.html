@@ -194,8 +194,8 @@
 
                         <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Образование</h2>
 
-                        <div class="fw-light">
-                           <ul class="list-markered">
+                        <div class="article">
+                           <ul>
                               <li>Саратовский государственный медицинский университет им. В.И. Разумовского,
                                  квалификация
                                  врача
@@ -222,8 +222,8 @@
 
                         <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Деятельность</h2>
 
-                        <div class="fw-light">
-                           <ul class="list-markered">
+                        <div class="article">
+                           <ul>
                               <li>После окончания университета работает по своей основной специальности,
                                  хирургом-онкологом, в
                                  Саратовском онкологическом диспансере.</li>
@@ -784,12 +784,12 @@
    <div class="modal fade" id="ConsultModal" tabindex="-1" aria-labelledby="ConsultModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-sm">
          <div class="modal-content overflow-hidden">
-            <div class="modal-header border-0 pt-4 px-4 pb-2">
-               <h2 class="modal-title fs-5 fw-bold" id="ConsultModalLabel">Онлайн консультация
-               </h2>
+            <div class="modal-header border-0 px-sm-4 pt-sm-4 pb-0">
+               <h5 class="modal-title fw-bold" id="ConsultModalLabel">Онлайн консультация
+               </h5>
                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body position-relative px-4 pb-4">
+            <div class="modal-body position-relative p-sm-4">
                <form>
                   <div class="form-floating mb-4">
                      <input type="text" class="form-control" id="ConsultName" placeholder="Имя Фамилия" required>
@@ -829,6 +829,7 @@
    </div>
 
    @@include('html/footer.html', {})
+   @@include('html/login-modal.html', {})
    @@include('html/calc.html', {})
    @@include('html/scroll-to-top.html', {})
 

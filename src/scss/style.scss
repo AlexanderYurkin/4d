@@ -92,8 +92,23 @@ body:not(.user-is-tabbing) textarea:focus {
 // ТИПОГРАФИКА И ШИРОКИЕ ЭЛЕМЕНТЫ ДЛЯ ТЕКСТОВЫХ СТРАНИЦ
 
 .article {
+   line-height: 1.6em;
+
    .fit-to-text {
       max-width: 770px;
+   }
+
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+   }
+
+   a {
+      text-decoration: none;
    }
 
    p,
@@ -106,19 +121,29 @@ body:not(.user-is-tabbing) textarea:focus {
 
    ul,
    ol {
+      padding-left: 1.1rem;
+
       li {
-         margin-bottom: 0.813rem;
+         margin-bottom: 0.75rem;
       }
 
       ul,
       ol {
-         margin-top: 0.813rem;
+         margin-top: 0.75rem;
          margin-bottom: 0.5rem;
       }
    }
 
    table {
       @include font-size(1rem);
+   }
+
+   ul {
+      li {
+         &::marker {
+            color: $danger;
+         }
+      }
    }
 }
 
@@ -202,28 +227,6 @@ a {
    font-weight: 300;
 }
 
-.list-markered {
-   list-style: none;
-   padding-left: 1rem;
-
-   li {
-      position: relative;
-      margin-bottom: 1rem;
-
-      &::before {
-         position: absolute;
-         top: 7px;
-         left: -1rem;
-         content: "";
-         display: block;
-         width: 8px;
-         height: 8px;
-         background: $danger;
-         border-radius: 50%;
-      }
-   }
-}
-
 .bg-img {
    background-position: center;
    background-repeat: no-repeat;
@@ -238,7 +241,7 @@ a {
    }
 
    &:hover {
-      color: $danger !important;
+      color: $danger  !important;
 
       svg {
          path {
@@ -253,7 +256,7 @@ a {
    color: $white;
 
    &:hover {
-      color: $white !important;
+      color: $white  !important;
    }
 }
 
@@ -286,7 +289,7 @@ a {
       margin-top: 1px;
    }
 
-   > * {
+   >* {
       &:hover {
          cursor: pointer;
       }
@@ -441,7 +444,7 @@ a {
    left: 0;
    right: 0;
    bottom: 0;
-   z-index: 9;
+   z-index: 11;
    margin-bottom: 0;
    border-radius: 0;
 }
@@ -630,7 +633,7 @@ a {
 }
 
 .main-service-item {
-   background-size: 100px;
+   background-size: auto 80px;
    background-repeat: no-repeat;
    background-position: right 10px bottom 10px;
 
@@ -687,7 +690,7 @@ a {
 
    .nav {
       .nav-item {
-         > .nav-link {
+         >.nav-link {
             position: relative;
             color: $secondary;
             font-weight: 500;
@@ -709,6 +712,7 @@ a {
 
             svg {
                margin-left: 0.5rem;
+
                path {
                   fill: $secondary;
                }
@@ -1230,6 +1234,127 @@ a {
    }
 }
 
+
+// label,
+// input {
+//    cursor: pointer;
+// }
+
+// .select-box {
+//    display: flex;
+//    width: 400px;
+//    flex-direction: column;
+//    position: relative;
+//    z-index: 2;
+// }
+
+// .select-box .options-container {
+//    max-height: 0;
+//    width: calc(100% - 12px);
+//    opacity: 0;
+//    transition: all 0.4s;
+//    overflow: hidden;
+//    border-radius: 5px;
+//    border: solid 1px #dcdfe5;
+//    background-color: #ffffff;
+//    order: 1;
+//    position: absolute;
+//    top: 68px;
+// }
+
+// .selected {
+//    background: #2f3640;
+//    margin-bottom: 8px;
+//    position: relative;
+//    width: 388px;
+//    height: 64px;
+//    border-radius: 5px;
+//    border: solid 1px #dcdfe5;
+//    background-color: #ffffff;
+//    order: 0;
+// }
+
+// .selected::after {
+//    /* Font Awesome	 */
+//    content: "\f078";
+//    font-family: "Font Awesome 5 Free";
+//    font-weight: 900;
+//    -webkit-font-smoothing: antialiased;
+//    display: inline-block;
+//    font-style: normal;
+//    font-variant: normal;
+//    text-rendering: auto;
+//    line-height: 1;
+//    /* BG Img	 */
+//    /* 	content:  url("img/arrow-down.svg");	 */
+//    position: absolute;
+//    right: 15px;
+//    top: 50%;
+//    transition: transform .5s;
+//    transform: translateY(-50%);
+// }
+
+
+// .selected h3,
+// .select-box label h3 {
+//    font-family: "Open Sans", sans-serif;
+//    font-size: 14px;
+//    font-weight: 400;
+//    line-height: 1.57;
+//    color: #1f2949;
+// }
+
+// .selected h5,
+// .select-box label h5 {
+//    font-family: "Open Sans", sans-serif;
+//    font-size: 12px;
+//    font-weight: 400;
+//    line-height: 1.83;
+//    color: #81878f;
+// }
+
+// .select-box .options-container.active {
+//    max-height: 240px;
+//    opacity: 1;
+//    overflow-y: scroll;
+// }
+
+// .select-box .options-container.active+.selected::after {
+//    transform: translateY(-50%) rotateX(180deg);
+// }
+
+// .select-box .options-container::-webkit-scrollbar {
+//    width: 8px;
+//    background: #0d141f;
+//    background: #81878f;
+//    background: #f1f2f3;
+//    border-radius: 0 5px 5px 0;
+// }
+
+// .select-box .options-container::-webkit-scrollbar-thumb {
+//    background: #525861;
+//    background: #81878f;
+//    border-radius: 0 5px 5px 0;
+// }
+
+// .select-box .option,
+// .selected {
+//    padding: 12px 24px;
+//    cursor: pointer;
+// }
+
+// .select-box .option:hover {
+//    background: #dcdfe5;
+// }
+
+// .select-box label {
+//    cursor: pointer;
+// }
+
+// .select-box .option .radio {
+//    display: none;
+// }
+
 @include media-breakpoint-up(xl) {
    .cta {
       &__right {
@@ -1305,6 +1430,7 @@ a {
 }
 
 @include media-breakpoint-down(lg) {
+
    .main-slider,
    .doctors-slider,
    .rates-slider,
