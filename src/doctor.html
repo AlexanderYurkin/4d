@@ -1,864 +1,799 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru" class="h-100">
+  @@include('html/head.html', { "title": "doctor" })
 
-@@include('html/head.html', {
-"title": "doctor"
-})
+  <body class="d-flex flex-column h-100">
+    @@include('html/header.html', {}) @@include('html/offcanvas.html', {})
 
-<body class="d-flex flex-column h-100">
-
-   @@include('html/header.html', {})
-   @@include('html/offcanvas.html', {})
-
-   <main role="main" class="flex-shrink-0">
-
+    <main role="main" class="flex-shrink-0">
       <div class="container pt-md-5 pt-4 pb-md-6 pb-5">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item"><a href="doctors.html">Cпециалисты</a></li>
+          <li class="breadcrumb-item active">Гамдуллаев Кямран Дашдамирович</li>
+        </ol>
 
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-            <li class="breadcrumb-item"><a href="doctors.html">Cпециалисты</a></li>
-            <li class="breadcrumb-item active">Гамдуллаев Кямран Дашдамирович</li>
-         </ol>
-
-         <div class="doc-hero position-relative bg-white rounded-4 overflow-hidden shadow">
-            <div class="row align-items-stretch g-0">
-               <div class="col-xl-3 col-lg-4 col-md-5">
-                  <div class="doc-hero__img h-100"
-                     style="background-image:url('@img/dynamic-img/doctor-card-img_0.jpg');">
-                  </div>
-               </div>
-
-               <div class="col-xl-9 col-lg-8 col-md-7">
-                  <div class="h-100 d-flex flex-column justify-content-center p-lg-5 p-sm-4 p-3">
-                     <div>
-                        <h1 class="doc-hero__name fw-extrabold mb-3">
-                           Кямран Дашдамирович
-                           <span class="doc-hero__surname d-block text-uppercase fw-black">Гамдуллаев</span>
-                        </h1>
-
-                        <div class="text-muted mt-n3 mb-3">Стаж: 19 лет</div>
-
-                        <div class="row g-1 mb-4">
-                           <div class="col-auto">
-                              <div class="d-inline-block bg-danger text-white fs-9 px-1 mx-1">Врач высшей
-                                 категории
-                              </div>
-                           </div>
-
-                           <div class="col-auto">
-                              <div class="d-inline-block bg-danger text-white fs-9 px-1 mx-1">Врач высшей
-                                 категории
-                              </div>
-                           </div>
-
-                           <div class="col-auto">
-                              <div class="d-inline-block bg-danger text-white fs-9 px-1 mx-1">Врач высшей
-                                 категории
-                              </div>
-                           </div>
-
-                           <div class="col-auto">
-                              <div class="d-inline-block bg-danger text-white fs-9 px-1 mx-1">Врач высшей
-                                 категории
-                              </div>
-                           </div>
-
-                           <div class="col-auto">
-                              <div class="d-inline-block bg-danger text-white fs-9 px-1 mx-1">Врач высшей
-                                 категории
-                              </div>
-                           </div>
-
-                           <div class="col-auto">
-                              <div class="d-inline-block bg-danger text-white fs-9 px-1 mx-1">Врач высшей
-                                 категории
-                              </div>
-                           </div>
-
-                           <div class="col-auto">
-                              <div class="d-inline-block bg-danger text-white fs-9 px-1 mx-1">Врач высшей
-                                 категории
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="row g-lg-3 g-2 mb-lg-5 mb-4">
-                           <div class="col-auto">
-                              <div class="bg-light-blue text-secondary rounded-pill fs-8 px-lg-3 px-2 py-1">пластический
-                                 хирург
-                              </div>
-                           </div>
-
-                           <div class="col-auto">
-                              <div class="bg-light-blue text-secondary rounded-pill fs-8 px-lg-3 px-2 py-1">
-                                 хирург-онколог</div>
-                           </div>
-
-                           <div class="col-auto">
-                              <div class="bg-light-blue text-secondary rounded-pill fs-8 px-lg-3 px-2 py-1">маммолог
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="mb-lg-5 mb-3">Кандидат медицинских наук, врач высшей категории или какое-то
-                           другое
-                           “УТП” в одну-три строчки</div>
-
-                        <div class="row g-3 align-items-center">
-                           <div class="col-sm-auto">
-                              <a href="#" class="btn btn-danger w-100">Записаться к врачу</a>
-                           </div>
-
-                           <div class="col-sm-auto">
-                              <a href="#ConsultModal" data-bs-toggle="modal" class="btn btn-primary w-100">Онлайн
-                                 консультация</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
+        <div class="doc-hero position-relative bg-white rounded-4 overflow-hidden shadow">
+          <div class="row align-items-stretch g-0">
+            <div class="col-xl-3 col-lg-4 col-md-5">
+              <div class="doc-hero__img h-100" style="background-image: url('@img/dynamic-img/doctor-card-img_0.jpg')"></div>
             </div>
-         </div>
+
+            <div class="col-xl-9 col-lg-8 col-md-7">
+              <div class="h-100 d-flex flex-column justify-content-center p-lg-5 p-sm-4 p-3">
+                <div>
+                  <h1 class="doc-hero__name fw-extrabold mb-3">
+                    Кямран Дашдамирович
+                    <span class="doc-hero__surname d-block text-uppercase fw-black">Гамдуллаев</span>
+                  </h1>
+
+                  <div class="text-muted mt-n3 mb-3">Стаж: 19 лет</div>
+
+                  <div class="row g-1 mb-4">
+                    <div class="col-auto">
+                      <div class="d-inline-block bg-danger text-white fs-10 px-1 mx-1">Врач высшей категории</div>
+                    </div>
+
+                    <div class="col-auto">
+                      <div class="d-inline-block bg-danger text-white fs-10 px-1 mx-1">Врач высшей категории</div>
+                    </div>
+
+                    <div class="col-auto">
+                      <div class="d-inline-block bg-danger text-white fs-10 px-1 mx-1">Врач высшей категории</div>
+                    </div>
+                  </div>
+
+                  <div class="row g-lg-3 g-2 mb-lg-5 mb-4">
+                    <div class="col-auto">
+                      <div class="bg-light-blue text-secondary rounded-pill fs-8 px-lg-3 px-2 py-1">пластический хирург</div>
+                    </div>
+
+                    <div class="col-auto">
+                      <div class="bg-light-blue text-secondary rounded-pill fs-8 px-lg-3 px-2 py-1">хирург-онколог</div>
+                    </div>
+
+                    <div class="col-auto">
+                      <div class="bg-light-blue text-secondary rounded-pill fs-8 px-lg-3 px-2 py-1">маммолог</div>
+                    </div>
+                  </div>
+
+                  <div class="mb-lg-5 mb-3">Кандидат медицинских наук, врач высшей категории или какое-то другое “УТП” в одну-три строчки</div>
+
+                  <div class="row g-3 align-items-center">
+                    <div class="col-sm-auto">
+                      <a href="#" class="btn btn-danger w-100">Записаться к врачу</a>
+                    </div>
+
+                    <div class="col-sm-auto">
+                      <a href="#ConsultModal" data-bs-toggle="modal" class="btn btn-primary w-100">Онлайн консультация</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="overflow-hidden pb-md-6 pb-5">
-         <div class="container">
-            <h2 class="fs-3 mb-md-5 mb-4">Специальные предложения</h2>
+        <div class="container">
+          <h2 class="fs-3 mb-md-5 mb-4">Специальные предложения</h2>
 
-            <div class="position-relative">
-               <div class="swiper-button-next sbn-4"></div>
-               <div class="swiper-button-prev sbp-4"></div>
+          <div class="position-relative">
+            <div class="swiper-button-next sbn-4"></div>
+            <div class="swiper-button-prev sbp-4"></div>
 
-               <div class="swiper doc-sales-slider">
-                  <div class="swiper-wrapper">
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
+            <div class="swiper doc-sales-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
+                    <a href="#DocSaleModal" data-bs-toggle="modal" class="stretched-link d-block text-decoration-none link-danger f-2 fw-extrabold mb-2">
+                      Блефаропластика под ключ
+                    </a>
 
-                           <a href="#DocSaleModal" data-bs-toggle="modal"
-                              class="stretched-link d-block text-decoration-none link-danger f-2 fw-extrabold mb-2">Блефаропластика
-                              под
-                              ключ</a>
+                    <div class="fs-8 mb-3">Верните красоту своим глазам</div>
 
-                           <div class="fs-8 mb-3">Верните красоту своим глазам</div>
+                    <div class="f-2 fs-5 fw-extrabold">
+                      <span class="me-1">от</span>
+                      <span class="number">40000</span>
+                      ₽
+                    </div>
 
-                           <div class="f-2 fs-5 fw-extrabold">
-                              <span class="me-1">от</span>
-                              <span class="number">40000</span>
-                              ₽
-                           </div>
-
-                           <div class="sale-badge"></div>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
-                           <a href="#DocSaleModal" data-bs-toggle="modal"
-                              class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">Консультация
-                              в
-                              октябре</a>
-
-                           <div class="f-2 fs-5 fw-extrabold">
-                              Бесплатно
-                           </div>
-
-                           <div class="sale-badge"></div>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
-                           <a href="#DocSaleModal" data-bs-toggle="modal"
-                              class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">Скидка
-                              10% на повторный приём</a>
-
-                           <div class="sale-badge"></div>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
-                           <a href="#DocSaleModal" data-bs-toggle="modal"
-                              class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">Первый
-                              приём</a>
-
-                           <div class="f-2 fs-5 fw-extrabold">
-                              <span class="number">1000</span>
-                              ₽
-                           </div>
-
-                           <div class="sale-badge"></div>
-                        </div>
-                     </div>
-
+                    <div class="sale-badge"></div>
                   </div>
-               </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
+                    <a
+                      href="#DocSaleModal"
+                      data-bs-toggle="modal"
+                      class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">
+                      Консультация в октябре
+                    </a>
+
+                    <div class="f-2 fs-5 fw-extrabold">Бесплатно</div>
+
+                    <div class="sale-badge"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
+                    <a
+                      href="#DocSaleModal"
+                      data-bs-toggle="modal"
+                      class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">
+                      Скидка 10% на повторный приём
+                    </a>
+
+                    <div class="sale-badge"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
+                    <a
+                      href="#DocSaleModal"
+                      data-bs-toggle="modal"
+                      class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">
+                      Первый приём
+                    </a>
+
+                    <div class="f-2 fs-5 fw-extrabold">
+                      <span class="number">1000</span>
+                      ₽
+                    </div>
+
+                    <div class="sale-badge"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
 
       <div class="pb-md-6 pb-5">
-         <div class="container">
-            <div class="row gx-xl-6 gx-lg-5">
-               <div class="col-lg-auto pt-lg-4">
-                  <div class="nav-links-vertical-wrapper mb-3 mb-lg-0">
-                     <div class="nav nav-links-vertical flex-nowrap flex-lg-column" id="DocInfo-tab" role="tablist"
-                        aria-orientation="vertical">
-                        <a href="#" class="nav-link fs-5 active" id="DocInfo-1-tab" data-bs-toggle="pill"
-                           data-bs-target="#DocInfo-1" role="tab" aria-controls="DocInfo-1"
-                           aria-selected="true">Образование</a>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-xl-3">
+              <div class="nav-mobile-scroll bg-lg-white lg-shadow rounded-3 px-lg-4 py-lg-3 mb-3">
+                <nav class="sidebar">
+                  <ul class="nav" id="DocInfo-tab" role="tablist" aria-orientation="vertical">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        href="#"
+                        id="DocInfo-1-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#DocInfo-1"
+                        role="tab"
+                        aria-controls="DocInfo-1"
+                        aria-selected="true">
+                        Образование
+                      </a>
+                    </li>
 
-                        <a href="#" class="nav-link fs-5" id="DocInfo-2-tab" data-bs-toggle="pill"
-                           data-bs-target="#DocInfo-2" role="tab" aria-controls="DocInfo-2"
-                           aria-selected="false">Деятельность</a>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="#"
+                        id="DocInfo-2-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#DocInfo-2"
+                        role="tab"
+                        aria-controls="DocInfo-2"
+                        aria-selected="true">
+                        Деятельность
+                      </a>
+                    </li>
 
-                        <a href="#" class="nav-link fs-5" id="DocInfo-3-tab" data-bs-toggle="pill"
-                           data-bs-target="#DocInfo-3" role="tab" aria-controls="DocInfo-3"
-                           aria-selected="false">Сертификаты</a>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="#"
+                        id="DocInfo-3-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#DocInfo-3"
+                        role="tab"
+                        aria-controls="DocInfo-3"
+                        aria-selected="true">
+                        Сертификаты
+                      </a>
+                    </li>
 
-                        <a href="#" class="nav-link fs-5" id="DocInfo-4-tab" data-bs-toggle="pill"
-                           data-bs-target="#DocInfo-4" role="tab" aria-controls="DocInfo-4"
-                           aria-selected="false">Отзывы</a>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="#"
+                        id="DocInfo-4-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#DocInfo-4"
+                        role="tab"
+                        aria-controls="DocInfo-4"
+                        aria-selected="true">
+                        Отзывы
+                      </a>
+                    </li>
 
-                        <a href="#" class="nav-link fs-5" id="DocInfo-5-tab" data-bs-toggle="pill"
-                           data-bs-target="#DocInfo-5" role="tab" aria-controls="DocInfo-5" aria-selected="false">Фото и
-                           видео</a>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="#"
+                        id="DocInfo-5-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#DocInfo-5"
+                        role="tab"
+                        aria-controls="DocInfo-5"
+                        aria-selected="true">
+                        Фото и видео
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
 
-                     </div>
+            <div class="col-lg">
+              <div class="tab-content bg-white rounded-4 overflow-hidden p-xl-5 p-md-4 p-3" id="DocInfo-tabContent">
+                <div class="tab-pane fade show active" id="DocInfo-1" role="tabpanel" aria-labelledby="DocInfo-1-tab" tabindex="0">
+                  <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Образование</h2>
+
+                  <div class="article">
+                    <ul>
+                      <li>
+                        Саратовский государственный медицинский университет им. В.И. Разумовского, квалификация врача на факультете лечебное дела, 2014 г.
+                      </li>
+
+                      <li>Саратовский государственный медицинский университет им. В.И. Разумовского, ординатура на факультете хирургии, 2014 г.</li>
+
+                      <li>
+                        Саратовский государственный медицинский университет им. В.И. Разумовского, профессиональная переподготовка по специальности
+                        «Онкология», 2015 г.
+                      </li>
+                      <li>
+                        Первый Санкт-Петербургский государственный медицинский университет имени академика И.П. Павлова, ординатура по пластической
+                        хирургии, 2022 г.
+                      </li>
+                    </ul>
                   </div>
-               </div>
+                </div>
 
-               <div class="col-lg">
-                  <div class="tab-content bg-white rounded-4 overflow-hidden p-xl-5 p-md-4 p-3" id="DocInfo-tabContent">
-                     <div class="tab-pane fade show active" id="DocInfo-1" role="tabpanel"
-                        aria-labelledby="DocInfo-1-tab" tabindex="0">
+                <div class="tab-pane fade" id="DocInfo-2" role="tabpanel" aria-labelledby="DocInfo-2-tab" tabindex="0">
+                  <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Деятельность</h2>
 
-                        <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Образование</h2>
+                  <div class="article">
+                    <ul>
+                      <li>
+                        После окончания университета работает по своей основной специальности, хирургом-онкологом, в Саратовском онкологическом диспансере.
+                      </li>
 
-                        <div class="article">
-                           <ul>
-                              <li>Саратовский государственный медицинский университет им. В.И. Разумовского,
-                                 квалификация
-                                 врача
-                                 на факультете лечебное дела, 2014 г.</li>
+                      <li>Продолжает свою практику как хирург-онколог в 4Д Поликлинике с 2019 года</li>
 
-                              <li>Саратовский государственный медицинский университет им. В.И. Разумовского, ординатура
-                                 на
-                                 факультете хирургии, 2014 г.</li>
+                      <li>
+                        Регулярно проходит повышение квалификации по направлениям своей деятельности – онколог, маммолог, пластический хирург – и является
+                        действующим членом научно-профессиональных объединений врачей: РООМ (Российское общество онкомаммологов) и РОПРЭХ (Российское
+                        общество пластических, реконструктивных и эстетических хирургов)
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
-                              <li>Саратовский государственный медицинский университет им. В.И. Разумовского,
-                                 профессиональная
-                                 переподготовка по специальности «Онкология», 2015 г.</li>
-                              <li>Первый Санкт-Петербургский государственный медицинский университет имени академика
-                                 И.П.
-                                 Павлова, ординатура по пластической хирургии, 2022 г.
-                              </li>
-                           </ul>
+                <div class="tab-pane fade" id="DocInfo-3" role="tabpanel" aria-labelledby="DocInfo-3-tab" tabindex="0">
+                  <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Сертификаты</h2>
+
+                  <div class="position-relative d-flex align-items-center mb-3">
+                    <div
+                      class="license-thumb flex-shrink-0 ratio ratio-1x1 me-md-4 me-3"
+                      style="background-image: url('@img/dynamic-img/certificate-1.jpg')"></div>
+
+                    <a
+                      href="@img/dynamic-img/certificate-1.jpg"
+                      data-fancybox="certificate-gallery"
+                      class="stretched-link text-decoration-none link-secondary">
+                      Член научно-профессионального объединения врачей РООМ (Российское общество онкомаммологов)
+                    </a>
+                  </div>
+
+                  <div class="position-relative d-flex align-items-center mb-3">
+                    <div
+                      class="license-thumb flex-shrink-0 ratio ratio-1x1 me-md-4 me-3"
+                      style="background-image: url('@img/dynamic-img/certificate-2.jpg')"></div>
+
+                    <a
+                      href="@img/dynamic-img/certificate-2.jpg"
+                      data-fancybox="certificate-gallery"
+                      class="stretched-link text-decoration-none link-secondary">
+                      Член научно-профессионального объединения врачей РОПРЭХ (Российское общество пластических, реконструктивных и эстетических хирургов)
+                    </a>
+                  </div>
+
+                  <div class="position-relative d-flex align-items-center mb-3">
+                    <div
+                      class="license-thumb flex-shrink-0 ratio ratio-1x1 me-md-4 me-3"
+                      style="background-image: url('@img/dynamic-img/certificate-3.jpg')"></div>
+
+                    <a
+                      href="@img/dynamic-img/certificate-3.jpg"
+                      data-fancybox="certificate-gallery"
+                      class="stretched-link text-decoration-none link-secondary">
+                      Член Российского общества хирургов
+                    </a>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="DocInfo-4" role="tabpanel" aria-labelledby="DocInfo-4-tab" tabindex="0">
+                  <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Отзывы</h2>
+
+                  <div class="row g-md-4 g-3">
+                    <div class="col-md-6">
+                      <div class="gallery-item position-relative">
+                        <div
+                          class="bg-img ratio ratio-16x9 position-relative rounded-4"
+                          style="background-image: url('https://i3.ytimg.com/vi/PWv2zfJvebQ/maxresdefault.jpg')">
+                          <div class="gallery-item__play-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 63">
+                              <path
+                                style="stroke: none; fill-rule: nonzero"
+                                d="M46.563 20.898 21.18 2.535C15.254-1.746 6.922-.48 2.582 5.38a12.95 12.95 0 0 0-2.57 7.742v36.746C0 57.105 5.938 62.988 13.285 63c2.844 0 5.613-.887 7.895-2.547L46.563 42.09c5.921-4.293 7.195-12.504 2.855-18.348a13.125 13.125 0 0 0-2.855-2.82zm0 0" />
+                            </svg>
+                          </div>
                         </div>
 
-                     </div>
+                        <a
+                          data-fancybox="doc-feedback-gallery"
+                          data-caption="Отзыв о бариатрической операции"
+                          href="https://youtu.be/PWv2zfJvebQ"
+                          class="stretched-link d-inline-block text-decoration-none link-secondary fs-8 pt-2">
+                          Отзыв о бариатрической операции
+                        </a>
+                      </div>
+                    </div>
 
-                     <div class="tab-pane fade" id="DocInfo-2" role="tabpanel" aria-labelledby="DocInfo-2-tab"
-                        tabindex="0">
-
-                        <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Деятельность</h2>
-
-                        <div class="article">
-                           <ul>
-                              <li>После окончания университета работает по своей основной специальности,
-                                 хирургом-онкологом, в
-                                 Саратовском онкологическом диспансере.</li>
-
-                              <li>Продолжает свою практику как хирург-онколог в 4Д Поликлинике с 2019 года</li>
-
-                              <li>Регулярно проходит повышение квалификации по направлениям своей деятельности –
-                                 онколог,
-                                 маммолог, пластический хирург – и является действующим членом научно-профессиональных
-                                 объединений врачей:
-
-                                 РООМ (Российское общество онкомаммологов) и РОПРЭХ (Российское общество пластических,
-                                 реконструктивных и эстетических хирургов)</li>
-                           </ul>
+                    <div class="col-md-6">
+                      <div class="gallery-item position-relative">
+                        <div
+                          class="bg-img ratio ratio-16x9 position-relative rounded-4"
+                          style="background-image: url('https://i3.ytimg.com/vi/59hnfy4THR0/maxresdefault.jpg')">
+                          <div class="gallery-item__play-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 63">
+                              <path
+                                style="stroke: none; fill-rule: nonzero"
+                                d="M46.563 20.898 21.18 2.535C15.254-1.746 6.922-.48 2.582 5.38a12.95 12.95 0 0 0-2.57 7.742v36.746C0 57.105 5.938 62.988 13.285 63c2.844 0 5.613-.887 7.895-2.547L46.563 42.09c5.921-4.293 7.195-12.504 2.855-18.348a13.125 13.125 0 0 0-2.855-2.82zm0 0" />
+                            </svg>
+                          </div>
                         </div>
 
-                     </div>
+                        <a
+                          data-fancybox="doc-feedback-gallery"
+                          data-caption="Удаление атеромы на
+                                 голове"
+                          href="https://youtu.be/59hnfy4THR0"
+                          class="stretched-link d-inline-block text-decoration-none link-secondary fs-8 pt-2">
+                          Удаление атеромы на голове
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                     <div class="tab-pane fade" id="DocInfo-3" role="tabpanel" aria-labelledby="DocInfo-3-tab"
-                        tabindex="0">
+                <div class="tab-pane fade" id="DocInfo-5" role="tabpanel" aria-labelledby="DocInfo-5-tab" tabindex="0">
+                  <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Фото и видео</h2>
 
-                        <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Сертификаты</h2>
-
-                        <div class="position-relative d-flex align-items-center mb-3">
-                           <div class="license-thumb flex-shrink-0 ratio ratio-1x1 me-md-4 me-3"
-                              style="background-image: url('@img/dynamic-img/certificate-1.jpg');"></div>
-
-                           <a href="@img/dynamic-img/certificate-1.jpg" data-fancybox="certificate-gallery"
-                              class="stretched-link text-decoration-none link-secondary">Член
-                              научно-профессионального объединения врачей РООМ (Российское общество
-                              онкомаммологов)</a>
+                  <div class="row g-md-4 g-3">
+                    <div class="col-xl-4 col-md-6">
+                      <div class="gallery-item position-relative">
+                        <div
+                          class="bg-img ratio ratio-16x9 position-relative rounded-4"
+                          style="background-image: url('https://i3.ytimg.com/vi/A-q7qVkJKxo/maxresdefault.jpg')">
+                          <div class="gallery-item__play-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 63">
+                              <path
+                                style="stroke: none; fill-rule: nonzero"
+                                d="M46.563 20.898 21.18 2.535C15.254-1.746 6.922-.48 2.582 5.38a12.95 12.95 0 0 0-2.57 7.742v36.746C0 57.105 5.938 62.988 13.285 63c2.844 0 5.613-.887 7.895-2.547L46.563 42.09c5.921-4.293 7.195-12.504 2.855-18.348a13.125 13.125 0 0 0-2.855-2.82zm0 0" />
+                            </svg>
+                          </div>
                         </div>
 
-                        <div class="position-relative d-flex align-items-center mb-3">
-                           <div class="license-thumb flex-shrink-0 ratio ratio-1x1 me-md-4 me-3"
-                              style="background-image: url('@img/dynamic-img/certificate-2.jpg');"></div>
-
-                           <a href="@img/dynamic-img/certificate-2.jpg" data-fancybox="certificate-gallery"
-                              class="stretched-link text-decoration-none link-secondary">Член
-                              научно-профессионального объединения врачей РОПРЭХ (Российское общество
-                              пластических,
-                              реконструктивных и эстетических хирургов)</a>
-                        </div>
-
-                        <div class="position-relative d-flex align-items-center mb-3">
-                           <div class="license-thumb flex-shrink-0 ratio ratio-1x1 me-md-4 me-3"
-                              style="background-image: url('@img/dynamic-img/certificate-3.jpg');"></div>
-
-                           <a href="@img/dynamic-img/certificate-3.jpg" data-fancybox="certificate-gallery"
-                              class="stretched-link text-decoration-none link-secondary">Член
-                              Российского общества хирургов</a>
-                        </div>
-                     </div>
-
-                     <div class="tab-pane fade" id="DocInfo-4" role="tabpanel" aria-labelledby="DocInfo-4-tab"
-                        tabindex="0">
-
-                        <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Отзывы</h2>
-
-                        <div class="row g-md-4 g-3">
-                           <div class="col-md-6">
-                              <div class="gallery-item position-relative">
-                                 <div class="bg-img ratio ratio-16x9 position-relative rounded-4"
-                                    style="background-image: url('https://i3.ytimg.com/vi/PWv2zfJvebQ/maxresdefault.jpg');">
-
-                                    <div class="gallery-item__play-icon">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64"
-                                          viewBox="0 0 52 63">
-                                          <path style="stroke:none;fill-rule:nonzero;"
-                                             d="M46.563 20.898 21.18 2.535C15.254-1.746 6.922-.48 2.582 5.38a12.95 12.95 0 0 0-2.57 7.742v36.746C0 57.105 5.938 62.988 13.285 63c2.844 0 5.613-.887 7.895-2.547L46.563 42.09c5.921-4.293 7.195-12.504 2.855-18.348a13.125 13.125 0 0 0-2.855-2.82zm0 0" />
-                                       </svg>
-                                    </div>
-                                 </div>
-
-                                 <a data-fancybox="doc-feedback-gallery" data-caption="Отзыв о бариатрической операции"
-                                    href="https://youtu.be/PWv2zfJvebQ"
-                                    class="stretched-link d-inline-block text-decoration-none link-secondary fs-8 pt-2">Отзыв
-                                    о бариатрической операции</a>
-                              </div>
-                           </div>
-
-                           <div class="col-md-6">
-
-                              <div class="gallery-item position-relative">
-                                 <div class="bg-img ratio ratio-16x9 position-relative rounded-4"
-                                    style="background-image: url('https://i3.ytimg.com/vi/59hnfy4THR0/maxresdefault.jpg');">
-
-                                    <div class="gallery-item__play-icon">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64"
-                                          viewBox="0 0 52 63">
-                                          <path style="stroke:none;fill-rule:nonzero;"
-                                             d="M46.563 20.898 21.18 2.535C15.254-1.746 6.922-.48 2.582 5.38a12.95 12.95 0 0 0-2.57 7.742v36.746C0 57.105 5.938 62.988 13.285 63c2.844 0 5.613-.887 7.895-2.547L46.563 42.09c5.921-4.293 7.195-12.504 2.855-18.348a13.125 13.125 0 0 0-2.855-2.82zm0 0" />
-                                       </svg>
-                                    </div>
-                                 </div>
-
-                                 <a data-fancybox="doc-feedback-gallery" data-caption="Удаление атеромы на
-                                 голове" href="https://youtu.be/59hnfy4THR0"
-                                    class="stretched-link d-inline-block text-decoration-none link-secondary fs-8 pt-2">Удаление
-                                    атеромы на
-                                    голове</a>
-                              </div>
-
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="tab-pane fade" id="DocInfo-5" role="tabpanel" aria-labelledby="DocInfo-5-tab"
-                        tabindex="0">
-
-                        <h2 class="fs-4 fw-extrabold mb-md-4 mb-3">Фото и видео</h2>
-
-                        <div class="row g-md-4 g-3">
-                           <div class="col-xl-4 col-md-6">
-                              <div class="gallery-item position-relative">
-
-                                 <div class="bg-img ratio ratio-16x9 position-relative rounded-4"
-                                    style="background-image: url('https://i3.ytimg.com/vi/A-q7qVkJKxo/maxresdefault.jpg');">
-
-                                    <div class="gallery-item__play-icon">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64"
-                                          viewBox="0 0 52 63">
-                                          <path style="stroke:none;fill-rule:nonzero;"
-                                             d="M46.563 20.898 21.18 2.535C15.254-1.746 6.922-.48 2.582 5.38a12.95 12.95 0 0 0-2.57 7.742v36.746C0 57.105 5.938 62.988 13.285 63c2.844 0 5.613-.887 7.895-2.547L46.563 42.09c5.921-4.293 7.195-12.504 2.855-18.348a13.125 13.125 0 0 0-2.855-2.82zm0 0" />
-                                       </svg>
-                                    </div>
-                                 </div>
-
-                                 <a data-fancybox="doc-media-gallery" data-caption="Процесс
+                        <a
+                          data-fancybox="doc-media-gallery"
+                          data-caption="Процесс
                                  лазерного
-                                 лечения варикоза (ЭВЛК) / Без боли" href="https://youtu.be/A-q7qVkJKxo"
-                                    class="stretched-link d-inline-block text-decoration-none link-secondary fs-8 pt-2">Процесс
-                                    лазерного
-                                    лечения варикоза (ЭВЛК) / Без боли</a>
-                              </div>
-                           </div>
+                                 лечения варикоза (ЭВЛК) / Без боли"
+                          href="https://youtu.be/A-q7qVkJKxo"
+                          class="stretched-link d-inline-block text-decoration-none link-secondary fs-8 pt-2">
+                          Процесс лазерного лечения варикоза (ЭВЛК) / Без боли
+                        </a>
+                      </div>
+                    </div>
 
-                           <div class="col-xl-4 col-md-6">
-                              <div class="gallery-item position-relative">
+                    <div class="col-xl-4 col-md-6">
+                      <div class="gallery-item position-relative">
+                        <div
+                          class="bg-img ratio ratio-16x9 position-relative rounded-4"
+                          style="background-image: url('@img/dynamic-img/doc-gallery-img-md-1.jpg')"></div>
 
-                                 <div class="bg-img ratio ratio-16x9 position-relative rounded-4"
-                                    style="background-image: url('@img/dynamic-img/doc-gallery-img-md-1.jpg');">
-                                 </div>
-
-                                 <a data-fancybox="doc-media-gallery" data-caption="Результат
+                        <a
+                          data-fancybox="doc-media-gallery"
+                          data-caption="Результат
                                  операции по маммопластике (22 сентября 2022)"
-                                    href="@img/dynamic-img/doc-gallery-img-lg-1.jpg"
-                                    class="stretched-link d-inline-block text-decoration-none link-secondary fs-8 pt-2">Результат
-                                    операции по маммопластике (22 сентября 2022)</a>
-                              </div>
-                           </div>
+                          href="@img/dynamic-img/doc-gallery-img-lg-1.jpg"
+                          class="stretched-link d-inline-block text-decoration-none link-secondary fs-8 pt-2">
+                          Результат операции по маммопластике (22 сентября 2022)
+                        </a>
+                      </div>
+                    </div>
 
-                           <div class="col-xl-4 col-md-6">
-                              <div class="gallery-item position-relative">
-
-                                 <div class="bg-img ratio ratio-16x9 position-relative rounded-4"
-                                    style="background-image: url('http://i3.ytimg.com/vi/Zoo7aETBecs/hqdefault.jpg');">
-
-                                    <div class="gallery-item__play-icon">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64"
-                                          viewBox="0 0 52 63">
-                                          <path style="stroke:none;fill-rule:nonzero;"
-                                             d="M46.563 20.898 21.18 2.535C15.254-1.746 6.922-.48 2.582 5.38a12.95 12.95 0 0 0-2.57 7.742v36.746C0 57.105 5.938 62.988 13.285 63c2.844 0 5.613-.887 7.895-2.547L46.563 42.09c5.921-4.293 7.195-12.504 2.855-18.348a13.125 13.125 0 0 0-2.855-2.82zm0 0" />
-                                       </svg>
-                                    </div>
-                                 </div>
-
-                                 <a data-fancybox="doc-media-gallery" data-caption="Интервью для канала Россия 24"
-                                    href="https://youtu.be/Zoo7aETBecs"
-                                    class="stretched-link d-inline-block text-decoration-none link-secondary fs-8 pt-2">Интервью
-                                    для канала Россия 24</a>
-                              </div>
-                           </div>
-
+                    <div class="col-xl-4 col-md-6">
+                      <div class="gallery-item position-relative">
+                        <div
+                          class="bg-img ratio ratio-16x9 position-relative rounded-4"
+                          style="background-image: url('http://i3.ytimg.com/vi/Zoo7aETBecs/hqdefault.jpg')">
+                          <div class="gallery-item__play-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 63">
+                              <path
+                                style="stroke: none; fill-rule: nonzero"
+                                d="M46.563 20.898 21.18 2.535C15.254-1.746 6.922-.48 2.582 5.38a12.95 12.95 0 0 0-2.57 7.742v36.746C0 57.105 5.938 62.988 13.285 63c2.844 0 5.613-.887 7.895-2.547L46.563 42.09c5.921-4.293 7.195-12.504 2.855-18.348a13.125 13.125 0 0 0-2.855-2.82zm0 0" />
+                            </svg>
+                          </div>
                         </div>
-                     </div>
 
+                        <a
+                          data-fancybox="doc-media-gallery"
+                          data-caption="Интервью для канала Россия 24"
+                          href="https://youtu.be/Zoo7aETBecs"
+                          class="stretched-link d-inline-block text-decoration-none link-secondary fs-8 pt-2">
+                          Интервью для канала Россия 24
+                        </a>
+                      </div>
+                    </div>
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
 
       <div class="pb-md-6 pb-5">
-         <div class="container">
-            <div class="bg-white rounded-4 overflow-hidden p-xl-5 p-md-4 p-3">
-               <h2 class="fs-3 mb-md-5 mb-4">Услуги врача</h2>
+        <div class="container">
+          <div class="bg-white rounded-4 overflow-hidden p-xl-5 p-md-4 p-3">
+            <h2 class="fs-3 mb-md-5 mb-4">Услуги врача</h2>
 
-               <div class="service-item position-relative">
-                  <div class="row">
-                     <div class="col-md mb-4 mb-md-0">
-                        <div class="d-inline-block bg-danger text-white fs-9 mb-1 px-1">Скидка 10%</div>
-                        <a href="service.html"
-                           class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Ультразвуковая
-                           диагностика беременности</a>
+            <div class="service-item position-relative">
+              <div class="row">
+                <div class="col-md mb-4 mb-md-0">
+                  <div class="d-inline-block bg-danger text-white fs-10 mb-1 px-1">Скидка 10%</div>
+                  <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                    Ультразвуковая диагностика беременности
+                  </a>
 
-                        <p class="fw-light text-muted fs-7 mb-0">Исследование, позволяющее подтвердить беременность и
-                           определить место прикрепления плодного яйца (для исключения внематочной беременности).</p>
-                     </div>
+                  <p class="fw-light text-muted fs-7 mb-0">
+                    Исследование, позволяющее подтвердить беременность и определить место прикрепления плодного яйца (для исключения внематочной
+                    беременности).
+                  </p>
+                </div>
 
-                     <div class="col-auto text-md-end">
-
-                        <div class="text-decoration-line-through text-muted f-2 fs-9 fw-semibold">&nbsp;<span
-                              class="number me-1">3500</span>₽&nbsp;
-                        </div>
-
-                        <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                           <span class="number">2290</span>
-                           ₽
-                        </div>
-
-                        <div class="d-flex align-items-center justify-md-content-end">
-
-                           <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                           <a href="#" class="btn btn-outline-secondary btn-sm">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                 <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                    d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                 <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                    d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                              </svg>
-                           </a>
-                        </div>
-
-                     </div>
+                <div class="col-auto text-md-end">
+                  <div class="text-decoration-line-through text-muted f-2 fs-10 fw-semibold">
+                    &nbsp;
+                    <span class="number me-1">3500</span>
+                    ₽&nbsp;
                   </div>
-               </div>
 
-               <div class="service-item position-relative">
-                  <div class="row">
-                     <div class="col-md mb-4 mb-md-0">
-                        <a href="service.html"
-                           class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                           УЗИ 1-го триместра беременности (11-13 недель 6 дней)</a>
-
-                        <p class="fw-light text-muted fs-7 mb-0">Исследование, необходимое для контроля роста и
-                           развития плода в первом триместре беременности.</p>
-                     </div>
-
-                     <div class="col-auto text-md-end">
-
-                        <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                           <span class="number">2290</span>
-                           ₽
-                        </div>
-
-                        <div class="d-flex align-items-center justify-md-content-end">
-
-                           <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                           <a href="#" class="btn btn-outline-secondary btn-sm">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                 <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                    d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                 <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                    d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                              </svg>
-                           </a>
-                        </div>
-
-                     </div>
+                  <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                    <span class="number">2290</span>
+                    ₽
                   </div>
-               </div>
 
-               <div class="service-item position-relative">
-                  <div class="row">
-                     <div class="col-md mb-4 mb-md-0">
-                        <a href="service.html"
-                           class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                           УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6
-                           дней)</a>
+                  <div class="d-flex align-items-center justify-md-content-end">
+                    <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
 
-                        <p class="fw-light text-muted fs-7 mb-0">Сочетанное проведение ультразвукового исследования и
-                           биохимического скрининга, позволяющее выявить врожденные заболевания малыша.</p>
-                     </div>
-
-                     <div class="col-auto text-md-end">
-
-                        <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                           <span class="number">2290</span>
-                           ₽
-                        </div>
-
-                        <div class="d-flex align-items-center justify-md-content-end">
-
-                           <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                           <a href="#" class="btn btn-outline-secondary btn-sm">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                 <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                    d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                 <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                    d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                              </svg>
-                           </a>
-                        </div>
-
-                     </div>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                        <path
+                          style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                          d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                        <path
+                          style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                          d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                      </svg>
+                    </a>
                   </div>
-               </div>
-
-               <div class="service-item position-relative">
-                  <div class="row">
-                     <div class="col-md mb-4 mb-md-0">
-                        <a href="service.html"
-                           class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                           УЗИ 2-го триместра беременности (18-21 неделя) с допплеровской оценкой показателей
-                           кровотока</a>
-
-                        <p class="fw-light text-muted fs-7 mb-0">Исследование для контроля течения многоплодной
-                           беременности, роста и развития плодов и состоятельности кровообращения.</p>
-                     </div>
-
-                     <div class="col-auto text-md-end">
-
-                        <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                           <span class="number">2290</span>
-                           ₽
-                        </div>
-
-                        <div class="d-flex align-items-center justify-md-content-end">
-
-                           <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                           <a href="#" class="btn btn-outline-secondary btn-sm">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                 <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                    d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                 <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                    d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                              </svg>
-                           </a>
-                        </div>
-
-                     </div>
-                  </div>
-               </div>
-
-               <div class="service-item position-relative">
-                  <div class="row">
-                     <div class="col-md mb-4 mb-md-0">
-                        <a href="service.html"
-                           class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                           УЗИ 2-го триместра многоплодной беременности (18-21 неделя) с допплеровской оценкой
-                           показателей кровотока</a>
-
-                        <p class="fw-light text-muted fs-7 mb-0">Способ контроля многоплодной беременности во 2-м
-                           триместре с целью оценки развития плодов, состояния матки и плаценты, а также для изучения
-                           состоятельности кровообращения в системе мать-плацента-плод(ы) с помощью допплерометрии.
-                        </p>
-                     </div>
-
-                     <div class="col-auto text-md-end">
-
-                        <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                           <span class="number">2290</span>
-                           ₽
-                        </div>
-
-                        <div class="d-flex align-items-center justify-md-content-end">
-
-                           <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                           <a href="#" class="btn btn-outline-secondary btn-sm">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                 <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                    d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                 <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                    d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                              </svg>
-                           </a>
-                        </div>
-
-                     </div>
-                  </div>
-               </div>
-
-               <div class="text-center pt-2">
-                  <a href="#" class="btn btn-outline-secondary">Показать ещё</a>
-               </div>
-
+                </div>
+              </div>
             </div>
-         </div>
+
+            <div class="service-item position-relative">
+              <div class="row">
+                <div class="col-md mb-4 mb-md-0">
+                  <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                    Скрининговое УЗИ 1-го триместра беременности (11-13 недель 6 дней)
+                  </a>
+
+                  <p class="fw-light text-muted fs-7 mb-0">
+                    Исследование, необходимое для контроля роста и развития плода в первом триместре беременности.
+                  </p>
+                </div>
+
+                <div class="col-auto text-md-end">
+                  <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                    <span class="number">2290</span>
+                    ₽
+                  </div>
+
+                  <div class="d-flex align-items-center justify-md-content-end">
+                    <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
+
+                    <a href="#" class="btn btn-outline-secondary btn-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                        <path
+                          style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                          d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                        <path
+                          style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                          d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item position-relative">
+              <div class="row">
+                <div class="col-md mb-4 mb-md-0">
+                  <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                    Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
+                  </a>
+
+                  <p class="fw-light text-muted fs-7 mb-0">
+                    Сочетанное проведение ультразвукового исследования и биохимического скрининга, позволяющее выявить врожденные заболевания малыша.
+                  </p>
+                </div>
+
+                <div class="col-auto text-md-end">
+                  <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                    <span class="number">2290</span>
+                    ₽
+                  </div>
+
+                  <div class="d-flex align-items-center justify-md-content-end">
+                    <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
+
+                    <a href="#" class="btn btn-outline-secondary btn-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                        <path
+                          style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                          d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                        <path
+                          style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                          d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item position-relative">
+              <div class="row">
+                <div class="col-md mb-4 mb-md-0">
+                  <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                    Скрининговое УЗИ 2-го триместра беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+                  </a>
+
+                  <p class="fw-light text-muted fs-7 mb-0">
+                    Исследование для контроля течения многоплодной беременности, роста и развития плодов и состоятельности кровообращения.
+                  </p>
+                </div>
+
+                <div class="col-auto text-md-end">
+                  <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                    <span class="number">2290</span>
+                    ₽
+                  </div>
+
+                  <div class="d-flex align-items-center justify-md-content-end">
+                    <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
+
+                    <a href="#" class="btn btn-outline-secondary btn-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                        <path
+                          style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                          d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                        <path
+                          style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                          d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item position-relative">
+              <div class="row">
+                <div class="col-md mb-4 mb-md-0">
+                  <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                    Скрининговое УЗИ 2-го триместра многоплодной беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+                  </a>
+
+                  <p class="fw-light text-muted fs-7 mb-0">
+                    Способ контроля многоплодной беременности во 2-м триместре с целью оценки развития плодов, состояния матки и плаценты, а также для
+                    изучения состоятельности кровообращения в системе мать-плацента-плод(ы) с помощью допплерометрии.
+                  </p>
+                </div>
+
+                <div class="col-auto text-md-end">
+                  <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                    <span class="number">2290</span>
+                    ₽
+                  </div>
+
+                  <div class="d-flex align-items-center justify-md-content-end">
+                    <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
+
+                    <a href="#" class="btn btn-outline-secondary btn-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                        <path
+                          style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                          d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                        <path
+                          style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                          d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center pt-2">
+              <a href="#" class="btn btn-outline-secondary">Показать ещё</a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="overflow-hidden pb-md-6 pb-5">
-         <div class="container">
-            <h2 class="fs-3 mb-md-5 mb-4">Рекомендуем обратить внимание</h2>
+        <div class="container">
+          <h2 class="fs-3 mb-md-5 mb-4">Рекомендуем обратить внимание</h2>
 
-            <div class="position-relative">
-               <div class="swiper-button-next sbn-5"></div>
-               <div class="swiper-button-prev sbp-5"></div>
+          <div class="position-relative">
+            <div class="swiper-button-next sbn-5"></div>
+            <div class="swiper-button-prev sbp-5"></div>
 
-               <div class="swiper doc-recommend-slider">
-                  <div class="swiper-wrapper">
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
-                           style="background-image:url('@img/service-bg-icon_1.svg');">
+            <div class="swiper doc-recommend-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
+                    style="background-image: url('@img/service-bg-icon_1.svg')">
+                    <a href="#" class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">УЗИ плода 4D</a>
 
-                           <a href="#"
-                              class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">УЗИ
-                              плода 4D</a>
-
-                           <div class="fs-8 mb-3">Позволяет получить полную информацию о развитии плода и течении
-                              беременности</div>
-                           <div class="f-2 fs-5 fw-extrabold mt-auto">
-                              <span class="me-1">от</span>
-                              <span class="number">1000</span>
-                              ₽
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
-                           style="background-image:url('@img/service-bg-icon_1.svg');">
-
-                           <a href="#"
-                              class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">УЗИ
-                              поджелудочной железы</a>
-
-                           <div class="fs-8 mb-3">Предупреждает панкреатит, панкреонекроз, диабет,
-                              рак</div>
-                           <div class="f-2 fs-5 fw-extrabold mt-auto">
-                              <span class="me-1">от</span>
-                              <span class="number">1500</span>
-                              ₽
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
-                           style="background-image:url('@img/service-bg-icon_2.svg');">
-
-                           <a href="#"
-                              class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">Гастроэнтеролог</a>
-
-                           <div class="fs-8 mb-3">Диагностика, профилактика и лечение заболеваний
-                              желудочно-кишечного тракта и пищевой аллергии</div>
-                           <div class="f-2 fs-5 fw-extrabold mt-auto">
-                              <span class="me-1">от</span>
-                              <span class="number">1500</span>
-                              ₽
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
-                           style="background-image:url('@img/service-bg-icon_3.svg');">
-
-                           <a href="#"
-                              class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">МРТ
-                              суставов</a>
-
-                           <div class="fs-8 mb-3">Исследование различных нарушений суставов</div>
-                           <div class="f-2 fs-5 fw-extrabold mt-auto">
-                              <span class="me-1">от</span>
-                              <span class="number">3400</span>
-                              ₽
-                           </div>
-
-                        </div>
-                     </div>
-
+                    <div class="fs-8 mb-3">Позволяет получить полную информацию о развитии плода и течении беременности</div>
+                    <div class="f-2 fs-5 fw-extrabold mt-auto">
+                      <span class="me-1">от</span>
+                      <span class="number">1000</span>
+                      ₽
+                    </div>
                   </div>
-               </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
+                    style="background-image: url('@img/service-bg-icon_1.svg')">
+                    <a href="#" class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">УЗИ поджелудочной железы</a>
+
+                    <div class="fs-8 mb-3">Предупреждает панкреатит, панкреонекроз, диабет, рак</div>
+                    <div class="f-2 fs-5 fw-extrabold mt-auto">
+                      <span class="me-1">от</span>
+                      <span class="number">1500</span>
+                      ₽
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
+                    style="background-image: url('@img/service-bg-icon_2.svg')">
+                    <a href="#" class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">Гастроэнтеролог</a>
+
+                    <div class="fs-8 mb-3">Диагностика, профилактика и лечение заболеваний желудочно-кишечного тракта и пищевой аллергии</div>
+                    <div class="f-2 fs-5 fw-extrabold mt-auto">
+                      <span class="me-1">от</span>
+                      <span class="number">1500</span>
+                      ₽
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
+                    style="background-image: url('@img/service-bg-icon_3.svg')">
+                    <a href="#" class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">МРТ суставов</a>
+
+                    <div class="fs-8 mb-3">Исследование различных нарушений суставов</div>
+                    <div class="f-2 fs-5 fw-extrabold mt-auto">
+                      <span class="me-1">от</span>
+                      <span class="number">3400</span>
+                      ₽
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
 
-      <section class="section py-md-6 py-5">
-         <div class="container pb-md-6 pb-5">
-            <div class="cta bg-light-blue rounded-4 px-sm-5 pt-sm-5 px-4 pt-4 px-xl-0 pt-xl-0">
-               <div class="row align-items-end align-items-xl-stretch gx-0">
-                  <div class="col-xl-4">
-                     <div class="cta__header ps-xl-6 py-xl-6 mb-5 mb-xl-0">
-                        <h2 class="cta__title mb-3">У вас остались вопросы?</h2>
-                        <p class="fs-5 mb-0 text-secondary">Оставьте свой телефон. Мы свяжемся с вами в ближайшее время.
-                        </p>
-                     </div>
-                  </div>
+      @@include('html/cta.html', {})
+    </main>
 
-                  <div class="col-lg-4 col-md-6 cta__left">
-                     <div class="position-relative w-100 h-100">
-                        <div class="cta__img ms-xxl-4 ms-xl-1 me-2">
-                           <img src="@img/cta-img.png" alt="">
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6">
-                     <div class="pe-xl-6 py-xl-6 pb-4">
-                        <form>
-                           <div class="form-floating mb-4">
-                              <input type="text" class="form-control form-control__no-border input-phone" id="ctaPhone"
-                                 placeholder="Ваш телефон" pattern=".{16}" required>
-                              <label for="ctaPhone">Ваш телефон</label>
-                           </div>
-
-                           <button class="btn btn-danger btn-form w-100" type="submit">Отправить</button>
-
-                           <div class="fs-9 pt-4 text-secondary">Нажимая на кнопку «Отправить», вы даёте своё
-                              согласие
-                              на
-                              <a href="content.html" title="" target="_blank">обработку персональных данных</a>.
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-
-                  <div class="col-4 cta__right">
-                     <div class="position-relative w-100 h-100">
-                        <div class="cta__img ms-xxl-4 ms-xl-1 ms-2">
-                           <img src="@img/cta-img2.png" alt="">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-         </div>
-      </section>
-
-   </main>
-
-   <div class="modal fade" id="DocSaleModal" tabindex="-1" aria-labelledby="DocSaleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="DocSaleModal" tabindex="-1" aria-labelledby="DocSaleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-         <div class="modal-content">
-            <div class="modal-header align-items-start border-0 pt-4 px-4 pb-0">
-               <div>
-                  <h2 class="modal-title fs-4 fw-extrabold" id="DocSaleModalLabel">Блефаропластика под ключ
-                  </h2>
-                  <div class="f-2 fs-4 text-secondary fw-extrabold">
-                     <span class="me-1">от</span>
-                     <span class="number">40000</span>
-                     ₽
-                  </div>
-               </div>
+        <div class="modal-content">
+          <div class="modal-header align-items-start border-0 pt-4 px-4 pb-0">
+            <div>
+              <h2 class="modal-title fs-4 fw-extrabold" id="DocSaleModalLabel">Блефаропластика под ключ</h2>
+              <div class="f-2 fs-4 text-secondary fw-extrabold">
+                <span class="me-1">от</span>
+                <span class="number">40000</span>
+                ₽
+              </div>
+            </div>
 
-               <button type="button" class="btn-close mt-1" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body px-4 pb-4">
-               <p>Акция проводится с 16 сентября по 16 октября 2022 года. Для участия достаточно записаться к врачу на
-                  первоначальный осмотр и получить направление на
-                  проведение процедуры блефаропластики</p>
-            </div>
-         </div>
+            <button type="button" class="btn-close mt-1" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body px-4 pb-4">
+            <p>
+              Акция проводится с 16 сентября по 16 октября 2022 года. Для участия достаточно записаться к врачу на первоначальный осмотр и получить
+              направление на проведение процедуры блефаропластики
+            </p>
+          </div>
+        </div>
       </div>
-   </div>
+    </div>
 
-   <div class="modal fade" id="ConsultModal" tabindex="-1" aria-labelledby="ConsultModalLabel" aria-hidden="true">
+    <div class="modal fade" id="ConsultModal" tabindex="-1" aria-labelledby="ConsultModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-sm">
-         <div class="modal-content overflow-hidden">
-            <div class="modal-header border-0 px-sm-4 pt-sm-4 pb-0">
-               <h5 class="modal-title fw-bold" id="ConsultModalLabel">Онлайн консультация
-               </h5>
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body position-relative p-sm-4">
-               <form>
-                  <div class="form-floating mb-4">
-                     <input type="text" class="form-control" id="ConsultName" placeholder="Имя Фамилия" required>
-                     <label for="ConsultName">Имя Фамилия</label>
-                  </div>
+        <div class="modal-content overflow-hidden">
+          <div class="modal-header border-0 px-sm-4 pt-sm-4 pb-0">
+            <h5 class="modal-title fw-bold" id="ConsultModalLabel">Онлайн консультация</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body position-relative p-sm-4">
+            <form>
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="ConsultName" placeholder="Имя Фамилия" required />
+                <label for="ConsultName">Имя Фамилия</label>
+              </div>
 
-                  <div class="form-floating mb-4">
-                     <input type="text" class="form-control input-phone" id="ConsultPhone" placeholder="Ваш телефон"
-                        pattern=".{16}" required>
-                     <label for="ConsultPhone">Ваш телефон</label>
-                  </div>
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control input-phone" id="ConsultPhone" placeholder="Ваш телефон" pattern=".{16}" required />
+                <label for="ConsultPhone">Ваш телефон</label>
+              </div>
 
-                  <button class="btn btn-danger btn-form w-100" type="submit">Записаться</button>
+              <button class="btn btn-danger btn-form w-100" type="submit">Записаться</button>
 
-                  <div class="fs-9 pt-4 text-secondary">Нажимая на кнопку «Записаться», вы даёте своё
-                     согласие
-                     на
-                     <a href="content.html" title="" target="_blank">обработку персональных данных</a>.
-                  </div>
-               </form>
+              <div class="fs-10 pt-4 text-secondary">
+                Нажимая на кнопку «Записаться», вы даёте своё согласие на
+                <a href="content.html" title="" target="_blank">обработку персональных данных</a>
+                .
+              </div>
+            </form>
 
-               <!-- Появляется при успешной отправке формы -->
-               <!-- <div class="form-success p-4">
+            <!-- Появляется при успешной отправке формы -->
+            <!-- <div class="form-success p-4">
                   <div class="d-flex align-items-center mb-3">
                      <img src="@img/form-success-icon.svg" alt="" height="32" class="me-3">
                      <h3 class="fs-5 text-danger mb-0">Заявка<br> отправлена</h3>
@@ -868,19 +803,14 @@
                   <div class="f-2 fs-5 fw-bold text-secondary mb-5">+7 (999) 888 77 66</div>
                   <a href="#" class="btn btn-primary w-100" data-bs-dismiss="modal">Хорошо</a>
                </div> -->
-
-            </div>
-         </div>
+          </div>
+        </div>
       </div>
-   </div>
+    </div>
 
-   @@include('html/footer.html', {})
-   @@include('html/login-modal.html', {})
-   @@include('html/calc.html', {})
-   @@include('html/scroll-to-top.html', {})
+    @@include('html/footer.html', {}) @@include('html/calc.html', {}) @@include('html/scroll-to-top.html', {})
 
-   <script src="js/bootstrap.js"></script>
-   <script src="js/app.js"></script>
-</body>
-
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

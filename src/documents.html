@@ -1,165 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru" class="h-100">
+  @@include('html/head.html', { "title": "documents" })
 
-@@include('html/head.html', {
-"title": "documents"
-})
+  <body class="d-flex flex-column h-100">
+    @@include('html/header.html', {}) @@include('html/offcanvas.html', {})
 
-<body class="d-flex flex-column h-100">
-
-   @@include('html/header.html', {})
-   @@include('html/offcanvas.html', {})
-
-   <main role="main" class="flex-shrink-0">
-
+    <main role="main" class="flex-shrink-0">
       <div class="container pt-md-5 pt-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active">Документы и лицензии</li>
+        </ol>
 
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-            <li class="breadcrumb-item active">Документы и лицензии</li>
-         </ol>
+        <h1 class="mb-md-5 mb-4">Документы и лицензии</h1>
 
-         <h1 class="mb-md-5 mb-4">Документы и лицензии</h1>
+        <div class="row g-4">
+          <div class="col-xxl-3 col-xl-4 col-md-6">
+            <div
+              class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
+              style="background-image: url('@img/document-bg-icon.svg')">
+              <a href="#" class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">
+                Медицинская лицензия ООО "4Д Поликлиника"
+              </a>
 
-         <div class="row g-4">
-            <div class="col-xxl-3 col-xl-4 col-md-6">
-               <div
-                  class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
-                  style="background-image:url('@img/document-bg-icon.svg');">
-
-                  <a href="#"
-                     class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">Медицинская
-                     лицензия
-                     ООО "4Д Поликлиника"</a>
-
-                  <div class="fs-8">№Л041-01126-23/00343065 от 21.08.2020г.</div>
-               </div>
+              <div class="fs-8">№Л041-01126-23/00343065 от 21.08.2020г.</div>
             </div>
+          </div>
 
-            <div class="col-xxl-3 col-xl-4 col-md-6">
-               <div
-                  class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
-                  style="background-image:url('@img/document-bg-icon.svg');">
+          <div class="col-xxl-3 col-xl-4 col-md-6">
+            <div
+              class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-sm-4 p-3"
+              style="background-image: url('@img/document-bg-icon.svg')">
+              <a href="#" class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">
+                Лицензия на осуществление деятельности по обороту наркотических средств
+              </a>
 
-                  <a href="#"
-                     class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">Лицензия
-                     на осуществление деятельности по обороту наркотических средств</a>
-
-                  <div class="fs-8">№Л017-01126-23/00148130 от 29.11.2019г.</div>
-               </div>
+              <div class="fs-8">№Л017-01126-23/00148130 от 29.11.2019г.</div>
             </div>
-         </div>
+          </div>
+        </div>
 
-         <div class="article">
-            <h3>О клинике</h3>
+        <div class="article">
+          <h3>О клинике</h3>
 
-            <ul>
-               <li><a href="content.html">Сведения об учредителях</a></li>
-               <li><a href="content.html">Структура и органы управления</a></li>
-               <li><a href="content.html">График приема граждан руководителем медицинской организации и иными
-                     уполномоченными лицами</a></li>
-               <li><a
-                     href="https://www.clinic23.ru/uploads/files/razreshenie-na-rabotu-bez-podtverzhdeniya.pdf?1627566325901">Признание
-                     лабораторных исследований на COVID-19 окончательными</a></li>
-            </ul>
+          <ul>
+            <li><a href="content.html">Сведения об учредителях</a></li>
+            <li><a href="content.html">Структура и органы управления</a></li>
+            <li><a href="content.html">График приема граждан руководителем медицинской организации и иными уполномоченными лицами</a></li>
+            <li>
+              <a href="https://www.clinic23.ru/uploads/files/razreshenie-na-rabotu-bez-podtverzhdeniya.pdf?1627566325901">
+                Признание лабораторных исследований на COVID-19 окончательными
+              </a>
+            </li>
+          </ul>
 
-            <h3>О клинике</h3>
+          <h3>О клинике</h3>
 
-            <ul>
-               <li><a href="content.html">Цены (тарифы) на медицинские услуги</a></li>
-               <li><a href="content.html">Прейскурант платных медицинских услуг с ценами в рублях ООО "Клиника №1"</a>
-               </li>
-               <li><a href="content.html">Правила предоставления платных медицинских услуг</a></li>
-               <li><a
-                     href="https://www.clinic23.ru/uploads/files/razreshenie-na-rabotu-bez-podtverzhdeniya.pdf?1627566325901">Положение
-                     о порядке и условиях предоставления платных медицинских услуг</a></li>
-               <li><a
-                     href="https://www.clinic23.ru/uploads/files/razreshenie-na-rabotu-bez-podtverzhdeniya.pdf?1627566325901">Порядок
-                     оказания медицинской помощи (услуг) с применением телемедицинских технологий</a></li>
-            </ul>
+          <ul>
+            <li><a href="content.html">Цены (тарифы) на медицинские услуги</a></li>
+            <li><a href="content.html">Прейскурант платных медицинских услуг с ценами в рублях ООО "Клиника №1"</a></li>
+            <li><a href="content.html">Правила предоставления платных медицинских услуг</a></li>
+            <li>
+              <a href="https://www.clinic23.ru/uploads/files/razreshenie-na-rabotu-bez-podtverzhdeniya.pdf?1627566325901">
+                Положение о порядке и условиях предоставления платных медицинских услуг
+              </a>
+            </li>
+            <li>
+              <a href="https://www.clinic23.ru/uploads/files/razreshenie-na-rabotu-bez-podtverzhdeniya.pdf?1627566325901">
+                Порядок оказания медицинской помощи (услуг) с применением телемедицинских технологий
+              </a>
+            </li>
+          </ul>
 
-            <h3>Информация для пациентов</h3>
+          <h3>Информация для пациентов</h3>
 
-            <h4>Правила приема</h4>
+          <h4>Правила приема</h4>
 
-            <ul>
-               <li><a href="content.html">Правила записи на первичный прием (консультацию, обследование)</a></li>
-               <li><a href="content.html">Правила подготовки к диагностическим исследованиям</a>
-               </li>
-               <li><a href="content.html">Правила и сроки госпитализации</a></li>
-               <li><a
-                     href="https://www.clinic23.ru/uploads/files/razreshenie-na-rabotu-bez-podtverzhdeniya.pdf?1627566325901">Правила
-                     приема в центре амбулаторной онкологической помощи ООО "Клиника Екатерининская"</a></li>
-               <li><a
-                     href="https://www.clinic23.ru/uploads/files/razreshenie-na-rabotu-bez-podtverzhdeniya.pdf?1627566325901">Правила
-                     внутреннего распорядка отделений стационара ООО "Клиника Екатерининская"</a></li>
-            </ul>
-         </div>
-
+          <ul>
+            <li><a href="content.html">Правила записи на первичный прием (консультацию, обследование)</a></li>
+            <li><a href="content.html">Правила подготовки к диагностическим исследованиям</a></li>
+            <li><a href="content.html">Правила и сроки госпитализации</a></li>
+            <li>
+              <a href="https://www.clinic23.ru/uploads/files/razreshenie-na-rabotu-bez-podtverzhdeniya.pdf?1627566325901">
+                Правила приема в центре амбулаторной онкологической помощи ООО "Клиника Екатерининская"
+              </a>
+            </li>
+            <li>
+              <a href="https://www.clinic23.ru/uploads/files/razreshenie-na-rabotu-bez-podtverzhdeniya.pdf?1627566325901">
+                Правила внутреннего распорядка отделений стационара ООО "Клиника Екатерининская"
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <section class="section py-md-6 py-5">
-         <div class="container pb-md-6 pb-5">
-            <div class="cta bg-light-blue rounded-4 px-sm-5 pt-sm-5 px-4 pt-4 px-xl-0 pt-xl-0">
-               <div class="row align-items-end align-items-xl-stretch gx-0">
-                  <div class="col-xl-4">
-                     <div class="cta__header ps-xl-6 py-xl-6 mb-5 mb-xl-0">
-                        <h2 class="cta__title mb-3">У вас остались вопросы?</h2>
-                        <p class="fs-5 mb-0 text-secondary">Оставьте свой телефон. Мы свяжемся с вами в ближайшее время.
-                        </p>
-                     </div>
-                  </div>
+      @@include('html/cta.html', {})
+    </main>
 
-                  <div class="col-lg-4 col-md-6 cta__left">
-                     <div class="position-relative w-100 h-100">
-                        <div class="cta__img ms-xxl-4 ms-xl-1 me-2">
-                           <img src="@img/cta-img.png" alt="">
-                        </div>
-                     </div>
-                  </div>
+    @@include('html/footer.html', {}) @@include('html/calc.html', {}) @@include('html/scroll-to-top.html', {})
 
-                  <div class="col-lg-4 col-md-6">
-                     <div class="pe-xl-6 py-xl-6 pb-4">
-                        <form>
-                           <div class="form-floating mb-4">
-                              <input type="text" class="form-control form-control__no-border input-phone" id="ctaPhone"
-                                 placeholder="Ваш телефон" pattern=".{16}" required>
-                              <label for="ctaPhone">Ваш телефон</label>
-                           </div>
-
-                           <button class="btn btn-danger btn-form w-100" type="submit">Отправить</button>
-
-                           <div class="fs-9 pt-4 text-secondary">Нажимая на кнопку «Отправить», вы даёте своё
-                              согласие
-                              на
-                              <a href="content.html" title="" target="_blank">обработку персональных данных</a>.
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-
-                  <div class="col-4 cta__right">
-                     <div class="position-relative w-100 h-100">
-                        <div class="cta__img ms-xxl-4 ms-xl-1 ms-2">
-                           <img src="@img/cta-img2.png" alt="">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-         </div>
-      </section>
-
-   </main>
-
-   @@include('html/footer.html', {})
-   @@include('html/login-modal.html', {})
-   @@include('html/calc.html', {})
-   @@include('html/scroll-to-top.html', {})
-
-   <script src="js/bootstrap.js"></script>
-   <script src="js/app.js"></script>
-</body>
-
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

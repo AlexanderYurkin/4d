@@ -1,634 +1,558 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru" class="h-100">
+  @@include('html/head.html', { "title": "services-category" })
 
-@@include('html/head.html', {
-"title": "services-category"
-})
+  <body class="d-flex flex-column h-100">
+    @@include('html/header.html', {}) @@include('html/offcanvas.html', {})
 
-<body class="d-flex flex-column h-100">
-
-   @@include('html/header.html', {})
-   @@include('html/offcanvas.html', {})
-
-   <main role="main" class="flex-shrink-0">
-
+    <main role="main" class="flex-shrink-0">
       <div class="container pt-md-5 pt-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item"><a href="services-startpoint.html">Услуги</a></li>
+          <li class="breadcrumb-item active">УЗИ при беременности</li>
+        </ol>
 
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-            <li class="breadcrumb-item"><a href="services-startpoint.html">Услуги</a></li>
-            <li class="breadcrumb-item active">УЗИ при беременности</li>
-         </ol>
+        <div class="d-md-flex align-items-end justify-content-between mb-md-3 mb-2">
+          <h1 class="mb-3 me-4">УЗИ при беременности</h1>
 
-         <div class="d-md-flex align-items-end justify-content-between mb-md-3 mb-2">
-            <h1 class="mb-3 me-4">УЗИ при беременности</h1>
+          <button
+            class="d-xl-none btn btn-primary btn-sm text-nowrap mb-3"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasFilters"
+            aria-controls="offcanvasFilters">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.02 468.85" fill="#fff" height="14px" class="me-1 mb-1">
+              <path
+                d="M85.35,468.85c-16.99,.04-33.29-6.71-45.27-18.75l-32.94-29.31c-8.8-7.85-9.57-21.34-1.73-30.14,7.85-8.8,21.34-9.57,30.14-1.73l33.81,30.17c7.84,8.8,21.32,9.58,30.12,1.74,.32-.29,.64-.58,.94-.89l76.8-73.19c8.26-8.4,21.77-8.52,30.17-.25,8.4,8.26,8.52,21.77,.25,30.17-.33,.34-.67,.66-1.03,.98l-76.48,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33ZM85.35,298.18c-16.99,.04-33.29-6.71-45.27-18.75L6.27,245.61c-8.19-8.47-7.95-21.98,.52-30.17,8.27-7.98,21.37-7.98,29.64,0l33.83,33.81c8.44,8.07,21.73,8.07,30.17,0l76.8-73.19c8.53-8.14,22.05-7.83,30.19,.7,8.14,8.53,7.83,22.05-.7,30.19l-76.57,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33ZM85.35,127.51c-16.99,.04-33.29-6.71-45.27-18.75L7.14,79.45c-8.8-7.85-9.57-21.34-1.73-30.14,7.85-8.8,21.34-9.57,30.14-1.73h0l33.81,30.17c7.84,8.8,21.32,9.58,30.12,1.74,.32-.29,.64-.58,.94-.89L177.32,5.4c8.8-7.83,22.28-7.05,30.12,1.75,7.47,8.39,7.15,21.13-.72,29.14l-76.57,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33Z" />
+            </svg>
 
-            <button class="d-xl-none btn btn-primary btn-sm text-nowrap mb-3" type="button" data-bs-toggle="offcanvas"
-               data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters">
+            Каталог услуг
+          </button>
+        </div>
 
-               <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512.02 468.85" fill="#fff" height="14px" class="me-1 mb-1">
-                  <path
-                     d="M85.35,468.85c-16.99,.04-33.29-6.71-45.27-18.75l-32.94-29.31c-8.8-7.85-9.57-21.34-1.73-30.14,7.85-8.8,21.34-9.57,30.14-1.73l33.81,30.17c7.84,8.8,21.32,9.58,30.12,1.74,.32-.29,.64-.58,.94-.89l76.8-73.19c8.26-8.4,21.77-8.52,30.17-.25,8.4,8.26,8.52,21.77,.25,30.17-.33,.34-.67,.66-1.03,.98l-76.48,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33ZM85.35,298.18c-16.99,.04-33.29-6.71-45.27-18.75L6.27,245.61c-8.19-8.47-7.95-21.98,.52-30.17,8.27-7.98,21.37-7.98,29.64,0l33.83,33.81c8.44,8.07,21.73,8.07,30.17,0l76.8-73.19c8.53-8.14,22.05-7.83,30.19,.7,8.14,8.53,7.83,22.05-.7,30.19l-76.57,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33ZM85.35,127.51c-16.99,.04-33.29-6.71-45.27-18.75L7.14,79.45c-8.8-7.85-9.57-21.34-1.73-30.14,7.85-8.8,21.34-9.57,30.14-1.73h0l33.81,30.17c7.84,8.8,21.32,9.58,30.12,1.74,.32-.29,.64-.58,.94-.89L177.32,5.4c8.8-7.83,22.28-7.05,30.12,1.75,7.47,8.39,7.15,21.13-.72,29.14l-76.57,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33Z" />
-               </svg>
+        <div class="row">
+          <div class="col-xxl-3 col-xl-4">
+            <div class="offcanvas-xl offcanvas-start bg-white" tabindex="-1" id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
+              <div class="offcanvas-header pb-3">
+                <h5 class="offcanvas-title" id="offcanvasFiltersLabel">Анализы</h5>
 
-               Каталог услуг
-            </button>
-         </div>
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasFilters" aria-label="Close"></button>
+              </div>
 
-         <div class="row">
+              <div class="offcanvas-body pt-0">
+                <div class="bg-xl-white xl-shadow rounded-3 w-100 px-0 px-xl-4 py-0 py-xl-3 mb-4">
+                  <nav class="sidebar">
+                    <ul class="nav">
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link active" href="#">
+                          УЗИ
 
-            <div class="col-xxl-3 col-xl-4">
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
 
-               <div class="offcanvas-xl offcanvas-start bg-light" tabindex="-1" id="offcanvasFilters"
-                  aria-labelledby="offcanvasFiltersLabel">
-                  <div class="offcanvas-header pb-3">
-
-                     <h5 class="offcanvas-title" id="offcanvasFiltersLabel">Услуги</h5>
-
-                     <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas"
-                        data-bs-target="#offcanvasFilters" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body pt-0">
-
-                     <nav class="sidebar bg-white rounded-3 py-3">
-                        <ul class="nav flex-column">
-                           <li class="nav-item">
-
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-1" aria-expanded="true">УЗИ
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse show" id="collapse-1">
-                                 <li><a class="nav-link active" href="services-category.html">УЗИ при беременности</a>
-                                 </li>
-                                 <li><a class="nav-link" href="services-category.html">УЗИ предстательной железы</a>
-                                 </li>
-                                 <li><a class="nav-link" href="services-category.html">УЗИ в педиатрии</a></li>
-                                 <li><a class="nav-link" href="services-category.html">УЗИ сосудов</a></li>
-                                 <li><a class="nav-link" href="services-category.html">УЗИ мочевыделительной системы</a>
-                                 </li>
-                                 <li><a class="nav-link" href="services-category.html">УЗИ щитовидной железы</a></li>
-                              </ul>
-                           </li>
-
-                           <li class="nav-item">
-
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-2" aria-expanded="false">МРТ
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse" id="collapse-2">
-                                 <li><a class="nav-link" href="services-category.html">МРТ периферической нервной
-                                       системы</a>
-                                 </li>
-                                 <li><a class="nav-link" href="services-category.html">МРТ головы</a></li>
-                                 <li><a class="nav-link" href="services-category.html">МРТ внутренних органов</a></li>
-                                 <li><a class="nav-link" href="services-category.html">МРТ мягких тканей</a></li>
-                                 <li><a class="nav-link" href="services-category.html">МРТ при беременности</a></li>
-                                 <li><a class="nav-link" href="services-category.html">МРТ позвоночника</a></li>
-                              </ul>
-                           </li>
-
-                           <li class="nav-item">
-
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-3"
-                                 aria-expanded="false">Хирургия
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse" id="collapse-3">
-                                 <li><a class="nav-link" href="services-category.html">Флебология</a></li>
-                                 <li><a class="nav-link" href="services-category.html">Маммология</a></li>
-                              </ul>
-                           </li>
-
-                           <li class="nav-item">
-
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-4"
-                                 aria-expanded="false">Рентгенология
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse" id="collapse-4">
-                                 <li><a class="nav-link" href="services-category.html">Рентген головы</a></li>
-                                 <li><a class="nav-link" href="services-category.html">Рентген тела</a></li>
-                                 <li><a class="nav-link" href="services-category.html">Рентген суставов костей</a></li>
-                                 <li><a class="nav-link" href="services-category.html">Дополнительные услуги</a></li>
-                              </ul>
-                           </li>
-
-                           <li class="nav-item">
-
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-5"
-                                 aria-expanded="false">Компьтерная томография
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse" id="collapse-5">
-                                 <li><a class="nav-link" href="services-category.html">КТ головы</a></li>
-                                 <li><a class="nav-link" href="services-category.html">КТ с констрастом</a></li>
-                                 <li><a class="nav-link" href="services-category.html">КТ позвоночника</a></li>
-                                 <li><a class="nav-link" href="services-category.html">КТ суставов и костей</a></li>
-                                 <li><a class="nav-link" href="services-category.html">КТ внутренних органов</a></li>
-                                 <li><a class="nav-link" href="services-category.html">КТ мягких тканей</a></li>
-                              </ul>
-                           </li>
-
+                        <ul class="submenu collapse show">
+                          <li><a class="nav-link active" href="analyses-category.html">УЗИ при беременности</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">УЗИ предстательной железы</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">УЗИ в педиатрии</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">УЗИ сосудов</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">УЗИ мочевыделительной системы</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">УЗИ щитовидной железы</a></li>
                         </ul>
-                     </nav>
+                      </li>
 
-                  </div>
-               </div>
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#">
+                          МРТ
 
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
+
+                        <ul class="submenu collapse">
+                          <li><a class="nav-link" href="analyses-category.html">МРТ периферической нервной системы</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">МРТ головы</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">МРТ внутренних органов</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">МРТ мягких тканей</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">МРТ при беременности</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">МРТ позвоночника</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#">
+                          Хирургия
+
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
+
+                        <ul class="submenu collapse">
+                          <li><a class="nav-link" href="analyses-category.html">Флебология</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Маммология</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#">
+                          Рентгенология
+
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
+
+                        <ul class="submenu collapse">
+                          <li><a class="nav-link" href="analyses-category.html">Рентген головы</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Рентген тела</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Рентген суставов костей</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Дополнительные услуги</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#">
+                          Компьтерная томография
+
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
+
+                        <ul class="submenu collapse">
+                          <li><a class="nav-link" href="analyses-category.html">КТ головы</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">КТ с констрастом</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">КТ позвоночника</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">КТ суставов и костей</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">КТ внутренних органов</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">КТ мягких тканей</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <div class="col-xxl-9 col-xl-8">
-               <div class="pt-xl-4">
-                  <div class="service-item position-relative">
-                     <div class="row">
-                        <div class="col-md mb-4 mb-md-0">
-                           <div class="d-inline-block bg-danger text-white fs-9 mb-1 px-1">Скидка 10%</div>
-                           <a href="service.html"
-                              class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Ультразвуковая
-                              диагностика беременности</a>
+          <div class="col-xxl-9 col-xl-8">
+            <div class="pt-xl-4">
+              <div class="service-item position-relative">
+                <div class="row">
+                  <div class="col-md mb-4 mb-md-0">
+                    <div class="d-inline-block bg-danger text-white fs-10 mb-1 px-1">Скидка 10%</div>
+                    <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                      Ультразвуковая диагностика беременности
+                    </a>
 
-                           <p class="fw-light text-muted fs-7 mb-0">Исследование, позволяющее подтвердить беременность и
-                              определить место прикрепления плодного яйца (для исключения внематочной беременности).</p>
-                        </div>
-
-                        <div class="col-auto text-md-end">
-
-                           <div class="text-decoration-line-through text-muted f-2 fs-9 fw-semibold">&nbsp;<span
-                                 class="number me-1">3500</span>₽&nbsp;
-                           </div>
-
-                           <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
-
-                           <div class="d-flex align-items-center justify-md-content-end">
-
-                              <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                              <a href="#" class="btn btn-outline-secondary btn-sm">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                    <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                       d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                    <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                       d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                                 </svg>
-                              </a>
-                           </div>
-
-                        </div>
-                     </div>
+                    <p class="fw-light text-muted fs-7 mb-0">
+                      Исследование, позволяющее подтвердить беременность и определить место прикрепления плодного яйца (для исключения внематочной
+                      беременности).
+                    </p>
                   </div>
 
-                  <div class="service-item position-relative">
-                     <div class="row">
-                        <div class="col-md mb-4 mb-md-0">
-                           <a href="service.html"
-                              class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                              УЗИ 1-го триместра беременности (11-13 недель 6 дней)</a>
+                  <div class="col-auto text-md-end">
+                    <div class="text-decoration-line-through text-muted f-2 fs-10 fw-semibold">
+                      &nbsp;
+                      <span class="number me-1">3500</span>
+                      ₽&nbsp;
+                    </div>
 
-                           <p class="fw-light text-muted fs-7 mb-0">Исследование, необходимое для контроля роста и
-                              развития плода в первом триместре беременности.</p>
-                        </div>
+                    <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
 
-                        <div class="col-auto text-md-end">
+                    <div class="d-flex align-items-center justify-md-content-end">
+                      <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
 
-                           <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
+                      <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                          <path
+                            style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                            d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                          <path
+                            style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                            d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                           <div class="d-flex align-items-center justify-md-content-end">
+              <div class="service-item position-relative">
+                <div class="row">
+                  <div class="col-md mb-4 mb-md-0">
+                    <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                      Скрининговое УЗИ 1-го триместра беременности (11-13 недель 6 дней)
+                    </a>
 
-                              <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                              <a href="#" class="btn btn-outline-secondary btn-sm">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                    <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                       d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                    <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                       d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                                 </svg>
-                              </a>
-                           </div>
-
-                        </div>
-                     </div>
+                    <p class="fw-light text-muted fs-7 mb-0">
+                      Исследование, необходимое для контроля роста и развития плода в первом триместре беременности.
+                    </p>
                   </div>
 
-                  <div class="service-item position-relative">
-                     <div class="row">
-                        <div class="col-md mb-4 mb-md-0">
-                           <a href="service.html"
-                              class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                              УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6
-                              дней)</a>
+                  <div class="col-auto text-md-end">
+                    <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
 
-                           <p class="fw-light text-muted fs-7 mb-0">Сочетанное проведение ультразвукового исследования и
-                              биохимического скрининга, позволяющее выявить врожденные заболевания малыша.</p>
-                        </div>
+                    <div class="d-flex align-items-center justify-md-content-end">
+                      <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
 
-                        <div class="col-auto text-md-end">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                          <path
+                            style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                            d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                          <path
+                            style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                            d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                           <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
+              <div class="service-item position-relative">
+                <div class="row">
+                  <div class="col-md mb-4 mb-md-0">
+                    <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                      Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
+                    </a>
 
-                           <div class="d-flex align-items-center justify-md-content-end">
-
-                              <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                              <a href="#" class="btn btn-outline-secondary btn-sm">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                    <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                       d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                    <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                       d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                                 </svg>
-                              </a>
-                           </div>
-
-                        </div>
-                     </div>
+                    <p class="fw-light text-muted fs-7 mb-0">
+                      Сочетанное проведение ультразвукового исследования и биохимического скрининга, позволяющее выявить врожденные заболевания малыша.
+                    </p>
                   </div>
 
-                  <div class="service-item position-relative">
-                     <div class="row">
-                        <div class="col-md mb-4 mb-md-0">
-                           <a href="service.html"
-                              class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                              УЗИ 2-го триместра беременности (18-21 неделя) с допплеровской оценкой показателей
-                              кровотока</a>
+                  <div class="col-auto text-md-end">
+                    <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
 
-                           <p class="fw-light text-muted fs-7 mb-0">Исследование для контроля течения многоплодной
-                              беременности, роста и развития плодов и состоятельности кровообращения.</p>
-                        </div>
+                    <div class="d-flex align-items-center justify-md-content-end">
+                      <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
 
-                        <div class="col-auto text-md-end">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                          <path
+                            style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                            d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                          <path
+                            style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                            d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                           <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
+              <div class="service-item position-relative">
+                <div class="row">
+                  <div class="col-md mb-4 mb-md-0">
+                    <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                      Скрининговое УЗИ 2-го триместра беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+                    </a>
 
-                           <div class="d-flex align-items-center justify-md-content-end">
-
-                              <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                              <a href="#" class="btn btn-outline-secondary btn-sm">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                    <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                       d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                    <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                       d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                                 </svg>
-                              </a>
-                           </div>
-
-                        </div>
-                     </div>
+                    <p class="fw-light text-muted fs-7 mb-0">
+                      Исследование для контроля течения многоплодной беременности, роста и развития плодов и состоятельности кровообращения.
+                    </p>
                   </div>
 
-                  <div class="service-item position-relative">
-                     <div class="row">
-                        <div class="col-md mb-4 mb-md-0">
-                           <a href="service.html"
-                              class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                              УЗИ 2-го триместра многоплодной беременности (18-21 неделя) с допплеровской оценкой
-                              показателей кровотока</a>
+                  <div class="col-auto text-md-end">
+                    <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
 
-                           <p class="fw-light text-muted fs-7 mb-0">Способ контроля многоплодной беременности во 2-м
-                              триместре с целью оценки развития плодов, состояния матки и плаценты, а также для изучения
-                              состоятельности кровообращения в системе мать-плацента-плод(ы) с помощью допплерометрии.
-                           </p>
-                        </div>
+                    <div class="d-flex align-items-center justify-md-content-end">
+                      <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
 
-                        <div class="col-auto text-md-end">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                          <path
+                            style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                            d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                          <path
+                            style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                            d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                           <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
+              <div class="service-item position-relative">
+                <div class="row">
+                  <div class="col-md mb-4 mb-md-0">
+                    <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                      Скрининговое УЗИ 2-го триместра многоплодной беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+                    </a>
 
-                           <div class="d-flex align-items-center justify-md-content-end">
-
-                              <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                              <a href="#" class="btn btn-outline-secondary btn-sm">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                    <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                       d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                    <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                       d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                                 </svg>
-                              </a>
-                           </div>
-
-                        </div>
-                     </div>
+                    <p class="fw-light text-muted fs-7 mb-0">
+                      Способ контроля многоплодной беременности во 2-м триместре с целью оценки развития плодов, состояния матки и плаценты, а также для
+                      изучения состоятельности кровообращения в системе мать-плацента-плод(ы) с помощью допплерометрии.
+                    </p>
                   </div>
 
-                  <div class="service-item position-relative">
-                     <div class="row">
-                        <div class="col-md mb-4 mb-md-0">
-                           <a href="service.html"
-                              class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Ультразвуковая
-                              диагностика беременности</a>
+                  <div class="col-auto text-md-end">
+                    <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
 
-                           <p class="fw-light text-muted fs-7 mb-0">Исследование, позволяющее подтвердить беременность и
-                              определить место прикрепления плодного яйца (для исключения внематочной беременности).</p>
-                        </div>
+                    <div class="d-flex align-items-center justify-md-content-end">
+                      <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
 
-                        <div class="col-auto text-md-end">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                          <path
+                            style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                            d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                          <path
+                            style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                            d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                           <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
+              <div class="service-item position-relative">
+                <div class="row">
+                  <div class="col-md mb-4 mb-md-0">
+                    <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                      Ультразвуковая диагностика беременности
+                    </a>
 
-                           <div class="d-flex align-items-center justify-md-content-end">
-
-                              <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                              <a href="#" class="btn btn-outline-secondary btn-sm">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                    <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                       d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                    <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                       d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                                 </svg>
-                              </a>
-                           </div>
-
-                        </div>
-                     </div>
+                    <p class="fw-light text-muted fs-7 mb-0">
+                      Исследование, позволяющее подтвердить беременность и определить место прикрепления плодного яйца (для исключения внематочной
+                      беременности).
+                    </p>
                   </div>
 
-                  <div class="service-item position-relative">
-                     <div class="row">
-                        <div class="col-md mb-4 mb-md-0">
-                           <a href="service.html"
-                              class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                              УЗИ 1-го триместра беременности (11-13 недель 6 дней)</a>
+                  <div class="col-auto text-md-end">
+                    <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
 
-                           <p class="fw-light text-muted fs-7 mb-0">Исследование, необходимое для контроля роста и
-                              развития плода в первом триместре беременности.</p>
-                        </div>
+                    <div class="d-flex align-items-center justify-md-content-end">
+                      <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
 
-                        <div class="col-auto text-md-end">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                          <path
+                            style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                            d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                          <path
+                            style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                            d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                           <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
+              <div class="service-item position-relative">
+                <div class="row">
+                  <div class="col-md mb-4 mb-md-0">
+                    <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                      Скрининговое УЗИ 1-го триместра беременности (11-13 недель 6 дней)
+                    </a>
 
-                           <div class="d-flex align-items-center justify-md-content-end">
-
-                              <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                              <a href="#" class="btn btn-outline-secondary btn-sm">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                    <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                       d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                    <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                       d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                                 </svg>
-                              </a>
-                           </div>
-
-                        </div>
-                     </div>
+                    <p class="fw-light text-muted fs-7 mb-0">
+                      Исследование, необходимое для контроля роста и развития плода в первом триместре беременности.
+                    </p>
                   </div>
 
-                  <div class="service-item position-relative">
-                     <div class="row">
-                        <div class="col-md mb-4 mb-md-0">
-                           <a href="service.html"
-                              class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                              УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6
-                              дней)</a>
+                  <div class="col-auto text-md-end">
+                    <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
 
-                           <p class="fw-light text-muted fs-7 mb-0">Сочетанное проведение ультразвукового исследования и
-                              биохимического скрининга, позволяющее выявить врожденные заболевания малыша.</p>
-                        </div>
+                    <div class="d-flex align-items-center justify-md-content-end">
+                      <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
 
-                        <div class="col-auto text-md-end">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                          <path
+                            style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                            d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                          <path
+                            style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                            d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                           <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
+              <div class="service-item position-relative">
+                <div class="row">
+                  <div class="col-md mb-4 mb-md-0">
+                    <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                      Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
+                    </a>
 
-                           <div class="d-flex align-items-center justify-md-content-end">
-
-                              <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                              <a href="#" class="btn btn-outline-secondary btn-sm">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                    <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                       d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                    <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                       d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                                 </svg>
-                              </a>
-                           </div>
-
-                        </div>
-                     </div>
+                    <p class="fw-light text-muted fs-7 mb-0">
+                      Сочетанное проведение ультразвукового исследования и биохимического скрининга, позволяющее выявить врожденные заболевания малыша.
+                    </p>
                   </div>
 
-                  <div class="service-item position-relative">
-                     <div class="row">
-                        <div class="col-md mb-4 mb-md-0">
-                           <a href="service.html"
-                              class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                              УЗИ 2-го триместра беременности (18-21 неделя) с допплеровской оценкой показателей
-                              кровотока</a>
+                  <div class="col-auto text-md-end">
+                    <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
 
-                           <p class="fw-light text-muted fs-7 mb-0">Исследование для контроля течения многоплодной
-                              беременности, роста и развития плодов и состоятельности кровообращения.</p>
-                        </div>
+                    <div class="d-flex align-items-center justify-md-content-end">
+                      <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
 
-                        <div class="col-auto text-md-end">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                          <path
+                            style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                            d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                          <path
+                            style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                            d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                           <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
+              <div class="service-item position-relative">
+                <div class="row">
+                  <div class="col-md mb-4 mb-md-0">
+                    <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                      Скрининговое УЗИ 2-го триместра беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+                    </a>
 
-                           <div class="d-flex align-items-center justify-md-content-end">
-
-                              <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                              <a href="#" class="btn btn-outline-secondary btn-sm">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                    <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                       d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                    <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                       d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                                 </svg>
-                              </a>
-                           </div>
-
-                        </div>
-                     </div>
+                    <p class="fw-light text-muted fs-7 mb-0">
+                      Исследование для контроля течения многоплодной беременности, роста и развития плодов и состоятельности кровообращения.
+                    </p>
                   </div>
 
-                  <div class="service-item position-relative">
-                     <div class="row">
-                        <div class="col-md mb-4 mb-md-0">
-                           <a href="service.html"
-                              class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">Скрининговое
-                              УЗИ 2-го триместра многоплодной беременности (18-21 неделя) с допплеровской оценкой
-                              показателей кровотока</a>
+                  <div class="col-auto text-md-end">
+                    <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
 
-                           <p class="fw-light text-muted fs-7 mb-0">Способ контроля многоплодной беременности во 2-м
-                              триместре с целью оценки развития плодов, состояния матки и плаценты, а также для изучения
-                              состоятельности кровообращения в системе мать-плацента-плод(ы) с помощью допплерометрии.
-                           </p>
-                        </div>
+                    <div class="d-flex align-items-center justify-md-content-end">
+                      <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
 
-                        <div class="col-auto text-md-end">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                          <path
+                            style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                            d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                          <path
+                            style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                            d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                           <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
+              <div class="service-item position-relative">
+                <div class="row">
+                  <div class="col-md mb-4 mb-md-0">
+                    <a href="service.html" class="stretched-link d-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-md-1">
+                      Скрининговое УЗИ 2-го триместра многоплодной беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+                    </a>
 
-                           <div class="d-flex align-items-center justify-md-content-end">
-
-                              <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
-
-                              <a href="#" class="btn btn-outline-secondary btn-sm">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                                    <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                       d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                                    <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                       d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                                 </svg>
-                              </a>
-                           </div>
-
-                        </div>
-                     </div>
+                    <p class="fw-light text-muted fs-7 mb-0">
+                      Способ контроля многоплодной беременности во 2-м триместре с целью оценки развития плодов, состояния матки и плаценты, а также для
+                      изучения состоятельности кровообращения в системе мать-плацента-плод(ы) с помощью допплерометрии.
+                    </p>
                   </div>
 
-                  <nav class="pt-5">
-                     <ul class="pagination mb-0 justify-content-end">
-                        <!-- <li class="page-item">
+                  <div class="col-auto text-md-end">
+                    <div class="f-2 fs-4 lh-1 fw-black text-secondary mb-3">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
+
+                    <div class="d-flex align-items-center justify-md-content-end">
+                      <a href="#" class="btn btn-danger btn-sm me-2">Записаться</a>
+
+                      <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                          <path
+                            style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                            d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                          <path
+                            style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                            d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <nav class="pt-5">
+                <ul class="pagination mb-0 justify-content-end">
+                  <!-- <li class="page-item">
                         <a class="page-link rounded-2" href="#">Назад</a>
                      </li> -->
-                        <li class="page-item active"><a class="page-link rounded-2" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link rounded-2" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link rounded-2" href="#">3</a></li>
-                        <li class="page-item disabled"><a class="page-link rounded-2" href="#">...</a></li>
-                        <li class="page-item"><a class="page-link rounded-2" href="#">7</a></li>
-                        <li class="page-item">
-                           <a class="page-link rounded-2" href="#">Далее</a>
-                        </li>
-                     </ul>
-                  </nav>
-
-               </div>
+                  <li class="page-item active"><a class="page-link rounded-2" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link rounded-2" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link rounded-2" href="#">3</a></li>
+                  <li class="page-item disabled"><a class="page-link rounded-2" href="#">...</a></li>
+                  <li class="page-item"><a class="page-link rounded-2" href="#">7</a></li>
+                  <li class="page-item">
+                    <a class="page-link rounded-2" href="#">Далее</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-
-         </div>
+          </div>
+        </div>
       </div>
 
-      <section class="section py-md-6 py-5">
-         <div class="container pb-md-6 pb-5">
-            <div class="cta bg-light-blue rounded-4 px-sm-5 pt-sm-5 px-4 pt-4 px-xl-0 pt-xl-0">
-               <div class="row align-items-end align-items-xl-stretch gx-0">
-                  <div class="col-xl-4">
-                     <div class="cta__header ps-xl-6 py-xl-6 mb-5 mb-xl-0">
-                        <h2 class="cta__title mb-3">У вас остались вопросы?</h2>
-                        <p class="fs-5 mb-0 text-secondary">Оставьте свой телефон. Мы свяжемся с вами в ближайшее время.
-                        </p>
-                     </div>
-                  </div>
+      @@include('html/cta.html', {})
+    </main>
 
-                  <div class="col-lg-4 col-md-6 cta__left">
-                     <div class="position-relative w-100 h-100">
-                        <div class="cta__img ms-xxl-4 ms-xl-1 me-2">
-                           <img src="@img/cta-img.png" alt="">
-                        </div>
-                     </div>
-                  </div>
+    @@include('html/footer.html', {}) @@include('html/calc.html', {}) @@include('html/scroll-to-top.html', {})
 
-                  <div class="col-lg-4 col-md-6">
-                     <div class="pe-xl-6 py-xl-6 pb-4">
-                        <form>
-                           <div class="form-floating mb-4">
-                              <input type="text" class="form-control form-control__no-border input-phone" id="ctaPhone"
-                                 placeholder="Ваш телефон" pattern=".{16}" required>
-                              <label for="ctaPhone">Ваш телефон</label>
-                           </div>
-
-                           <button class="btn btn-danger btn-form w-100" type="submit">Отправить</button>
-
-                           <div class="fs-9 pt-4 text-secondary">Нажимая на кнопку «Отправить», вы даёте своё
-                              согласие
-                              на
-                              <a href="content.html" title="" target="_blank">обработку персональных данных</a>.
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-
-                  <div class="col-4 cta__right">
-                     <div class="position-relative w-100 h-100">
-                        <div class="cta__img ms-xxl-4 ms-xl-1 ms-2">
-                           <img src="@img/cta-img2.png" alt="">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-         </div>
-      </section>
-
-   </main>
-
-   @@include('html/footer.html', {})
-   @@include('html/login-modal.html', {})
-   @@include('html/calc.html', {})
-   @@include('html/scroll-to-top.html', {})
-
-   <script src="js/bootstrap.js"></script>
-   <script src="js/app.js"></script>
-</body>
-
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

@@ -10,7 +10,8 @@ export const js = () => {
       ))
 
       .pipe(webpack({
-         mode: 'production',
+         mode: 'development',
+         devtool: 'source-map',
          entry: {
             app: './src/js/app.js',
             maps: './src/js/maps.js',
@@ -19,6 +20,7 @@ export const js = () => {
          output: {
             filename: '[name].js',
             path: '/dist/js',
+            sourceMapFilename: "[name].js.map"
          },
       }))
       .pipe(app.gulp.dest(app.path.build.js))

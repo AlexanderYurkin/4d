@@ -1,693 +1,588 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru" class="h-100">
+  @@include('html/head.html', { "title": "analyse" })
 
-@@include('html/head.html', {
-"title": "analyse"
-})
+  <body class="d-flex flex-column h-100">
+    @@include('html/header.html', {}) @@include('html/offcanvas.html', {})
 
-<body class="d-flex flex-column h-100">
-
-   @@include('html/header.html', {})
-   @@include('html/offcanvas.html', {})
-
-   <main role="main" class="flex-shrink-0">
-
+    <main role="main" class="flex-shrink-0">
       <div class="container pt-md-5 pt-4 pb-md-6 pb-5">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item"><a href="analyses-startpoint.html">Анализы</a></li>
+          <li class="breadcrumb-item"><a href="analyses-category.html">Оценка риска развития заболеваний сердечно-сосудистой системы</a></li>
+          <li class="breadcrumb-item active">Профилактика заболеваний сердца и сосудов и их осложнений</li>
+        </ol>
 
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-            <li class="breadcrumb-item"><a href="analyses-startpoint.html">Анализы</a></li>
-            <li class="breadcrumb-item"><a href="analyses-category.html">Оценка риска развития заболеваний
-                  сердечно-сосудистой системы</a></li>
-            <li class="breadcrumb-item active">Профилактика заболеваний сердца и сосудов и их осложнений</li>
-         </ol>
+        <button
+          class="d-xl-none btn btn-primary btn-sm text-nowrap mb-4"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasFilters"
+          aria-controls="offcanvasFilters">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.02 468.85" fill="#fff" height="14px" class="me-1 mb-1">
+            <path
+              d="M85.35,468.85c-16.99,.04-33.29-6.71-45.27-18.75l-32.94-29.31c-8.8-7.85-9.57-21.34-1.73-30.14,7.85-8.8,21.34-9.57,30.14-1.73l33.81,30.17c7.84,8.8,21.32,9.58,30.12,1.74,.32-.29,.64-.58,.94-.89l76.8-73.19c8.26-8.4,21.77-8.52,30.17-.25,8.4,8.26,8.52,21.77,.25,30.17-.33,.34-.67,.66-1.03,.98l-76.48,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33ZM85.35,298.18c-16.99,.04-33.29-6.71-45.27-18.75L6.27,245.61c-8.19-8.47-7.95-21.98,.52-30.17,8.27-7.98,21.37-7.98,29.64,0l33.83,33.81c8.44,8.07,21.73,8.07,30.17,0l76.8-73.19c8.53-8.14,22.05-7.83,30.19,.7,8.14,8.53,7.83,22.05-.7,30.19l-76.57,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33ZM85.35,127.51c-16.99,.04-33.29-6.71-45.27-18.75L7.14,79.45c-8.8-7.85-9.57-21.34-1.73-30.14,7.85-8.8,21.34-9.57,30.14-1.73h0l33.81,30.17c7.84,8.8,21.32,9.58,30.12,1.74,.32-.29,.64-.58,.94-.89L177.32,5.4c8.8-7.83,22.28-7.05,30.12,1.75,7.47,8.39,7.15,21.13-.72,29.14l-76.57,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33Z" />
+          </svg>
 
-         <button class="d-xl-none btn btn-primary btn-sm text-nowrap mb-4" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters">
+          Каталог анализов
+        </button>
 
-            <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-               viewBox="0 0 512.02 468.85" fill="#fff" height="14px" class="me-1 mb-1">
-               <path
-                  d="M85.35,468.85c-16.99,.04-33.29-6.71-45.27-18.75l-32.94-29.31c-8.8-7.85-9.57-21.34-1.73-30.14,7.85-8.8,21.34-9.57,30.14-1.73l33.81,30.17c7.84,8.8,21.32,9.58,30.12,1.74,.32-.29,.64-.58,.94-.89l76.8-73.19c8.26-8.4,21.77-8.52,30.17-.25,8.4,8.26,8.52,21.77,.25,30.17-.33,.34-.67,.66-1.03,.98l-76.48,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33ZM85.35,298.18c-16.99,.04-33.29-6.71-45.27-18.75L6.27,245.61c-8.19-8.47-7.95-21.98,.52-30.17,8.27-7.98,21.37-7.98,29.64,0l33.83,33.81c8.44,8.07,21.73,8.07,30.17,0l76.8-73.19c8.53-8.14,22.05-7.83,30.19,.7,8.14,8.53,7.83,22.05-.7,30.19l-76.57,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33ZM85.35,127.51c-16.99,.04-33.29-6.71-45.27-18.75L7.14,79.45c-8.8-7.85-9.57-21.34-1.73-30.14,7.85-8.8,21.34-9.57,30.14-1.73h0l33.81,30.17c7.84,8.8,21.32,9.58,30.12,1.74,.32-.29,.64-.58,.94-.89L177.32,5.4c8.8-7.83,22.28-7.05,30.12,1.75,7.47,8.39,7.15,21.13-.72,29.14l-76.57,72.83c-11.9,11.83-28.02,18.45-44.8,18.39h0Zm405.33-21.33h-213.33c-11.78,0-21.33-9.55-21.33-21.33s9.55-21.33,21.33-21.33h213.33c11.78,0,21.33,9.55,21.33,21.33s-9.55,21.33-21.33,21.33Z" />
-            </svg>
+        <div class="bg-white rounded-4 p-xl-5 p-md-4 p-3">
+          <div class="row align-items-center gx-xxl-6 gx-xl-5">
+            <div class="col-lg">
+              <h1 class="mb-lg-0 mb-4">Профилактика заболеваний сердца и сосудов и их осложнений</h1>
+            </div>
 
-            Каталог анализов
-         </button>
+            <div class="col-lg-auto">
+              <div class="bg-light-blue rounded-3 p-lg-4 p-3">
+                <div class="d-flex align-items-end justify-content-lg-end mb-3">
+                  <div class="me-4">
+                    <!-- Старая цена для скидки -->
+                    <div class="text-decoration-line-through text-muted f-2 fs-7 fw-semibold">
+                      &nbsp;
+                      <span class="number me-1">3500</span>
+                      ₽&nbsp;
+                    </div>
 
-         <div class="bg-white rounded-4 p-xl-5 p-md-4 p-3">
-            <div class="row align-items-center gx-xxl-6 gx-xl-5">
-               <div class="col-lg">
-                  <h1 class="mb-lg-0 mb-4">Профилактика заболеваний сердца и сосудов и их осложнений</h1>
-               </div>
-
-               <div class="col-lg-auto">
-
-                  <div class="bg-light-blue rounded-3 p-lg-4 p-3">
-
-                     <div class="d-flex align-items-end justify-content-lg-end mb-3">
-                        <div class="me-4">
-                           <!-- Старая цена для скидки -->
-                           <div class="text-decoration-line-through text-muted f-2 fs-7 fw-semibold">&nbsp;<span
-                                 class="number me-1">3500</span>₽&nbsp;
-                           </div>
-
-                           <div class="f-2 fs-2 text-secondary lh-1 fw-black">
-                              <span class="number">2290</span>
-                              ₽
-                           </div>
-                        </div>
-
-                        <a href="#" class="btn btn-outline-secondary btn-sm">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
-                              <path style="stroke:none;fill-rule:nonzero;fill-opacity:1"
-                                 d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
-                              <path style="stroke:none;fill-rule:evenodd;fill-opacity:1"
-                                 d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
-                           </svg>
-                        </a>
-                     </div>
-
-                     <a href="#" class="btn btn-danger w-100 me-2">Записаться</a>
-
+                    <div class="f-2 fs-2 text-secondary lh-1 fw-black">
+                      <span class="number">2290</span>
+                      ₽
+                    </div>
                   </div>
 
-               </div>
+                  <a href="#" class="btn btn-outline-secondary btn-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16">
+                      <path
+                        style="stroke: none; fill-rule: nonzero; fill-opacity: 1"
+                        d="M24.027 0h-11.93c-.476 0-.796.32-.796.8v14.4c0 .48.32.8.797.8h11.93c.476 0 .796-.32.796-.8V.8c0-.48-.32-.8-.797-.8zm-8.75 14.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm3.977 6.398H16.87v-1.597h2.383zm0-3.199H16.87V9.602h2.383zm0-3.199H16.87V6.398h2.383zm3.98 6.398h-2.386v-1.597h2.386zm0-3.199h-2.386V9.602h2.386zm0-3.199h-2.386V6.398h2.386zm0-3.2H12.891V1.603h10.343zm0 0" />
+                      <path
+                        style="stroke: none; fill-rule: evenodd; fill-opacity: 1"
+                        d="M3.402 4.8H4.45a.43.43 0 0 1 .43.423v2.41h2.387c.23 0 .421.195.421.426v1.05a.43.43 0 0 1-.421.434H4.879v2.398a.43.43 0 0 1-.43.426H3.402a.428.428 0 0 1-.418-.426V9.543H.598a.433.433 0 0 1-.422-.434V8.06c0-.23.195-.426.422-.426h2.386v-2.41c0-.227.192-.422.418-.422zm0 0" />
+                    </svg>
+                  </a>
+                </div>
 
+                <a href="#" class="btn btn-danger w-100 me-2">Записаться</a>
+              </div>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
 
       <div class="overflow-hidden pb-md-6 pb-5">
-         <div class="container">
-            <h2 class="fs-3 mb-md-5 mb-4">Специальные предложения</h2>
+        <div class="container">
+          <h2 class="fs-3 mb-md-5 mb-4">Специальные предложения</h2>
 
-            <div class="position-relative">
-               <div class="swiper-button-next sbn-4"></div>
-               <div class="swiper-button-prev sbp-4"></div>
+          <div class="position-relative">
+            <div class="swiper-button-next sbn-4"></div>
+            <div class="swiper-button-prev sbp-4"></div>
 
-               <div class="swiper doc-sales-slider">
-                  <div class="swiper-wrapper">
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
+            <div class="swiper doc-sales-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
+                    <a href="#DocSaleModal" data-bs-toggle="modal" class="stretched-link d-block text-decoration-none link-danger f-2 fw-extrabold mb-2">
+                      Блефаропластика под ключ
+                    </a>
 
-                           <a href="#DocSaleModal" data-bs-toggle="modal"
-                              class="stretched-link d-block text-decoration-none link-danger f-2 fw-extrabold mb-2">Блефаропластика
-                              под
-                              ключ</a>
+                    <div class="fs-8 mb-3">Верните красоту своим глазам</div>
 
-                           <div class="fs-8 mb-3">Верните красоту своим глазам</div>
+                    <div class="f-2 fs-5 fw-extrabold">
+                      <span class="me-1">от</span>
+                      <span class="number">40000</span>
+                      ₽
+                    </div>
 
-                           <div class="f-2 fs-5 fw-extrabold">
-                              <span class="me-1">от</span>
-                              <span class="number">40000</span>
-                              ₽
-                           </div>
-
-                           <div class="sale-badge"></div>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
-                           <a href="#DocSaleModal" data-bs-toggle="modal"
-                              class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">Консультация
-                              в
-                              октябре</a>
-
-                           <div class="f-2 fs-5 fw-extrabold">
-                              Бесплатно
-                           </div>
-
-                           <div class="sale-badge"></div>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
-                           <a href="#DocSaleModal" data-bs-toggle="modal"
-                              class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">Скидка
-                              10% на повторный приём</a>
-
-                           <div class="sale-badge"></div>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div
-                           class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
-                           <a href="#DocSaleModal" data-bs-toggle="modal"
-                              class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">Первый
-                              приём</a>
-
-                           <div class="f-2 fs-5 fw-extrabold">
-                              <span class="number">1000</span>
-                              ₽
-                           </div>
-
-                           <div class="sale-badge"></div>
-                        </div>
-                     </div>
-
+                    <div class="sale-badge"></div>
                   </div>
-               </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
+                    <a
+                      href="#DocSaleModal"
+                      data-bs-toggle="modal"
+                      class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">
+                      Консультация в октябре
+                    </a>
+
+                    <div class="f-2 fs-5 fw-extrabold">Бесплатно</div>
+
+                    <div class="sale-badge"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
+                    <a
+                      href="#DocSaleModal"
+                      data-bs-toggle="modal"
+                      class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">
+                      Скидка 10% на повторный приём
+                    </a>
+
+                    <div class="sale-badge"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary overflow-hidden py-3 ps-3 pe-7">
+                    <a
+                      href="#DocSaleModal"
+                      data-bs-toggle="modal"
+                      class="main-service-item__title stretched-link d-block link-danger text-decoration-none f-2 fw-extrabold mb-2">
+                      Первый приём
+                    </a>
+
+                    <div class="f-2 fs-5 fw-extrabold">
+                      <span class="number">1000</span>
+                      ₽
+                    </div>
+
+                    <div class="sale-badge"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
 
       <div class="container">
+        <div class="row">
+          <div class="col-xxl-3 col-xl-4">
+            <div class="offcanvas-xl offcanvas-start bg-white" tabindex="-1" id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
+              <div class="offcanvas-header pb-3">
+                <h5 class="offcanvas-title" id="offcanvasFiltersLabel">Анализы</h5>
 
-         <div class="row">
-            <div class="col-xxl-3 col-xl-4">
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasFilters" aria-label="Close"></button>
+              </div>
 
-               <div class="offcanvas-xl offcanvas-start bg-light" tabindex="-1" id="offcanvasFilters"
-                  aria-labelledby="offcanvasFiltersLabel">
-                  <div class="offcanvas-header pb-3">
+              <div class="offcanvas-body pt-0">
+                <div class="bg-xl-white xl-shadow rounded-3 w-100 px-0 px-xl-4 py-0 py-xl-3 mb-4">
+                  <nav class="sidebar">
+                    <ul class="nav">
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link active" href="#">
+                          Комплексы анализов
 
-                     <h5 class="offcanvas-title" id="offcanvasFiltersLabel">Анализы</h5>
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
 
-                     <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas"
-                        data-bs-target="#offcanvasFilters" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body pt-0">
-
-                     <nav class="sidebar bg-white rounded-3 py-3">
-                        <ul class="nav flex-column">
-                           <li class="nav-item">
-
-                              <!-- aria-expanded="true" для активного состояния -->
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-1"
-                                 aria-expanded="true">Комплексы
-                                 анализов
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <!-- + .show для разворачивания сабменю -->
-                              <ul class="submenu collapse show" id="collapse-1">
-                                 <li><a class="nav-link" href="analyses-category.html">COVID-19</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Программа обследования для
-                                       офисных
-                                       сотрудников</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Обследование домашнего
-                                       персонала</a>
-                                 </li>
-                                 <!-- + .active для активного состояния -->
-                                 <li><a class="nav-link active" href="analyses-category.html">Оценка риска развития
-                                       заболеваний
-                                       сердечно-сосудистой системы</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Диагностика антифосфолипидного
-                                       синдрома
-                                       (АФС)</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Оценка функции печени</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Диагностика состояния почек и
-                                       мочеполовой системы</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Диагностика состояния
-                                       желудочно-кишечного тракта</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Диагностика заболеваний
-                                       соединительной
-                                       ткани</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Диагностика сахарного диабета</a>
-                                 </li>
-                              </ul>
-                           </li>
-
-                           <li class="nav-item">
-                              <!-- + .active для активного состояния, когда нет сабменю -->
-                              <a class="nav-link" href="analyses-category.html">COVID-19
-                              </a>
-                           </li>
-
-                           <li class="nav-item">
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-2"
-                                 aria-expanded="false">Биохимические исследования
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse" id="collapse-2">
-                                 <li><a class="nav-link" href="analyses-category.html">Глюкоза и метаболиты углеводного
-                                       обмена</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Белки и аминокислоты</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Желчные пигменты и кислоты</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Липиды</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Ферменты</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Маркеры функции почек</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Неорганические
-                                       вещества/электролиты</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Витамины</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Белки, участвующие в обмене
-                                       железа</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Кардиоспецифичные белки</a></li>
-                              </ul>
-                           </li>
-
-                           <li class="nav-item">
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-3"
-                                 aria-expanded="false">Гормональные
-                                 исследования
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse" id="collapse-3">
-                                 <li><a class="nav-link" href="analyses-category.html">Лабораторная оценка
-                                       гипофизарно-надпочечниковой системы</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Лабораторная оценка соматотропной
-                                       функции гипофиза</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Лабораторная оценка функции
-                                       щитовидной
-                                       железы</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Оценка функции паращитовидных
-                                       желез</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Гипофизарные гонадотропные
-                                       гормоны и
-                                       пролактин</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Эстрогены и прогестины</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Оценка андрогенной функции</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Нестероидные регуляторные факторы
-                                       половых желёз</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Мониторинг беременности,
-                                       биохимические
-                                       маркёры состояния плода</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Лабораторная оценка эндокринной
-                                       функции
-                                       поджелудочной железы и диагностика диабета</a></li>
-                              </ul>
-                           </li>
-
-                           <li class="nav-item">
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-4"
-                                 aria-expanded="false">Гематологические исследования
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse" id="collapse-4">
-                                 <li><a class="nav-link" href="analyses-category.html">Клинический анализ крови</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Иммуногематологические
-                                       исследования</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Коагулологические исследования
-                                       (коагулограмма)</a></li>
-                              </ul>
-                           </li>
-
-                           <li class="nav-item">
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-5"
-                                 aria-expanded="false">Иммунологические исследования
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse" id="collapse-5">
-                                 <li><a class="nav-link" href="analyses-category.html">Комплексные иммунологические
-                                       исследования</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Лимфоциты, субпопуляции</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Оценка фагоцитоза</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Иммуноглобулины</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Компоненты комплемента</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Регуляторы и медиаторы
-                                       иммунитета</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Интерфероновый статус, оценка
-                                       чувствительности к иммунотерапевтическим препаратам</a></li>
-                              </ul>
-                           </li>
-
-                           <li class="nav-item">
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-6"
-                                 aria-expanded="false">Аллергологические исследования
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse" id="collapse-6">
-                                 <li><a class="nav-link" href="analyses-category.html">IgE - аллерген-специфические
-                                       (аллерготесты), смеси, панели, общий IgE</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">IgG, аллерген-специфические</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Технология ImmunoCAP</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Технология АлкорБио</a></li>
-                              </ul>
-                           </li>
-
-                           <li class="nav-item">
-                              <a class="nav-link" data-bs-toggle="collapse" href="#collapse-7"
-                                 aria-expanded="false">Маркеры
-                                 аутоиммунных заболеваний
-
-                                 <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.99 4" height="6px">
-                                    <path
-                                       d="M3,2.8L5.21,.16c.15-.18,.41-.21,.6-.06,.01,0,.02,.02,.03,.03,.18,.18,.2,.48,.03,.68L3.32,3.85c-.14,.18-.41,.21-.59,.07-.02-.02-.05-.04-.07-.07L.12,.81C-.05,.61-.04,.31,.15,.13c.18-.18,.46-.16,.63,.03L3,2.8Z" />
-                                 </svg>
-                              </a>
-
-                              <ul class="submenu collapse" id="collapse-7">
-                                 <li><a class="nav-link" href="analyses-category.html">Системные заболевания
-                                       соединительной
-                                       ткани</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Ревматоидный артрит, поражения
-                                       суставов</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Антифосфолипидный синдром</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Васкулиты и поражения почек</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Аутоиммунные поражения
-                                       желудочно-кишечного тракта. Целиакия</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Аутоиммунные поражения печени</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Неврологические аутоиммунные
-                                       заболевания</a></li>
-                                 <li><a class="nav-link" href="analyses-category.html">Аутоиммунные эндокринопатии</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Аутоиммунные заболевания кожи</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Заболевания легких и сердца</a>
-                                 </li>
-                                 <li><a class="nav-link" href="analyses-category.html">Иммунная тромбоцитопения</a></li>
-                              </ul>
-                           </li>
-
+                        <ul class="submenu collapse show">
+                          <li><a class="nav-link" href="analyses-category.html">COVID-19</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Программа обследования для офисных сотрудников</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Обследование домашнего персонала</a></li>
+                          <li>
+                            <a class="nav-link active" href="analyses-category.html">Оценка риска развития заболеваний сердечно-сосудистой системы</a>
+                          </li>
+                          <li><a class="nav-link" href="analyses-category.html">Диагностика антифосфолипидного синдрома (АФС)</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Оценка функции печени</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Диагностика состояния почек и мочеполовой системы</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Диагностика состояния желудочно-кишечного тракта</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Диагностика заболеваний соединительной ткани</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Диагностика сахарного диабета</a></li>
                         </ul>
-                     </nav>
+                      </li>
 
+                      <li class="nav-item">
+                        <a class="nav-link" href="analyses-category.html">COVID-19</a>
+                      </li>
+
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#">
+                          Биохимические исследования
+
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
+
+                        <ul class="submenu collapse">
+                          <li><a class="nav-link" href="analyses-category.html">Глюкоза и метаболиты углеводного обмен</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Белки и аминокислоты</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Желчные пигменты и кислоты</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Липиды</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Ферменты</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Маркеры функции почек</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Неорганические вещества/электролиты</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Витамины</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Белки, участвующие в обмене железа</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Кардиоспецифичные белки</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#">
+                          Гормональные исследования
+
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
+
+                        <ul class="submenu collapse">
+                          <li><a class="nav-link" href="analyses-category.html">Лабораторная оценка гипофизарно-надпочечниковой системы</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Лабораторная оценка соматотропной функции гипофиза</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Лабораторная оценка функции щитовидной железы</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Оценка функции паращитовидных желез</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Гипофизарные гонадотропные гормоны и пролактин</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Эстрогены и прогестины</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Оценка андрогенной функции</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Нестероидные регуляторные факторы половых желёз</a></li>
+                          <li>
+                            <a class="nav-link" href="analyses-category.html">Мониторинг беременности, биохимические маркёры состояния плода</a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="analyses-category.html">
+                              Лабораторная оценка эндокринной функции поджелудочной железы и диагностика диабета
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#">
+                          Гематологические исследования
+
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
+
+                        <ul class="submenu collapse">
+                          <li><a class="nav-link" href="analyses-category.html">Клинический анализ крови</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Иммуногематологические исследования</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Коагулологические исследования (коагулограмма)</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#">
+                          Иммунологические исследования
+
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
+
+                        <ul class="submenu collapse">
+                          <li><a class="nav-link" href="analyses-category.html">Комплексные иммунологические исследования</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Лимфоциты, субпопуляции</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Оценка фагоцитоза</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Иммуноглобулины</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Компоненты комплемента</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Регуляторы и медиаторы иммунитета</a></li>
+                          <li>
+                            <a class="nav-link" href="analyses-category.html">
+                              Интерфероновый статус, оценка чувствительности к иммунотерапевтическим препаратам
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#">
+                          Аллергологические исследования
+
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
+
+                        <ul class="submenu collapse">
+                          <li>
+                            <a class="nav-link" href="analyses-category.html">IgE - аллерген-специфические (аллерготесты), смеси, панели, общий Ig</a>
+                          </li>
+                          <li><a class="nav-link" href="analyses-category.html">IgG, аллерген-специфические</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Технология ImmunoCAP</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Технология АлкорБио</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#">
+                          Маркеры аутоиммунных заболеваний
+
+                          <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </a>
+
+                        <ul class="submenu collapse">
+                          <li><a class="nav-link" href="analyses-category.html">Системные заболевания соединительной ткани</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Ревматоидный артрит, поражения суставов</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Антифосфолипидный синдром</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Васкулиты и поражения почек</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Аутоиммунные поражения желудочно-кишечного тракта. Целиакия</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Аутоиммунные поражения печени</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Неврологические аутоиммунные заболевания</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Аутоиммунные эндокринопатии</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Аутоиммунные заболевания кожи</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Заболевания легких и сердца</a></li>
+                          <li><a class="nav-link" href="analyses-category.html">Иммунная тромбоцитопения</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xxl-9 col-xl-8">
+            <div class="bg-white rounded-4 p-3 px-md-4 pb-md-4 pt-md-3 px-xl-5 pb-xl-5 pt-xl-3 mb-5">
+              <div class="nav-mobile-scroll fw-semibold mb-2">
+                <nav class="linebar" id="service-tab" role="tablist">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        href="#"
+                        id="service-1-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#service-1"
+                        role="tab"
+                        aria-controls="service-1"
+                        aria-selected="true">
+                        Описание
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="#"
+                        id="service-2-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#service-2"
+                        role="tab"
+                        aria-controls="service-2"
+                        aria-selected="false">
+                        Состав
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="#"
+                        id="service-3-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#service-3"
+                        role="tab"
+                        aria-controls="service-3"
+                        aria-selected="false">
+                        Подготовка
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="tab-content" id="service-tabContent">
+                <div class="tab-pane fade show active" id="service-1" role="tabpanel" aria-labelledby="service-1-tab" tabindex="0">
+                  <div class="article">
+                    <p>Скрининговая оценка риска развития атеросклероза и сердечно-сосудистых осложнений.</p>
                   </div>
-               </div>
+                </div>
 
+                <div class="tab-pane fade" id="service-2" role="tabpanel" aria-labelledby="service-2-tab" tabindex="0">
+                  <div class="service-item position-relative">
+                    <div class="row">
+                      <div class="col">
+                        <a href="analyse.html" class="stretched-link d-inline-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-1">
+                          Гомоцистеин (Homocysteine)
+                        </a>
+
+                        <p class="fw-light text-muted fs-7 mb-0">
+                          Определение гомоцистеина в плазме крови используют в диагностике В12- и фолиеводефицитной анемий, некоторых врожденных нарушений
+                          метаболизма (в т. ч. гомоцистинурии), а также в целях дополнительной оценки сердечно-сосудистых рисков.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item position-relative">
+                    <div class="row">
+                      <div class="col">
+                        <a href="analyse.html" class="stretched-link d-inline-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-1">
+                          Триглицериды (Triglycerides)
+                        </a>
+
+                        <p class="fw-light text-muted fs-7 mb-0">
+                          Триглицериды представляют собой форму жиров сыворотки крови. Тест используют в составе липидного профиля для оценки кардиориска,
+                          выявления нарушений липидного метаболизма.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item position-relative">
+                    <div class="row">
+                      <div class="col">
+                        <a href="analyse.html" class="stretched-link d-inline-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-1">
+                          Холестерин общий (холестерин, Cholesterol total)
+                        </a>
+
+                        <p class="fw-light text-muted fs-7 mb-0">
+                          Оценку уровня холестерина в сыворотке крови используют для оценкисердечно-сосудистых рисков, в диагностике нарушений обмена
+                          липидов, а также в комплексных обследованиях пациентов с патологией почек, печени, эндокринной системы.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item position-relative">
+                    <div class="row">
+                      <div class="col">
+                        <a href="analyse.html" class="stretched-link d-inline-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-1">
+                          Холестерин-ЛПВП (Холестерин липопротеинов высокой плотности, HDL Cholesterol)
+                        </a>
+
+                        <p class="fw-light text-muted fs-7 mb-0">
+                          Определение холестерина ЛПВП в сыворотке крови используют в комплексе с другими тестами липидного профиля для оценки кардиорисков
+                          (отражает содержание «хорошего холестерина»). Повышение уровня ассоциировано с меньшим риском атеросклероза.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item position-relative">
+                    <div class="row">
+                      <div class="col">
+                        <a href="analyse.html" class="stretched-link d-inline-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-1">
+                          Холестерин-ЛПНП (Холестерин липопротеинов низкой плотности, ЛПНП, Cholesterol LDL)
+                        </a>
+
+                        <p class="fw-light text-muted fs-7 mb-0">
+                          Определение холестерина ЛПНП в сыворотке крови используют в комплексе с другими тестами липидного профиля для оценки кардиорисков
+                          (отражает содержание «плохого холестерина»). Повышение уровня ассоциировано с бóльшим риском атеросклероза.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="service-3" role="tabpanel" aria-labelledby="service-3-tab" tabindex="0">
+                  <div class="article">
+                    <p>
+                      Строго натощак после ночного периода голодания от 12 до 14 часов. Накануне исследования необходимо исключить повышенные
+                      психо-эмоциональные и физические нагрузки (спортивные тренировки), приём алкоголя.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="col-xxl-9 col-xl-8">
-               <div class="bg-white rounded-4 pt-xl-3 pt-md-2 pb-xl-4 pb-3 px-xl-5 px-md-4 px-3 mb-5">
-                  <div class="nav-links-wrap nav-links-wrap_white">
-                     <div class="nav nav-links flex-nowrap mb-md-5 mb-4" id="service-tab" role="tablist">
-                        <a href="#" class="nav-link text-nowrap fs-7 px-0 me-5 active" id="service-1-tab"
-                           data-bs-toggle="pill" data-bs-target="#service-1" role="tab" aria-controls="service-1"
-                           aria-selected="false">Описание</a>
+            <div class="bg-white rounded-4 p-xl-5 p-md-4 p-3">
+              <h2 class="fs-4 mb-4">Рекомендуем обратить внимание</h2>
 
-                        <a href="#" class="nav-link text-nowrap fs-7 px-0 me-5" id="service-2-tab" data-bs-toggle="pill"
-                           data-bs-target="#service-2" role="tab" aria-controls="service-2"
-                           aria-selected="true">Состав</a>
+              <div class="position-relative">
+                <div class="swiper-button-next sbn-6"></div>
+                <div class="swiper-button-prev sbp-6"></div>
 
-                        <a href="#" class="nav-link text-nowrap fs-7 px-0 me-5" id="service-3-tab" data-bs-toggle="pill"
-                           data-bs-target="#service-3" role="tab" aria-controls="service-3"
-                           aria-selected="false">Подготовка</a>
+                <div class="swiper service-recommend-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div
+                        class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-4"
+                        style="background-image: url('@img/service-bg-icon_1.svg')">
+                        <a href="#" class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">УЗИ плода 4D</a>
 
-                     </div>
+                        <div class="fs-8 mb-3">Позволяет получить полную информацию о развитии плода и течении беременности</div>
+                        <div class="f-2 fs-5 fw-extrabold mt-auto">
+                          <span class="me-1">от</span>
+                          <span class="number">1000</span>
+                          ₽
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div
+                        class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-4"
+                        style="background-image: url('@img/service-bg-icon_1.svg')">
+                        <a href="#" class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">УЗИ поджелудочной железы</a>
+
+                        <div class="fs-8 mb-3">Предупреждает панкреатит, панкреонекроз, диабет, рак</div>
+                        <div class="f-2 fs-5 fw-extrabold mt-auto">
+                          <span class="me-1">от</span>
+                          <span class="number">1500</span>
+                          ₽
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div
+                        class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-4"
+                        style="background-image: url('@img/service-bg-icon_2.svg')">
+                        <a href="#" class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">Гастроэнтеролог</a>
+
+                        <div class="fs-8 mb-3">Диагностика, профилактика и лечение заболеваний желудочно-кишечного тракта и пищевой аллергии</div>
+                        <div class="f-2 fs-5 fw-extrabold mt-auto">
+                          <span class="me-1">от</span>
+                          <span class="number">1500</span>
+                          ₽
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div
+                        class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-4"
+                        style="background-image: url('@img/service-bg-icon_3.svg')">
+                        <a href="#" class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">МРТ суставов</a>
+
+                        <div class="fs-8 mb-3">Исследование различных нарушений суставов</div>
+                        <div class="f-2 fs-5 fw-extrabold mt-auto">
+                          <span class="me-1">от</span>
+                          <span class="number">3400</span>
+                          ₽
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-                  <div class="tab-content" id="service-tabContent">
-
-                     <div class="tab-pane fade show active" id="service-1" role="tabpanel"
-                        aria-labelledby="service-1-tab" tabindex="0">
-
-                        <div class="article">
-                           <p>Скрининговая оценка риска развития атеросклероза и сердечно-сосудистых осложнений.</p>
-                        </div>
-
-                     </div>
-
-                     <div class="tab-pane fade" id="service-2" role="tabpanel" aria-labelledby="service-2-tab"
-                        tabindex="0">
-
-                        <div class="service-item position-relative">
-                           <div class="row">
-                              <div class="col">
-                                 <a href="analyse.html"
-                                    class="stretched-link d-inline-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-1">Гомоцистеин
-                                    (Homocysteine)</a>
-
-                                 <p class="fw-light text-muted fs-7 mb-0">Определение гомоцистеина в плазме крови
-                                    используют в диагностике В12- и фолиеводефицитной анемий, некоторых врожденных
-                                    нарушений метаболизма (в т. ч. гомоцистинурии), а также в целях дополнительной
-                                    оценки сердечно-сосудистых рисков.</p>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="service-item position-relative">
-                           <div class="row">
-                              <div class="col">
-                                 <a href="analyse.html"
-                                    class="stretched-link d-inline-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-1">Триглицериды
-                                    (Triglycerides)</a>
-
-                                 <p class="fw-light text-muted fs-7 mb-0">Триглицериды представляют собой форму жиров
-                                    сыворотки крови. Тест используют в составе липидного профиля для оценки кардиориска,
-                                    выявления нарушений липидного метаболизма.</p>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="service-item position-relative">
-                           <div class="row">
-                              <div class="col">
-                                 <a href="analyse.html"
-                                    class="stretched-link d-inline-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-1">Холестерин
-                                    общий (холестерин, Cholesterol total)</a>
-
-                                 <p class="fw-light text-muted fs-7 mb-0">Оценку уровня холестерина в сыворотке крови
-                                    используют для оценкисердечно-сосудистых рисков, в диагностике нарушений обмена
-                                    липидов, а также в комплексных обследованиях пациентов с патологией почек, печени,
-                                    эндокринной системы.</p>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="service-item position-relative">
-                           <div class="row">
-                              <div class="col">
-                                 <a href="analyse.html"
-                                    class="stretched-link d-inline-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-1">Холестерин-ЛПВП
-                                    (Холестерин липопротеинов высокой плотности, HDL Cholesterol)</a>
-
-                                 <p class="fw-light text-muted fs-7 mb-0">Определение холестерина ЛПВП в сыворотке крови
-                                    используют в комплексе с другими тестами липидного профиля для оценки кардиорисков
-                                    (отражает содержание «хорошего холестерина»). Повышение уровня ассоциировано с
-                                    меньшим риском атеросклероза.</p>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="service-item position-relative">
-                           <div class="row">
-                              <div class="col">
-                                 <a href="analyse.html"
-                                    class="stretched-link d-inline-block f-2 fs-5 fw-bold link-secondary text-decoration-none mb-2 pt-1">Холестерин-ЛПНП
-                                    (Холестерин липопротеинов низкой плотности, ЛПНП, Cholesterol LDL)</a>
-
-                                 <p class="fw-light text-muted fs-7 mb-0">Определение холестерина ЛПНП в сыворотке крови
-                                    используют в комплексе с другими тестами липидного профиля для оценки кардиорисков
-                                    (отражает содержание «плохого холестерина»). Повышение уровня ассоциировано с
-                                    бóльшим риском атеросклероза.</p>
-                              </div>
-                           </div>
-                        </div>
-
-                     </div>
-
-                     <div class="tab-pane fade" id="service-3" role="tabpanel" aria-labelledby="service-3-tab"
-                        tabindex="0">
-
-                        <div class="article">
-                           <p>Строго натощак после ночного периода голодания от 12 до 14 часов. Накануне исследования
-                              необходимо исключить повышенные психо-эмоциональные и физические нагрузки (спортивные
-                              тренировки), приём алкоголя.</p>
-                        </div>
-
-                     </div>
-
-                  </div>
-               </div>
-
-               <div class="bg-white rounded-4 p-xl-5 p-md-4 p-3">
-                  <h2 class="fs-4 mb-4">Рекомендуем обратить внимание</h2>
-
-                  <div class="position-relative">
-                     <div class="swiper-button-next sbn-6"></div>
-                     <div class="swiper-button-prev sbp-6"></div>
-
-                     <div class="swiper service-recommend-slider">
-                        <div class="swiper-wrapper">
-                           <div class="swiper-slide">
-                              <div
-                                 class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-4"
-                                 style="background-image:url('@img/service-bg-icon_1.svg');">
-
-                                 <a href="#"
-                                    class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">УЗИ
-                                    плода 4D</a>
-
-                                 <div class="fs-8 mb-3">Позволяет получить полную информацию о развитии плода и течении
-                                    беременности</div>
-                                 <div class="f-2 fs-5 fw-extrabold mt-auto">
-                                    <span class="me-1">от</span>
-                                    <span class="number">1000</span>
-                                    ₽
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="swiper-slide">
-                              <div
-                                 class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-4"
-                                 style="background-image:url('@img/service-bg-icon_1.svg');">
-
-                                 <a href="#"
-                                    class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">УЗИ
-                                    поджелудочной железы</a>
-
-                                 <div class="fs-8 mb-3">Предупреждает панкреатит, панкреонекроз, диабет,
-                                    рак</div>
-                                 <div class="f-2 fs-5 fw-extrabold mt-auto">
-                                    <span class="me-1">от</span>
-                                    <span class="number">1500</span>
-                                    ₽
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="swiper-slide">
-                              <div
-                                 class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-4"
-                                 style="background-image:url('@img/service-bg-icon_2.svg');">
-
-                                 <a href="#"
-                                    class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">Гастроэнтеролог</a>
-
-                                 <div class="fs-8 mb-3">Диагностика, профилактика и лечение заболеваний
-                                    желудочно-кишечного тракта и пищевой аллергии</div>
-                                 <div class="f-2 fs-5 fw-extrabold mt-auto">
-                                    <span class="me-1">от</span>
-                                    <span class="number">1500</span>
-                                    ₽
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="swiper-slide">
-                              <div
-                                 class="main-service-item h-100 d-flex flex-column position-relative bg-light-blue rounded-3 text-secondary p-4"
-                                 style="background-image:url('@img/service-bg-icon_3.svg');">
-
-                                 <a href="#"
-                                    class="stretched-link d-block text-decoration-none link-secondary f-2 fw-extrabold mb-2">МРТ
-                                    суставов</a>
-
-                                 <div class="fs-8 mb-3">Исследование различных нарушений суставов</div>
-                                 <div class="f-2 fs-5 fw-extrabold mt-auto">
-                                    <span class="me-1">от</span>
-                                    <span class="number">3400</span>
-                                    ₽
-                                 </div>
-
-                              </div>
-                           </div>
-
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
+                </div>
+              </div>
             </div>
-
-         </div>
+          </div>
+        </div>
       </div>
 
-      <section class="section py-md-6 py-5">
-         <div class="container pb-md-6 pb-5">
-            <div class="cta bg-light-blue rounded-4 px-sm-5 pt-sm-5 px-4 pt-4 px-xl-0 pt-xl-0">
-               <div class="row align-items-end align-items-xl-stretch gx-0">
-                  <div class="col-xl-4">
-                     <div class="cta__header ps-xl-6 py-xl-6 mb-5 mb-xl-0">
-                        <h2 class="cta__title mb-3">У вас остались вопросы?</h2>
-                        <p class="fs-5 mb-0 text-secondary">Оставьте свой телефон. Мы свяжемся с вами в ближайшее время.
-                        </p>
-                     </div>
-                  </div>
+      @@include('html/cta.html', {})
+    </main>
 
-                  <div class="col-lg-4 col-md-6 cta__left">
-                     <div class="position-relative w-100 h-100">
-                        <div class="cta__img ms-xxl-4 ms-xl-1 me-2">
-                           <img src="@img/cta-img.png" alt="">
-                        </div>
-                     </div>
-                  </div>
+    @@include('html/footer.html', {}) @@include('html/calc.html', {}) @@include('html/scroll-to-top.html', {})
 
-                  <div class="col-lg-4 col-md-6">
-                     <div class="pe-xl-6 py-xl-6 pb-4">
-                        <form>
-                           <div class="form-floating mb-4">
-                              <input type="text" class="form-control form-control__no-border input-phone" id="ctaPhone"
-                                 placeholder="Ваш телефон" pattern=".{16}" required>
-                              <label for="ctaPhone">Ваш телефон</label>
-                           </div>
-
-                           <button class="btn btn-danger btn-form w-100" type="submit">Отправить</button>
-
-                           <div class="fs-9 pt-4 text-secondary">Нажимая на кнопку «Отправить», вы даёте своё
-                              согласие
-                              на
-                              <a href="content.html" title="" target="_blank">обработку персональных данных</a>.
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-
-                  <div class="col-4 cta__right">
-                     <div class="position-relative w-100 h-100">
-                        <div class="cta__img ms-xxl-4 ms-xl-1 ms-2">
-                           <img src="@img/cta-img2.png" alt="">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-         </div>
-      </section>
-
-   </main>
-
-   @@include('html/footer.html', {})
-   @@include('html/login-modal.html', {})
-   @@include('html/calc.html', {})
-   @@include('html/scroll-to-top.html', {})
-
-   <script src="js/bootstrap.js"></script>
-   <script src="js/app.js"></script>
-</body>
-
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
