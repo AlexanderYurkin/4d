@@ -24,6 +24,7 @@
 @import "../../node_modules/bootstrap/scss/breadcrumb";
 @import "../../node_modules/bootstrap/scss/pagination";
 @import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/progress";
 @import "../../node_modules/bootstrap/scss/close";
 @import "../../node_modules/bootstrap/scss/modal";
 @import "../../node_modules/bootstrap/scss/offcanvas";
@@ -39,6 +40,20 @@
 
 //Fancybox
 @import "../../node_modules/@fancyapps/ui/dist/fancybox.css";
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex-grow: 1;
+}
 
 // ХАК ДЛЯ ТОГО, ЧТОБ ОТКЛЮЧИТЬ :FOCUS ПО КЛИКУ, НО ПОКАЗЫВАТЬ ПРИ ТАБЕ С КЛАВИАТУРЫ
 
@@ -338,6 +353,10 @@ a {
   .page-item {
     margin: 0 4px;
   }
+}
+
+.navbar-toggler {
+  border: none;
 }
 
 .navbar {
@@ -711,6 +730,8 @@ a {
 
       svg {
         height: 14px;
+        width: 14px;
+        text-align: center;
       }
     }
 
@@ -727,8 +748,15 @@ a {
 
   .submenu {
     list-style: none;
-    margin: 0 0 0.5rem 0;
+    // margin: 0 0 0.5rem 0;
+    margin: 0;
     padding: 0;
+
+    li {
+      &:last-of-type {
+        margin-bottom: 0.5rem;
+      }
+    }
 
     .nav-link {
       color: $dark;
@@ -1207,6 +1235,27 @@ a {
   }
 }
 
+.profile-item {
+  transition: box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba($primary, 0.13) !important;
+  }
+}
+
+.error-code {
+  font-size: 10rem;
+}
+
+.error-text {
+  font-size: 1.125rem;
+}
+
+.error-img {
+  max-height: 500px;
+  max-width: 100%;
+}
+
 @include media-breakpoint-up(xl) {
   .xl-shadow {
     box-shadow: $box-shadow;
@@ -1378,6 +1427,10 @@ a {
       text-align: left;
     }
   }
+
+  .error-img {
+    max-height: 400px;
+  }
 }
 
 @include media-breakpoint-down(md) {
@@ -1417,6 +1470,14 @@ a {
       display: none;
     }
   }
+
+  .error-code {
+    font-size: 6rem;
+  }
+
+  .error-text {
+    font-size: 1rem;
+  }
 }
 
 @include media-breakpoint-up(sm) {
@@ -1428,6 +1489,10 @@ a {
 @include media-breakpoint-down(sm) {
   .scroll-to-top {
     display: none !important;
+  }
+
+  .fs-10 {
+    font-size: 11px !important;
   }
 
   .article {
@@ -1449,5 +1514,13 @@ a {
     &__body {
       max-height: 60vh;
     }
+  }
+
+  .error-code {
+    font-size: 5rem;
+  }
+
+  .error-text {
+    font-size: 0.875rem;
   }
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  @@include('html/head.html', { "title": "503" })
+
+  <body>
+    @@include('html/header.html', {}) @@include('html/offcanvas.html', {})
+
+    <main role="main" class="flex-shrink-0">
+      <div class="container h-100 pt-md-5 pt-4">
+        <div class="h-100 row align-items-end">
+          <div class="col-lg-6">
+            <div class="mb-6">
+              <div class="f-2 fs-4 text-secondary text-uppercase">Ошибка</div>
+              <div class="error-code f-2 fw-black lh-1 text-danger mb-3">503</div>
+              <p class="error-text mb-4 mb-sm-5">
+                Сервер временно не может обработать ваш запрос по техническим причинам. Попробуйте обновить страницу или вернуться позже.
+              </p>
+
+              <a href="javascript:history.go(0)" class="btn btn-primary">Перезагрузить сраницу</a>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="text-end">
+              <img src="@img/error-img.png" alt="" class="error-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include('html/footer.html', {}) @@include('html/calc.html', {}) @@include('html/scroll-to-top.html', {})
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3b2b3d29-dd30-4d85-b6e8-eb15867d9469" type="text/javascript"></script>
+    <script src="js/maps.js"></script>
+  </body>
+</html>
