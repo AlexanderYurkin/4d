@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-100">
+  @@include('html/head.html', { "title": "login" })
+
+  <body class="d-flex flex-column h-100">
+    @@include('html/header.html', {}) @@include('html/offcanvas.html', {})
+
+    <main role="main" class="flex-shrink-0">
+      <div class="container py-md-5 py-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active">Войти в личный кабинет</li>
+        </ol>
+
+        <div class="row gy-5 gy-lg-0 gx-xl-5 gx-xxl-6">
+          <div class="col-xl-4 col-lg-5">
+            <div class="bg-white shadow rounded-3 p-3 p-sm-4 p-md-5">
+              <h1 class="fs-3 mb-3 mb-sm-4">Войти в личный кабинет</h1>
+
+              <form class="mb-4">
+                <div class="form-floating mb-3 mb-sm-4">
+                  <input
+                    type="text"
+                    class="form-control form-control__gra input-phone"
+                    id="loginPhone"
+                    placeholder="Ваш телефон"
+                    pattern=".{16}"
+                    required />
+                  <label for="loginPhone">Ваш телефон</label>
+                </div>
+
+                <div class="form-floating mb-3 mb-sm-4">
+                  <input type="password" class="form-control form-control__gra" id="loginPassword" placeholder="Пароль" required />
+                  <label for="loginPhone">Пароль</label>
+                </div>
+
+                <div class="form-check mb-3 mb-sm-4">
+                  <input class="form-check-input" type="checkbox" value="" id="loginRemember" />
+                  <label class="form-check-label" for="loginRemember">Запомнить меня</label>
+                </div>
+
+                <div class="alert alert-danger fs-8 alert-dismissible fade show" role="alert">
+                  <strong>Ошибка!</strong>
+                  Развёрнутое описание ошибки
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                <button class="btn btn-danger btn-form w-100" type="submit">Войти</button>
+              </form>
+
+              <a href="#restorePassModal" data-bs-toggle="modal" class="text-decoration-none">Забыли пароль?</a>
+            </div>
+          </div>
+
+          <div class="col pt-lg-4">
+            <h2 class="mb-4 mb-sm-5 pt-lg-1">Как зарегистрироваться и получить пароль от личного кабинета</h2>
+
+            <ul class="ps-4 m-0">
+              <li class="mb-4 mb-sm-5">
+                <h5 class="mb-2">В регистратуре клиники</h5>
+                <p class="fs-7 text-muted mb-2">Просто подойдите к стойке и попросите сотрудника зарегистрировать вам личный кабинет</p>
+              </li>
+
+              <li class="mb-4 mb-sm-5">
+                <h5 class="mb-2">Через колл-центр</h5>
+                <p class="fs-7 text-muted mb-2">Сообщите оператору, что хотите получить доступ к личному кабинету. Номер колл-центра:</p>
+                <a href="tel:+79283012171" class="f-2 fs-5 fw-semibold text-decoration-none">+7 (928) 301-21-71</a>
+              </li>
+
+              <li class="mb-4 mb-sm-5">
+                <h5 class="mb-2">С помощью бота в Telegram</h5>
+                <p class="fs-7 text-muted mb-2">Напишите нашему боту и следуйте инструкциям:</p>
+                <a href="#" class="f-2 fs-5 fw-semibold text-decoration-none">@uzi4dbot</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade" id="restorePassModal" tabindex="-1" aria-labelledby="restorePassModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header align-items-start border-0 pt-4 px-4 pb-0">
+            <div>
+              <h4 class="modal-title" id="restorePassModalLabel">Как восстановить пароль</h4>
+            </div>
+
+            <button type="button" class="btn-close mt-1" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body px-4 pb-4">
+            <ul class="ps-4 m-0">
+              <li>
+                <p>
+                  Обратитесь в колл-центр по номеру:
+                  <a href="tel:+79283012171" class="fw-medium text-decoration-none text-nowrap">+7 (928) 301-21-71</a>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Или напишите нашему боту в Telegram:
+                  <a href="#" class="fw-medium text-decoration-none">@uzi4dbot</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @@include('html/footer.html', {}) @@include('html/calc.html', {}) @@include('html/scroll-to-top.html', {})
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

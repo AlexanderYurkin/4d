@@ -10,7 +10,7 @@
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";
-@import "../../node_modules/bootstrap/scss/images";
+// @import "../../node_modules/bootstrap/scss/images";
 @import "../../node_modules/bootstrap/scss/containers";
 @import "../../node_modules/bootstrap/scss/grid";
 @import "../../node_modules/bootstrap/scss/tables";
@@ -18,13 +18,13 @@
 @import "../../node_modules/bootstrap/scss/buttons";
 @import "../../node_modules/bootstrap/scss/transitions";
 @import "../../node_modules/bootstrap/scss/dropdown";
-@import "../../node_modules/bootstrap/scss/button-group";
+// @import "../../node_modules/bootstrap/scss/button-group";
 @import "../../node_modules/bootstrap/scss/nav";
 @import "../../node_modules/bootstrap/scss/navbar";
 @import "../../node_modules/bootstrap/scss/breadcrumb";
 @import "../../node_modules/bootstrap/scss/pagination";
 @import "../../node_modules/bootstrap/scss/alert";
-@import "../../node_modules/bootstrap/scss/progress";
+// @import "../../node_modules/bootstrap/scss/progress";
 @import "../../node_modules/bootstrap/scss/close";
 @import "../../node_modules/bootstrap/scss/modal";
 @import "../../node_modules/bootstrap/scss/offcanvas";
@@ -146,12 +146,12 @@ body:not(.user-is-tabbing) textarea:focus {
   table {
     @include font-size(1rem);
   }
+}
 
-  ul {
-    li {
-      &::marker {
-        color: $danger;
-      }
+ul {
+  li {
+    &::marker {
+      color: $danger;
     }
   }
 }
@@ -318,6 +318,31 @@ a {
     margin-top: -0.25rem;
     transition: $transition-base;
 
+    .dropdown-item {
+      .icon {
+        padding-right: 0.5rem;
+        flex-shrink: 0;
+        line-height: 0;
+
+        svg {
+          margin-top: -2px;
+          height: 14px;
+          width: 14px;
+          text-align: center;
+        }
+      }
+
+      &:hover {
+        .icon {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+
     &.fade-down {
       top: 80%;
       transform: rotateX(-75deg);
@@ -332,6 +357,12 @@ a {
       top: 100%;
       transform: rotateX(0deg);
     }
+  }
+}
+
+.form-floating {
+  label {
+    font-size: 15px;
   }
 }
 
@@ -364,6 +395,8 @@ a {
     .nav-link {
       font-family: "Montserrat";
       font-size: 15px;
+      padding-top: 1rem;
+      padding-bottom: 0.75rem;
 
       svg {
         path {
@@ -385,10 +418,13 @@ a {
 .profile-link {
   max-width: 300px;
 
-  svg {
-    flex-shrink: 0;
-    height: 14px;
-    margin-right: 0.5rem;
+  .icon {
+    padding-right: 0.625rem !important;
+
+    svg {
+      flex-shrink: 0;
+      height: 14px !important;
+    }
   }
 }
 
@@ -908,6 +944,11 @@ a {
   &__no-border {
     border-color: $white;
   }
+
+  &__gray {
+    background-color: $gray-200;
+    border-color: $gray-200;
+  }
 }
 
 .cta {
@@ -961,14 +1002,13 @@ a {
 .doc-hero {
   background-image: url("@img/doctor-hero-bg.svg");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom -2rem right -2rem;
+  background-size: 30%;
+  background-position: bottom right;
 
   &__img {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    min-height: 400px;
   }
 
   h1 {
@@ -981,6 +1021,14 @@ a {
 
   &__surname {
     font-size: 2.5rem;
+  }
+}
+
+.child-icon {
+  img {
+    margin-top: -5px;
+    height: 24px;
+    width: auto;
   }
 }
 
@@ -1430,6 +1478,16 @@ a {
 
   .error-img {
     max-height: 400px;
+  }
+
+  .sub-bar {
+    .nav {
+      .nav-item {
+        .nav-link {
+          font-size: 0.875rem;
+        }
+      }
+    }
   }
 }
 

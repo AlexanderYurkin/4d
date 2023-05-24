@@ -302,3 +302,4 @@ flsFunctions.FormatNumber();
 flsFunctions.searchToggle();
 flsFunctions.calcToggle();
 flsFunctions.sidebar();
+flsFunctions.mobileScrollActive();

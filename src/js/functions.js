@@ -135,3 +135,18 @@ export function sidebar() {
     });
   }
 }
+
+// ПОЗИЦИЯ АКТИВНОГО ЭЛЕМЕНТА В ГОРИЗОНТАЛЬНОМ НАВБАРЕ
+
+export function mobileScrollActive() {
+  const activeItem = document.querySelector(".nav-mobile-scroll .nav-link.active");
+
+  if (activeItem) {
+    document.addEventListener("DOMContentLoaded", function () {
+      let menu = document.querySelector(".nav-mobile-scroll > *");
+      let menuRect = menu.getBoundingClientRect();
+      let activeRect = activeItem.getBoundingClientRect();
+      menu.scrollLeft += activeRect.left - menuRect.left;
+    });
+  }
+}
