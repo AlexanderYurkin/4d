@@ -71,7 +71,7 @@ export function FormatNumber() {
   });
 }
 
-// ПОКАЗАТЬ / СКРЫТЬ СТРОКУ ПОИСКА
+// ПОКАЗАТЬ / СКРЫТЬ СТРОКУ ПОИСКА В ШАПКЕ
 
 export function searchToggle() {
   const searchToggle = document.querySelector(".search__toggle"),

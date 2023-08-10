@@ -391,7 +391,7 @@ $small-font-size: 0.875em !default;
 
 $sub-sup-font-size: 0.75em !default;
 
-$text-muted: $gray-500 !default;
+$text-muted: $gray-600 !default;
 
 $initialism-font-size: $small-font-size !default;
 
@@ -563,7 +563,7 @@ $btn-active-border-tint-amount: 0% !default;
 
 // scss-docs-start form-text-variables
 $form-text-margin-top: 0.25rem !default;
-$form-text-font-size: $small-font-size !default;
+$form-text-font-size: 12px !default;
 $form-text-font-style: null !default;
 $form-text-font-weight: null !default;
 $form-text-color: $text-muted !default;
@@ -773,7 +773,7 @@ $form-floating-input-padding-t: 21px !default;
 $form-floating-input-padding-b: 3px !default;
 $form-floating-label-opacity: 0.7 !default;
 $form-floating-label-transform: scale(0.71) translateY(-5px) translateX(5px) !default;
-$form-floating-transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out !default;
+$form-floating-transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out !default;
 // scss-docs-end form-floating-variables
 
 // Form validation

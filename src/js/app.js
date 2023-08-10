@@ -9,18 +9,64 @@ xwiper.onSwipeRight(() => {
 
 //ПЛАГИН МАСОК ИНПУТОВ
 
-import Cleave from "cleave.js";
-import CleavePhone from "cleave.js/dist/addons/cleave-phone.ru.js";
+import IMask from "imask";
 
-let CleaveInput = document.querySelectorAll(".input-phone");
-if (CleaveInput) {
-  CleaveInput.forEach(function (el) {
-    new Cleave(el, {
-      phone: true,
-      phoneRegionCode: "RU",
-      prefix: "+7",
-      noImmediatePrefix: true,
-      blocks: [4, 3, 3, 4],
+const phoneInput = document.querySelectorAll(".input-phone");
+const textInput = document.querySelectorAll(".input-text");
+const dateInput = document.querySelectorAll(".input-date");
+
+if (phoneInput.length) {
+  phoneInput.forEach(function (el) {
+    var phoneMask;
+
+    el.addEventListener("focus", function () {
+      phoneMask = IMask(el, {
+        mask: "+{7} 000 000 00 00",
+        lazy: false,
+        placeholderChar: "*",
+      });
+    });
+
+    el.addEventListener("blur", function () {
+      phoneMask.updateOptions({
+        mask: "+{7} 000 000 00 00",
+        lazy: true,
+      });
+    });
+  });
+}
+
+if (textInput.length) {
+  textInput.forEach(function (el) {
+    var textMask = IMask(el, {
+      mask: /^[a-zа-яё\s]+$/iu,
+    });
+  });
+}
+
+if (dateInput.length) {
+  dateInput.forEach(function (el) {
+    let minDate = el.dataset.mindate.split(",");
+    let maxDate = el.dataset.maxdate.split(",");
+
+    var dateMask;
+
+    el.addEventListener("focus", function () {
+      dateMask = IMask(el, {
+        mask: Date,
+        min: new Date(minDate[0], minDate[1], minDate[2]),
+        max: new Date(maxDate[0], maxDate[1], maxDate[2]),
+        lazy: false,
+      });
+    });
+
+    el.addEventListener("blur", function () {
+      dateMask.updateOptions({
+        mask: Date,
+        min: new Date(minDate[0], minDate[1], minDate[2]),
+        max: new Date(maxDate[0], maxDate[1], maxDate[2]),
+        lazy: true,
+      });
     });
   });
 }
