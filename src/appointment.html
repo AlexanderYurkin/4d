@@ -14,159 +14,264 @@
 
         <h1 class="mb-md-5 mb-4">Запись на приём</h1>
 
-        <div class="row">
-          <div class="col-3"></div>
+        <div class="row gy-3" id="toHide">
+          <div class="col-lg-4 col-xxl-3">
+            <div class="bg-white rounded-3 shadow p-3 p-sm-4 p-xl-5">
+              <div class="completed-step">Пожалуйста, заполните необходимые поля. Это займёт не более пары минут</div>
 
-          <div class="col-9">
-            <div class="bg-white rounded-3 shadow p-3 p-sm-4 p-md-5 mb-3">
-              <!-- <div class="tab-status">
-                <span class="tab active">1</span>
-                <span class="tab">2</span>
-                <span class="tab">3</span>
-                <span class="tab">4</span>
-                <span class="tab">5</span>
-              </div> -->
+              <div class="completed-step">
+                <span class="fw-medium">Филиал:</span>
+                г. Минеральные Воды, пр. XXII Партсъезда, 32А
+              </div>
 
-              <form action="" id="regForm" class="form-wizard">
-                <fieldset class="form-wizard-step hidden">
-                  <h2 class="mb-4">Выберите филиал</h2>
+              <div class="completed-step">
+                <span class="fw-medium">Услуга:</span>
+                Скрининговое УЗИ 2-го триместра многоплодной беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+              </div>
 
-                  <div class="row gy-2">
-                    <div class="col-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="appointmentFilial1" />
-                        <label class="form-check-label" for="appointmentFilial1">Любой филиал</label>
-                      </div>
-                    </div>
-
-                    <div class="col-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="appointmentFilial2" />
-                        <label class="form-check-label" for="appointmentFilial2">г. Пятигорск, ул. Кузнечная, 26</label>
-                      </div>
-                    </div>
-
-                    <div class="col-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="appointmentFilial3" />
-                        <label class="form-check-label" for="appointmentFilial3">г. Пятигорск, пр. Калинина, 107</label>
-                      </div>
-                    </div>
-
-                    <div class="col-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="appointmentFilial4" />
-                        <label class="form-check-label" for="appointmentFilial4">г. Ессентуки, ул. Володарского, 25/2</label>
-                      </div>
-                    </div>
-
-                    <div class="col-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="appointmentFilial5" />
-                        <label class="form-check-label" for="appointmentFilial5">г. Минеральные Воды, пр. XXII Партсъезда, 32А</label>
-                      </div>
+              <div class="completed-step">
+                <div class="doc-xs d-flex">
+                  <div class="img position-relative me-3">
+                    <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
+                      <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
                     </div>
                   </div>
-                </fieldset>
 
+                  <div class="my-auto">
+                    <div class="doc-xs-name text-secondary f-2 fw-semibold mb-1">Гамдуллаев Кямран Дашдамирович</div>
+                    <div class="doc-xs-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="completed-step">
+                <span class="fw-medium">Дата и время:</span>
+                понедельник, 7 августа 2023 г., 12:00
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-xxl-9">
+            <div class="bg-white rounded-3 shadow p-3 p-sm-4 p-xl-5">
+              <div class="steps-status f-2 fw-semibold mb-2">
+                Шаг:
+                <span class="current-step">1</span>
+                из
+                <span class="total-steps">5</span>
+              </div>
+
+              <form action="javascript:demoSubmit()" class="form-wizard">
                 <fieldset class="form-wizard-step">
-                  <h2>Выберите услугу</h2>
+                  <h2 class="form-wizard-step-title">Выберите филиал</h2>
 
-                  <form class="search-form">
-                    <input type="text" class="form-control search-form__input" placeholder="Найти..." />
-                  </form>
+                  <div class="mb-4">
+                    <div class="row gy-2">
+                      <div class="col-xl-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="appointmentFilial1" />
+                          <label class="form-check-label" for="appointmentFilial1">Любой филиал</label>
+                        </div>
+                      </div>
 
-                  <div>
-                    <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService1" autocomplete="off" />
-                    <label class="service-radio rounded px-3 py-2" for="appointmentService1">
-                      Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
-                    </label>
-                  </div>
+                      <div class="col-xl-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="appointmentFilial2" />
+                          <label class="form-check-label" for="appointmentFilial2">г. Пятигорск, ул. Кузнечная, 26</label>
+                        </div>
+                      </div>
 
-                  <div>
-                    <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService2" autocomplete="off" />
-                    <label class="service-radio rounded px-3 py-2" for="appointmentService2">Ультразвуковая диагностика беременности</label>
-                  </div>
+                      <div class="col-xl-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="appointmentFilial3" />
+                          <label class="form-check-label" for="appointmentFilial3">г. Пятигорск, пр. Калинина, 107</label>
+                        </div>
+                      </div>
 
-                  <div>
-                    <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService1" autocomplete="off" />
-                    <label class="service-radio rounded px-3 py-2" for="appointmentService1">
-                      Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
-                    </label>
-                  </div>
+                      <div class="col-xl-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="appointmentFilial4" />
+                          <label class="form-check-label" for="appointmentFilial4">г. Ессентуки, ул. Володарского, 25/2</label>
+                        </div>
+                      </div>
 
-                  <div>
-                    <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService2" autocomplete="off" />
-                    <label class="service-radio rounded px-3 py-2" for="appointmentService2">Ультразвуковая диагностика беременности</label>
+                      <div class="col-xl-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="appointmentFilial5" />
+                          <label class="form-check-label" for="appointmentFilial5">г. Минеральные Воды, пр. XXII Партсъезда, 32А</label>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </fieldset>
 
                 <fieldset class="form-wizard-step hidden">
-                  <h2>Выберите врача</h2>
+                  <h2 class="form-wizard-step-title">Выберите услугу</h2>
 
-                  <div>
-                    <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor1" autocomplete="off" />
-                    <label class="doc-sm doc-radio rounded-3" for="appointmentDoctor1">
-                      <div class="d-flex p-3">
-                        <div class="img position-relative me-3">
-                          <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
-                            <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
-                          </div>
-                        </div>
+                  <input type="text" class="form-control mb-3" placeholder="Найти..." />
 
-                        <div class="my-auto">
-                          <div class="doc-sm-name text-secondary f-2 fw-semibold mb-1">Гамдуллаев Кямран Дашдамирович</div>
-                          <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
-                          <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
-                          <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
-                        </div>
-                      </div>
-                    </label>
-                  </div>
+                  <div class="form-wizard-step-scroll border rounded py-2 mb-4">
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService1" autocomplete="off" />
+                      <label class="service-radio px-3 py-2" for="appointmentService1">Ультразвуковая диагностика беременности</label>
+                    </div>
 
-                  <div>
-                    <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor2" autocomplete="off" />
-                    <label class="doc-sm doc-radio rounded-3" for="appointmentDoctor2">
-                      <div class="d-flex p-3">
-                        <div class="img position-relative me-3">
-                          <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
-                            <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
-                          </div>
-                        </div>
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService2" autocomplete="off" />
+                      <label class="service-radio px-3 py-2" for="appointmentService2">
+                        Скрининговое УЗИ 1-го триместра беременности (11-13 недель 6 дней)
+                      </label>
+                    </div>
 
-                        <div class="my-auto">
-                          <div class="doc-sm-name text-secondary f-2 fw-semibold mb-1">Гамдуллаев Кямран Дашдамирович</div>
-                          <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
-                          <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
-                          <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
-                        </div>
-                      </div>
-                    </label>
-                  </div>
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService3" autocomplete="off" />
+                      <label class="service-radio px-3 py-2" for="appointmentService3">
+                        Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
+                      </label>
+                    </div>
 
-                  <div>
-                    <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor3" autocomplete="off" />
-                    <label class="doc-sm doc-radio rounded-3" for="appointmentDoctor3">
-                      <div class="d-flex p-3">
-                        <div class="img position-relative me-3">
-                          <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
-                            <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
-                          </div>
-                        </div>
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService4" autocomplete="off" />
+                      <label class="service-radio px-3 py-2" for="appointmentService4">
+                        Скрининговое УЗИ 2-го триместра беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+                      </label>
+                    </div>
 
-                        <div class="my-auto">
-                          <div class="doc-sm-name text-secondary f-2 fw-semibold mb-1">Гамдуллаев Кямран Дашдамирович</div>
-                          <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
-                          <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
-                          <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
-                        </div>
-                      </div>
-                    </label>
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService5" autocomplete="off" />
+                      <label class="service-radio px-3 py-2" for="appointmentService5">
+                        Скрининговое УЗИ 2-го триместра многоплодной беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService6" autocomplete="off" />
+                      <label class="service-radio px-3 py-2" for="appointmentService6">Ультразвуковая диагностика беременности</label>
+                    </div>
+
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService7" autocomplete="off" />
+                      <label class="service-radio px-3 py-2" for="appointmentService7">
+                        Скрининговое УЗИ 1-го триместра беременности (11-13 недель 6 дней)
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService8" autocomplete="off" />
+                      <label class="service-radio px-3 py-2" for="appointmentService8">
+                        Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService9" autocomplete="off" />
+                      <label class="service-radio px-3 py-2" for="appointmentService9">
+                        Скрининговое УЗИ 2-го триместра беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentServices" id="appointmentService10" autocomplete="off" />
+                      <label class="service-radio px-3 py-2" for="appointmentService10">
+                        Скрининговое УЗИ 2-го триместра многоплодной беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
 
                 <fieldset class="form-wizard-step hidden">
-                  <h2>Выберите дату и время приёма</h2>
+                  <h2 class="form-wizard-step-title">Выберите врача</h2>
+
+                  <input type="text" class="form-control mb-3" placeholder="Найти..." />
+
+                  <div class="form-wizard-step-scroll border rounded py-2 mb-4">
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor1" autocomplete="off" />
+                      <label class="doc-sm doc-radio" for="appointmentDoctor1">
+                        <div class="d-flex p-3">
+                          <div class="img position-relative me-3">
+                            <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
+                              <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
+                            </div>
+                          </div>
+
+                          <div class="my-auto">
+                            <div class="doc-sm-name text-secondary f-2 fw-semibold mb-1">Гамдуллаев Кямран Дашдамирович</div>
+                            <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
+                            <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
+                            <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor2" autocomplete="off" />
+                      <label class="doc-sm doc-radio" for="appointmentDoctor2">
+                        <div class="d-flex p-3">
+                          <div class="img position-relative me-3">
+                            <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
+                              <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
+                            </div>
+                          </div>
+
+                          <div class="my-auto">
+                            <div class="doc-sm-name text-secondary f-2 fw-semibold mb-1">Гамдуллаев Кямран Дашдамирович</div>
+                            <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
+                            <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
+                            <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor3" autocomplete="off" />
+                      <label class="doc-sm doc-radio" for="appointmentDoctor3">
+                        <div class="d-flex p-3">
+                          <div class="img position-relative me-3">
+                            <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
+                              <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
+                            </div>
+                          </div>
+
+                          <div class="my-auto">
+                            <div class="doc-sm-name text-secondary f-2 fw-semibold mb-1">Гамдуллаев Кямран Дашдамирович</div>
+                            <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
+                            <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
+                            <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor4" autocomplete="off" />
+                      <label class="doc-sm doc-radio" for="appointmentDoctor4">
+                        <div class="d-flex p-3">
+                          <div class="img position-relative me-3">
+                            <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
+                              <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
+                            </div>
+                          </div>
+
+                          <div class="my-auto">
+                            <div class="doc-sm-name text-secondary f-2 fw-semibold mb-1">Гамдуллаев Кямран Дашдамирович</div>
+                            <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
+                            <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
+                            <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-wizard-step hidden">
+                  <div class="d-flex flex-wrap align-items-center mb-2">
+                    <h2 class="form-wizard-step-title pe-3 mb-3 me-auto">Выберите дату и время приёма</h2>
+
+                    <button type="button" class="btn btn-sm btn-secondary text-nowrap mb-3">Найти ближайшее время</button>
+                  </div>
 
                   <select class="form-select mb-3 mb-md-4">
                     <option selected disabled>Выберите дату</option>
@@ -177,7 +282,7 @@
                     <option value="5">пятница, 11 августа 2023 г.</option>
                   </select>
 
-                  <div class="mb-3 mb-md-4">
+                  <div class="mb-4">
                     <div class="row g-2">
                       <div class="col-auto">
                         <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime1" autocomplete="off" />
@@ -215,100 +320,123 @@
                       </div>
                     </div>
                   </div>
-
-                  <button type="button" class="btn btn-sm btn-primary mb-4">Найти ближайшее время</button>
                 </fieldset>
 
                 <fieldset class="form-wizard-step hidden">
-                  <h2>Укажите ваши контактные данные</h2>
+                  <h2 class="form-wizard-step-title">Укажите ваши контактные данные</h2>
 
-                  <div class="form-floating mb-3 mb-md-4">
-                    <input type="text" id="appointmentFIO" class="form-control input-text" placeholder="Ваши ФИО" required />
-                    <label for="appointmentFIO">Ваши ФИО</label>
-                  </div>
-
-                  <div class="form-floating mb-3 mb-md-4">
-                    <input type="text" id="appointmentPhone" class="form-control input-phone" placeholder="Ваш телефон" required />
-                    <label for="appointmentPhone">Ваш телефон</label>
-                  </div>
-
-                  <div class="form-floating mb-3 mb-md-4">
-                    <input
-                      type="text"
-                      id="appointmentBirthDate"
-                      class="form-control input-date"
-                      placeholder="Ваша дата рождения"
-                      data-mindate="1990, 0, 1"
-                      data-maxdate="2010, 0, 1"
-                      required />
-                    <label for="appointmentBirthDate">Ваша дата рождения</label>
-                    <div class="form-text">Пациент должен быть старше N лет</div>
-                  </div>
-
-                  <div class="form-check mb-3 mb-md-4">
-                    <input type="checkbox" class="form-check-input" id="signUpAgreement" required />
-                    <label class="form-check-label fs-8" for="signUpAgreement">
-                      Я даю согласие на обработку
-                      <a href="content.html" target="_blank">персональных данных</a>
-                    </label>
-                  </div>
-                </fieldset>
-
-                <div class="pagination">
-                  <a class="btn btn-primary hidden" id="prev">Назад</a>
-                  <a class="btn btn-primary" id="next">Далее</a>
-                  <button class="btn btn-primary btn-submit hidden" id="submit">Записаться</button>
-                </div>
-              </form>
-
-              <!-- <div>
-                <h2>Вы успешно записались на приём</h2>
-
-                <div class="mb-3">
-                  <div class="doc-sm">
-                    <div class="d-flex">
-                      <div class="img position-relative me-3">
-                        <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
-                          <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
-                        </div>
+                  <div class="row gx-4">
+                    <div class="col-12">
+                      <div class="form-floating mb-3 mb-md-4">
+                        <input type="text" id="appointmentFIO" class="form-control input-text" placeholder="Ваши ФИО" />
+                        <label for="appointmentFIO">Ваши ФИО</label>
                       </div>
+                    </div>
 
-                      <div class="my-auto">
-                        <div class="doc-sm-name text-secondary f-2 fw-semibold mb-1">Гамдуллаев Кямран Дашдамирович</div>
-                        <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
-                        <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
-                        <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
+                    <div class="col-sm-6">
+                      <div class="form-floating mb-3 mb-md-4">
+                        <input
+                          type="text"
+                          id="appointmentBirthDate"
+                          class="form-control input-date"
+                          placeholder="Ваша дата рождения"
+                          data-mindate="1990, 0, 1"
+                          data-maxdate="2010, 0, 1" />
+                        <label for="appointmentBirthDate">Ваша дата рождения</label>
+                        <div class="form-text">Пациент должен быть старше N лет</div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <div class="form-floating mb-3 mb-md-4">
+                        <input type="text" id="appointmentPhone" class="form-control input-phone" placeholder="Ваш телефон" />
+                        <label for="appointmentPhone">Ваш телефон</label>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-check mb-4">
+                        <input type="checkbox" class="form-check-input" id="signUpAgreement" />
+                        <label class="form-check-label fs-8" for="signUpAgreement">
+                          Я даю согласие на обработку
+                          <a href="content.html" target="_blank">персональных данных</a>
+                        </label>
                       </div>
                     </div>
                   </div>
-                </div>
+                </fieldset>
 
-                <div class="mb-3">
-                  <div>Услуга:</div>
-                  <div>Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)</div>
+                <div class="d-flex">
+                  <a class="btn btn-primary form-wizard-prev me-2 hidden">Назад</a>
+                  <a class="btn btn-primary form-wizard-next ms-auto">Далее</a>
+                  <button class="btn btn-primary form-wizard-submit ms-auto hidden">Записаться</button>
                 </div>
+              </form>
 
-                <div class="mb-3">
-                  <div>Ваши ФИО</div>
-                  <div>Иванов Иван Ивнович</div>
-                </div>
+              <!-- ток для теста, удалить на проде -->
 
-                <div class="mb-3">
-                  <div>Ваш телефон</div>
-                  <div>+7 999 888 77 66</div>
-                </div>
-
-                <div class="mb-3">
-                  <div>Ваша дата рождения</div>
-                  <div>12.06.1987</div>
-                </div>
-
-                <div class="mb-3">
-                  <div>Дата и время приёма</div>
-                  <div>Понедельник, 7 августа 2023 г.</div>
-                </div>
-              </div> -->
+              <script>
+                let demoSubmit = () => {
+                  let toHide = document.getElementById("toHide");
+                  let toShow = document.getElementById("toShow");
+                  toHide.style.display = "none";
+                  toShow.style.display = "block";
+                };
+              </script>
             </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3 shadow p-3 p-sm-4 p-xl-5" id="toShow" style="display: none">
+          <h2 class="form-wizard-step-title mb-4">Вы успешно записались на приём</h2>
+
+          <div class="mb-4">
+            <div class="doc-sm">
+              <div class="d-flex">
+                <div class="img position-relative me-3">
+                  <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
+                    <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
+                  </div>
+                </div>
+
+                <div class="my-auto">
+                  <div class="doc-sm-name text-secondary f-2 fw-semibold mb-1">Гамдуллаев Кямран Дашдамирович</div>
+                  <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
+                  <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
+                  <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="appointment-total-item">
+            <span class="fw-medium">Услуга:</span>
+            Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
+          </div>
+
+          <div class="appointment-total-item">
+            <span class="fw-medium">Филиал:</span>
+            г. Минеральные Воды, пр. XXII Партсъезда, 32А
+          </div>
+
+          <div class="appointment-total-item">
+            <span class="fw-medium">Дата и время приёма:</span>
+            Понедельник, 7 августа 2023 г., 12:00
+          </div>
+
+          <div class="appointment-total-item">
+            <span class="fw-medium">Ваши ФИО:</span>
+            Иванов Иван Ивнович
+          </div>
+
+          <div class="appointment-total-item">
+            <span class="fw-medium">Ваш телефон:</span>
+            +7 999 888 77 66
+          </div>
+
+          <div class="appointment-total-item">
+            <span class="fw-medium">Ваша дата рождения:</span>
+            12.06.1987
           </div>
         </div>
       </div>

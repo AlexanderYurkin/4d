@@ -349,3 +349,4 @@ flsFunctions.searchToggle();
 flsFunctions.calcToggle();
 flsFunctions.sidebar();
 flsFunctions.mobileScrollActive();
+flsFunctions.formWizard();

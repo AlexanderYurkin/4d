@@ -150,3 +150,59 @@ export function mobileScrollActive() {
     });
   }
 }
+
+// ФОРМА ЗАПИСИ
+
+export function formWizard() {
+  const previousButton = document.querySelector(".form-wizard-prev");
+  const nextButton = document.querySelector(".form-wizard-next");
+  const currentStepEl = document.querySelector(".current-step");
+  const totalStepsEl = document.querySelector(".total-steps");
+  const submitButton = document.querySelector(".form-wizard-submit");
+  const tabPanels = document.querySelectorAll(".form-wizard-step");
+  let currentStep = 0;
+
+  totalStepsEl.innerHTML = tabPanels.length;
+  currentStepEl.innerHTML = currentStep + 1;
+
+  nextButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    tabPanels[currentStep].classList.add("hidden");
+
+    tabPanels[currentStep + 1].classList.remove("hidden");
+    currentStep += 1;
+    currentStepEl.innerHTML = currentStep + 1;
+
+    updateStatusDisplay();
+  });
+
+  previousButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    tabPanels[currentStep].classList.add("hidden");
+
+    tabPanels[currentStep - 1].classList.remove("hidden");
+    currentStep -= 1;
+    currentStepEl.innerHTML = currentStep + 1;
+
+    nextButton.removeAttribute("disabled");
+    updateStatusDisplay();
+  });
+
+  function updateStatusDisplay() {
+    if (currentStep === tabPanels.length - 1) {
+      nextButton.classList.add("hidden");
+      previousButton.classList.remove("hidden");
+      submitButton.classList.remove("hidden");
+    } else if (currentStep == 0) {
+      nextButton.classList.remove("hidden");
+      previousButton.classList.add("hidden");
+      submitButton.classList.add("hidden");
+    } else {
+      nextButton.classList.remove("hidden");
+      previousButton.classList.remove("hidden");
+      submitButton.classList.add("hidden");
+    }
+  }
+}
