@@ -9,10 +9,10 @@
 $white: #fff !default;
 $gray-100: #f7fbfe !default;
 $gray-200: #ebf2f7 !default;
-$gray-300: #dee2e6 !default;
+$gray-300: #d9e4eb !default;
 $gray-400: #ced4da !default;
 $gray-500: #a1abbb !default;
-$gray-600: #6c757d !default;
+$gray-600: #57728b !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #131533 !default;
@@ -37,7 +37,7 @@ $grays: (
 
 // scss-docs-start color-variables
 $blue: #39abe2 !default;
-$light-blue: #e1f4fd !default;
+$light-blue: #e1f4fc !default;
 $dark-blue: #125096 !default;
 $pink: #d63384 !default;
 $red: #e52947 !default;
@@ -151,8 +151,6 @@ $spacers: (
   4: $spacer * 1.5,
   5: $spacer * 2,
   6: $spacer * 3,
-  7: $spacer * 5,
-  8: $spacer * 6,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -181,7 +179,7 @@ $body-text-align: null !default;
 // Style anchor elements.
 
 $link-color: $primary !default;
-$link-decoration: underline !default;
+$link-decoration: none !default;
 $link-shade-percentage: 20% !default;
 $link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration: null !default;
@@ -253,7 +251,7 @@ $border-widths: (
 ) !default;
 
 $border-style: solid !default;
-$border-color: $gray-200 !default;
+$border-color: $gray-300 !default;
 $border-color-translucent: rgba($black, 0.175) !default;
 // scss-docs-end border-variables
 
@@ -285,7 +283,7 @@ $caret-spacing: $caret-width * 0.85 !default;
 $transition-base: all 0.15s ease-in-out !default;
 $transition-fade: opacity 0.15s linear !default;
 // scss-docs-start collapse-transition
-$transition-collapse: height 0.35s ease !default;
+$transition-collapse: height 0.15s ease !default;
 $transition-collapse-width: width 0.35s ease !default;
 // scss-docs-end collapse-transition
 
@@ -308,7 +306,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+$font-family-sans-serif: "Montserrat", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
@@ -360,7 +358,7 @@ $font-sizes: (
 
 // scss-docs-start headings-variables
 $headings-margin-bottom: $spacer !default;
-$headings-font-family: "Montserrat", sans-serif !default;
+$headings-font-family: null !default;
 $headings-font-style: null !default;
 $headings-font-weight: 900 !default;
 $headings-line-height: 1.2 !default;
@@ -443,7 +441,7 @@ $table-accent-bg: transparent !default;
 $table-th-font-weight: null !default;
 
 $table-striped-color: $table-color !default;
-$table-striped-bg-factor: 0.05 !default;
+$table-striped-bg-factor: 0.03 !default;
 $table-striped-bg: rgba($black, $table-striped-bg-factor) !default;
 
 $table-active-color: $table-color !default;
@@ -498,8 +496,8 @@ $input-btn-focus-color: rgba($component-active-bg, $input-btn-focus-color-opacit
 $input-btn-focus-blur: 0 !default;
 $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm: 0.35rem !default;
-$input-btn-padding-x-sm: 0.7rem !default;
+$input-btn-padding-y-sm: 5px !default;
+$input-btn-padding-x-sm: 10px !default;
 $input-btn-font-size-sm: $font-size-sm !default;
 
 $input-btn-padding-y-lg: 0.5rem !default;
@@ -515,7 +513,7 @@ $input-btn-border-width: $border-width !default;
 
 // scss-docs-start btn-variables
 $btn-padding-y: $input-btn-padding-y !default;
-$btn-padding-x: $input-btn-padding-x !default;
+$btn-padding-x: $input-btn-padding-x * 1.5 !default;
 $btn-font-family: "Montserrat" !default;
 $btn-font-size: $input-btn-font-size !default;
 $btn-line-height: $input-btn-line-height !default;
@@ -899,7 +897,7 @@ $navbar-dark-brand-hover-color: $navbar-dark-active-color !default;
 $dropdown-min-width: 10rem !default;
 $dropdown-padding-x: 1.25rem !default;
 $dropdown-padding-y: 0.75rem !default;
-$dropdown-spacer: 0.125rem !default;
+$dropdown-spacer: 0 !default;
 $dropdown-font-size: $font-size-base * 0.938 !default;
 $dropdown-color: $body-color !default;
 $dropdown-bg: $white !default;
@@ -949,17 +947,17 @@ $dropdown-dark-header-color: $gray-500 !default;
 // Pagination
 
 // scss-docs-start pagination-variables
-$pagination-padding-y: 0.375rem !default;
+$pagination-padding-y: 0.5rem !default;
 $pagination-padding-x: 0.75rem !default;
 $pagination-padding-y-sm: 0.25rem !default;
 $pagination-padding-x-sm: 0.5rem !default;
 $pagination-padding-y-lg: 0.75rem !default;
 $pagination-padding-x-lg: 1.5rem !default;
 
-$pagination-font-size: 15px !default;
+$pagination-font-size: 14px !default;
 
 $pagination-color: $secondary !default;
-$pagination-bg: $gray-200 !default;
+$pagination-bg: $light-blue !default;
 $pagination-border-radius: null !default;
 $pagination-border-width: 0 !default;
 $pagination-margin-start: ($pagination-border-width * -1) !default;
@@ -971,7 +969,7 @@ $pagination-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $pagination-focus-outline: 0 !default;
 
 $pagination-hover-color: $secondary !default;
-$pagination-hover-bg: $light-blue !default;
+$pagination-hover-bg: darken($light-blue, 3%) !default;
 $pagination-hover-border-color: $gray-100 !default;
 
 $pagination-active-color: $component-active-color !default;
@@ -1272,7 +1270,7 @@ $figure-caption-color: $gray-600 !default;
 // Breadcrumbs
 
 // scss-docs-start breadcrumb-variables
-$breadcrumb-font-size: 0.75rem !default;
+$breadcrumb-font-size: 11px !default;
 $breadcrumb-padding-y: 0 !default;
 $breadcrumb-padding-x: 0 !default;
 $breadcrumb-item-padding-x: 0.5rem !default;

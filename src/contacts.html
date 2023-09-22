@@ -6,218 +6,220 @@
     @@include('html/header.html', {}) @@include('html/offcanvas.html', {})
 
     <main role="main" class="flex-shrink-0">
-      <div class="container pt-md-5 pt-4">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-          <li class="breadcrumb-item active">Наши филиалы</li>
-        </ol>
+      <div class="overflow-hidden">
+        <div class="container pt-4 pt-lg-5">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item active">Наши филиалы</li>
+          </ol>
 
-        <h1 class="mb-md-5 mb-4">Наши филиалы</h1>
+          <h1 class="mb-4">Наши филиалы</h1>
 
-        <div class="nav-mobile-scroll fw-semibold mb-3">
-          <nav class="linebar" id="adresses-tab" role="tablist">
-            <ul class="nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  href="#"
-                  id="adresses-1-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#adresses-1"
-                  role="tab"
-                  aria-controls="adresses-1"
-                  aria-selected="true">
-                  Пятигорск
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#"
-                  id="adresses-2-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#adresses-2"
-                  role="tab"
-                  aria-controls="adresses-2"
-                  aria-selected="false">
-                  Ессентуки
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#"
-                  id="adresses-3-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#adresses-3"
-                  role="tab"
-                  aria-controls="adresses-3"
-                  aria-selected="false">
-                  Минеральные Воды
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+          <div class="nav-mobile-scroll fw-semibold mb-4">
+            <div class="linebar" id="adresses-tab" role="tablist">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    href="#"
+                    id="adresses-1-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#adresses-1"
+                    role="tab"
+                    aria-controls="adresses-1"
+                    aria-selected="true">
+                    Пятигорск
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#"
+                    id="adresses-2-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#adresses-2"
+                    role="tab"
+                    aria-controls="adresses-2"
+                    aria-selected="false">
+                    Ессентуки
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#"
+                    id="adresses-3-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#adresses-3"
+                    role="tab"
+                    aria-controls="adresses-3"
+                    aria-selected="false">
+                    Минеральные Воды
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-        <div class="tab-content" id="adresses-tabContent">
-          <div class="tab-pane fade show active" id="adresses-1" role="tabpanel" aria-labelledby="adresses-1-tab" tabindex="0">
-            <div class="bg-white shadow-sm rounded-4 overflow-hidden mb-5">
-              <div class="row g-0">
-                <div class="col-lg-4 address-item-caption">
-                  <div class="h-100 d-flex flex-column p-md-5 p-sm-4 p-3">
-                    <a href="branch.html" class="f-2 fs-5 fw-bold link-secondary text-decoration-none mb-3">4Д на Кузнечной</a>
+          <div class="tab-content" id="adresses-tabContent">
+            <div class="tab-pane fade show active" id="adresses-1" role="tabpanel" aria-labelledby="adresses-1-tab" tabindex="0">
+              <div class="bg-white shadow rounded-3 overflow-hidden mb-5">
+                <div class="row g-0">
+                  <div class="col-lg-4 address-card-caption">
+                    <div class="h-100 d-flex flex-column p-3 p-sm-4 p-md-5 p-lg-4 p-xl-5">
+                      <h3 class="address-card-title mb-3"><a href="branch.html" class="link-secondary">4Д на Кузнечной</a></h3>
 
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Адрес:</div>
-                      <div class="">г. Пятигорск, ул. Кузнечная, 26</div>
-                    </div>
-
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Телефон:</div>
-                      <a href="tel:+79283012171" title="" class="text-decoration-none link-dark">+7 (928) 301-21-71</a>
-                    </div>
-
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Время работы:</div>
-                      <div class="">пн-вс 8:00 - 20:00</div>
-                    </div>
-
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Электронная почта:</div>
-                      <a href="mailto:klinika@yzi4d.ru" title="" class="text-decoration-none link-dark">klinika@yzi4d.ru</a>
-                    </div>
-
-                    <div class="pt-4 mt-auto">
-                      <div class="mb-1">
-                        <div class="fs-8 text-muted">Главный врач:</div>
-                        <div class="">В.Ю. Рушниченко</div>
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Адрес:</div>
+                        <div class="address-value">г. Пятигорск, ул. Кузнечная, 26</div>
                       </div>
 
-                      <div class="mb-1">
-                        <div class="fs-8 text-muted">Принимает:</div>
-                        <div class="">вт 10:00 - 12:00</div>
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Телефон:</div>
+                        <a href="tel:+79283012171" title="" class="address-value link-secondary">+7 (928) 301-21-71</a>
+                      </div>
+
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Время работы:</div>
+                        <div class="address-value">пн-вс 8:00 - 20:00</div>
+                      </div>
+
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Электронная почта:</div>
+                        <a href="mailto:klinika@yzi4d.ru" title="" class="address-value link-secondary">klinika@yzi4d.ru</a>
+                      </div>
+
+                      <div class="pt-3 mt-auto">
+                        <div class="mb-2">
+                          <div class="address-title text-muted">Главный врач:</div>
+                          <div class="address-value">В.Ю. Рушниченко</div>
+                        </div>
+
+                        <div class="mb-2">
+                          <div class="address-title text-muted">Принимает:</div>
+                          <div class="address-value">вт 10:00 - 12:00</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-8">
-                  <div class="map" id="Map1"></div>
+                  <div class="col-lg-8">
+                    <div class="map" id="Map1"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white shadow rounded-3 overflow-hidden mb-5">
+                <div class="row g-0">
+                  <div class="col-lg-4 address-card-caption">
+                    <div class="h-100 d-flex flex-column p-3 p-sm-4 p-md-5 p-lg-4 p-xl-5">
+                      <h3 class="address-card-title mb-3"><a href="branch.html" class="link-secondary">4Д на Калинина</a></h3>
+
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Адрес:</div>
+                        <div class="address-value">г. Пятигорск, пр. Калинина, 107</div>
+                      </div>
+
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Телефон:</div>
+                        <a href="tel:+79283012171" title="" class="address-value link-secondary">+7 (928) 301-21-71</a>
+                      </div>
+
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Время работы:</div>
+                        <div class="address-value">пн-вс 8:00 - 20:00</div>
+                      </div>
+
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Электронная почта:</div>
+                        <a href="mailto:klinika@yzi4d.ru" title="" class="address-value link-secondary">klinika@yzi4d.ru</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-8">
+                    <div class="map" id="Map2"></div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="bg-white shadow-sm rounded-4 overflow-hidden mb-5">
-              <div class="row g-0">
-                <div class="col-lg-4 address-item-caption">
-                  <div class="h-100 d-flex flex-column p-md-5 p-sm-4 p-3">
-                    <a href="branch.html" class="f-2 fs-5 fw-bold link-secondary text-decoration-none mb-3">4Д на Калинина</a>
+            <div class="tab-pane fade" id="adresses-2" role="tabpanel" aria-labelledby="adresses-2-tab" tabindex="0">
+              <div class="bg-white shadow rounded-3 overflow-hidden mb-5">
+                <div class="row g-0">
+                  <div class="col-lg-4 address-card-caption">
+                    <div class="h-100 d-flex flex-column p-3 p-sm-4 p-md-5 p-lg-4 p-xl-5">
+                      <h3 class="address-card-title mb-3"><a href="branch.html" class="link-secondary">4Д на Володарского</a></h3>
 
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Адрес:</div>
-                      <div class="">г. Пятигорск, пр. Калинина, 107</div>
-                    </div>
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Адрес:</div>
+                        <div class="address-value">г. Ессентуки, ул. Володарского, 25/2</div>
+                      </div>
 
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Телефон:</div>
-                      <a href="tel:+79283012171" title="" class="text-decoration-none link-dark">+7 (928) 301-21-71</a>
-                    </div>
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Телефон:</div>
+                        <a href="tel:+79283012171" title="" class="address-value link-secondary">+7 (928) 301-21-71</a>
+                      </div>
 
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Время работы:</div>
-                      <div class="">пн-вс 8:00 - 20:00</div>
-                    </div>
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Время работы:</div>
+                        <div class="address-value">пн-вс 8:00 - 20:00</div>
+                      </div>
 
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Электронная почта:</div>
-                      <a href="mailto:klinika@yzi4d.ru" title="" class="text-decoration-none link-dark">klinika@yzi4d.ru</a>
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Электронная почта:</div>
+                        <a href="mailto:klinika@yzi4d.ru" title="" class="address-value link-secondary">klinika@yzi4d.ru</a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-8">
-                  <div class="map" id="Map2"></div>
+                  <div class="col-lg-8">
+                    <div class="map" id="Map3"></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="tab-pane fade" id="adresses-2" role="tabpanel" aria-labelledby="adresses-2-tab" tabindex="0">
-            <div class="bg-white shadow-sm rounded-4 overflow-hidden mb-5">
-              <div class="row g-0">
-                <div class="col-lg-4 address-item-caption">
-                  <div class="h-100 d-flex flex-column p-md-5 p-sm-4 p-3">
-                    <a href="branch.html" class="f-2 fs-5 fw-bold link-secondary text-decoration-none mb-3">4Д на Володарского</a>
+            <div class="tab-pane fade" id="adresses-3" role="tabpanel" aria-labelledby="adresses-3-tab" tabindex="0">
+              <div class="bg-white shadow rounded-3 overflow-hidden mb-5">
+                <div class="row g-0">
+                  <div class="col-lg-4 address-card-caption">
+                    <div class="h-100 d-flex flex-column p-3 p-sm-4 p-md-5 p-lg-4 p-xl-5">
+                      <h3 class="address-card-title mb-3"><a href="branch.html" class="link-secondary">4Д на XXII Партсъезда</a></h3>
 
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Адрес:</div>
-                      <div class="">г. Ессентуки, ул. Володарского, 25/2</div>
-                    </div>
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Адрес:</div>
+                        <div class="address-value">г. Минеральные Воды, пр. XXII Партсъезда, 32А</div>
+                      </div>
 
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Телефон:</div>
-                      <a href="tel:+79283012171" title="" class="text-decoration-none link-dark">+7 (928) 301-21-71</a>
-                    </div>
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Телефон:</div>
+                        <a href="tel:+79283012171" title="" class="address-value link-secondary">+7 (928) 301-21-71</a>
+                      </div>
 
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Время работы:</div>
-                      <div class="">пн-вс 8:00 - 18:00</div>
-                    </div>
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Время работы:</div>
+                        <div class="address-value">пн-вс 8:00 - 20:00</div>
+                      </div>
 
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Электронная почта:</div>
-                      <a href="mailto:klinika@yzi4d.ru" title="" class="text-decoration-none link-dark">klinika@yzi4d.ru</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-8">
-                  <div class="map" id="Map3"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-pane fade" id="adresses-3" role="tabpanel" aria-labelledby="adresses-3-tab" tabindex="0">
-            <div class="bg-white shadow-sm rounded-4 overflow-hidden mb-5">
-              <div class="row g-0">
-                <div class="col-lg-4 address-item-caption">
-                  <div class="h-100 d-flex flex-column p-md-5 p-sm-4 p-3">
-                    <a href="branch.html" class="f-2 fs-5 fw-bold link-secondary text-decoration-none mb-3">4Д на XXII Партсъезда</a>
-
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Адрес:</div>
-                      <div class="">г. Минеральные Воды, пр. XXII Партсъезда, 32А</div>
-                    </div>
-
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Телефон:</div>
-                      <a href="tel:+79283012171" title="" class="text-decoration-none link-dark">+7 (928) 301-21-71</a>
-                    </div>
-
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Время работы:</div>
-                      <div class="">пн-вс 8:00 - 19:00</div>
-                    </div>
-
-                    <div class="mb-3">
-                      <div class="fs-8 text-muted">Электронная почта:</div>
-                      <a href="mailto:klinika@yzi4d.ru" title="" class="text-decoration-none link-dark">klinika@yzi4d.ru</a>
+                      <div class="mb-2 mb-md-3">
+                        <div class="address-title text-muted">Электронная почта:</div>
+                        <a href="mailto:klinika@yzi4d.ru" title="" class="address-value link-secondary">klinika@yzi4d.ru</a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-8">
-                  <div class="map" id="Map4"></div>
+                  <div class="col-lg-8">
+                    <div class="map" id="Map4"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        @@include('html/cta.html', {})
       </div>
-
-      @@include('html/cta.html', {})
     </main>
 
     @@include('html/footer.html', {}) @@include('html/calc.html', {}) @@include('html/scroll-to-top.html', {})

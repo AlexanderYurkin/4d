@@ -6,108 +6,115 @@
     @@include('html/header.html', {}) @@include('html/offcanvas.html', {})
 
     <main role="main" class="flex-shrink-0">
-      <div class="container pt-md-5 pt-4">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-          <li class="breadcrumb-item active">Спецпредложения</li>
-        </ol>
+      <div class="overflow-hidden">
+        <div class="container pt-4 pt-lg-5">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item active">Спецпредложения</li>
+          </ol>
 
-        <h1 class="mb-md-5 mb-4">Спецпредложения</h1>
+          <h1 class="mb-4">Спецпредложения</h1>
 
-        <div class="sale-item bg-white position-relative rounded-4 overflow-hidden mb-5">
-          <div class="row flex-column flex-md-row gx-0">
-            <div class="col">
-              <div class="h-100 d-flex align-items-center py-sm-4 py-3 px-sm-4 px-3 p-lg-5">
-                <div>
-                  <div class="d-inline-block bg-danger text-white rounded f-2 fw-semibold lh-1 py-2 px-3 mb-3">Выгода 20%</div>
-                  <a href="#" class="stretched-link d-block text-decoration-none link-secondary fs-2 fw-extrabold mb-3">Биохимия крови</a>
-                  <div class="d-inline-block bg-light-blue rounded f-2 fw-semibold lh-1 py-2 px-3 mb-4">25 августа - 25 сентября</div>
+          <div class="sale-banner bg-white position-relative">
+            <div class="row flex-column flex-md-row gx-0">
+              <div class="col-12 col-md-auto">
+                <div class="sale-banner-img bg-img" style="background-image: url('@img/dynamic-img/main-slider-img_1.jpg')"></div>
+              </div>
 
-                  <ul class="list-unstyled mb-3">
-                    <li class="mb-3">
-                      Базовый комплекс (9 показателей) + витамин Д
-                      <div class="fw-black">
-                        <span class="number">2600</span>
-                        <span>₽</span>
-                      </div>
-                    </li>
+              <div class="col-12 col-md">
+                <div class="sale-banner-text h-100 d-flex align-items-center px-3 px-sm-4 px-lg-5">
+                  <div>
+                    <div class="d-flex flex-wrap mb-2 mb-md-3 mb-xxl-4">
+                      <div class="sale-banner-badge bg-danger text-white fw-semibold px-2 px-lg-3 py-1 mb-1">Выгода 20%</div>
+                      <div class="sale-banner-date bg-light-blue fw-semibold px-2 px-lg-3 py-1 mb-1">25 августа - 25 сентября</div>
+                    </div>
 
-                    <li class="mb-3">
-                      Расширенный коплекс (13 показателей)
-                      <div class="fw-black">
-                        <span class="number">2500</span>
-                        <span>₽</span>
-                      </div>
-                    </li>
+                    <a href="#" class="sale-banner-title stretched-link d-block link-secondary fw-black mb-0">Биохимия крови</a>
 
-                    <li class="mb-3">Забор крови в подарок</li>
-                  </ul>
+                    <ul class="sale-banner-list list-unstyled mt-2 mt-md-3 mt-xxl-4">
+                      <li>
+                        Базовый комплекс (9 показателей) + витамин Д
+                        <div class="fw-bold">
+                          2600 ₽
+                          <span class="text-decoration-line-through fw-medium ms-1">3000 ₽</span>
+                        </div>
+                      </li>
+
+                      <li>
+                        Расширенный коплекс (13 показателей)
+                        <div class="fw-bold">
+                          2300 ₽
+                          <span class="text-decoration-line-through fw-medium ms-1">3000 ₽</span>
+                        </div>
+                      </li>
+
+                      <li class="fw-bold text-danger">Забор крови в подарок</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="col-xl-6 col-lg-5 col-md-4">
-              <div class="sale-item__img position-relative h-100 bg-img" style="background-image: url('@img/dynamic-img/main-slider-img_1.jpg')"></div>
+          <div class="sale-banner bg-white position-relative">
+            <div class="row flex-column flex-md-row gx-0">
+              <div class="col-12 col-md-auto">
+                <div class="sale-banner-img bg-img" style="background-image: url('@img/dynamic-img/main-slider-img_2.jpg')"></div>
+              </div>
+
+              <div class="col-12 col-md">
+                <div class="sale-banner-text h-100 d-flex align-items-center px-3 px-sm-4 px-lg-5">
+                  <div>
+                    <div class="d-flex flex-wrap mb-2 mb-md-3 mb-xxl-4">
+                      <div class="sale-banner-badge bg-danger text-white fw-semibold px-2 px-lg-3 py-1 mb-1">Выгода 50%</div>
+                      <div class="sale-banner-date bg-light-blue fw-semibold px-2 px-lg-3 py-1 mb-1">Все выходные сентября</div>
+                    </div>
+
+                    <a href="#" class="sale-banner-title stretched-link d-block link-secondary fw-black mb-0">Здоровье щитовидной железы</a>
+
+                    <ul class="sale-banner-list list-unstyled mt-2 mt-md-3 mt-xxl-4">
+                      <li>
+                        ТТГ + Т4св + АТПО
+                        <div class="fw-bold">
+                          2300 ₽
+                          <span class="text-decoration-line-through fw-medium ms-1">4600 ₽</span>
+                        </div>
+                      </li>
+
+                      <li class="fw-bold text-danger">Забор крови в подарок</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sale-banner bg-white position-relative">
+            <div class="row flex-column flex-md-row gx-0">
+              <div class="col-12 col-md-auto">
+                <div class="sale-banner-img bg-img" style="background-image: url('@img/dynamic-img/main-slider-img_3.jpg')"></div>
+              </div>
+
+              <div class="col-12 col-md">
+                <div class="sale-banner-text h-100 d-flex align-items-center px-3 px-sm-4 px-lg-5">
+                  <div>
+                    <div class="d-flex flex-wrap mb-2 mb-md-3 mb-xxl-4">
+                      <div class="sale-banner-badge bg-danger text-white fw-semibold px-2 px-lg-3 py-1 mb-1">БЕСПЛАТНО</div>
+                      <div class="sale-banner-date bg-light-blue fw-semibold px-2 px-lg-3 py-1 mb-1">23 сентября - 3 октября</div>
+                    </div>
+
+                    <a href="#" class="sale-banner-title stretched-link d-block link-secondary fw-black mb-0">
+                      Бесплатная консультация пластического хирурга
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="sale-item bg-white position-relative rounded-4 overflow-hidden mb-5">
-          <div class="row flex-column flex-md-row gx-0">
-            <div class="col">
-              <div class="h-100 d-flex align-items-center py-sm-4 py-3 px-sm-4 px-3 p-lg-5">
-                <div>
-                  <div class="d-inline-block bg-danger text-white rounded f-2 fw-semibold lh-1 py-2 px-3 mb-3">Выгода 20%</div>
-
-                  <a href="#" class="stretched-link d-block text-decoration-none link-secondary fs-2 fw-extrabold mb-3">Здоровье щитовидной железы</a>
-
-                  <div class="d-inline-block bg-light-blue rounded f-2 fw-semibold lh-1 py-2 px-3 mb-4">25 августа - 25 сентября</div>
-
-                  <ul class="list-unstyled mb-3">
-                    <li class="mb-3">
-                      ТТГ + Т4св + АТПО
-                      <div class="fw-black">
-                        <span class="number">1450</span>
-                        <span>₽</span>
-                      </div>
-                    </li>
-
-                    <li class="mb-3">Забор крови в подарок</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-6 col-lg-5 col-md-4">
-              <div class="sale-item__img position-relative h-100 bg-img" style="background-image: url('@img/dynamic-img/main-slider-img_2.jpg')"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="sale-item bg-white position-relative rounded-4 overflow-hidden mb-5">
-          <div class="row flex-column flex-md-row gx-0">
-            <div class="col">
-              <div class="h-100 d-flex align-items-center py-sm-4 py-3 px-sm-4 px-3 p-lg-5">
-                <div>
-                  <div class="d-inline-block bg-danger text-white rounded f-2 fw-semibold lh-1 py-2 px-3 mb-3">Скидка 100%</div>
-
-                  <a href="#" class="stretched-link d-block text-decoration-none link-secondary fs-2 fw-extrabold mb-3">
-                    Бесплатная консультация пластического хирурга
-                  </a>
-
-                  <div class="d-inline-block bg-light-blue rounded f-2 fw-semibold lh-1 py-2 px-3 mb-4">23 сентября - 13 октября</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-6 col-lg-5 col-md-4">
-              <div class="sale-item__img position-relative h-100 bg-img" style="background-image: url('@img/dynamic-img/main-slider-img_3.jpg')"></div>
-            </div>
-          </div>
-        </div>
+        @@include('html/cta.html', {})
       </div>
-
-      @@include('html/cta.html', {})
     </main>
 
     @@include('html/footer.html', {}) @@include('html/calc.html', {}) @@include('html/scroll-to-top.html', {})

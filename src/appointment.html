@@ -14,19 +14,14 @@
 
         <h1 class="mb-md-5 mb-4">Запись на приём</h1>
 
-        <div class="row gy-3" id="toHide">
+        <div class="row gy-3">
           <div class="col-lg-4 col-xxl-3">
             <div class="bg-white rounded-3 shadow p-3 p-sm-4 p-xl-5">
               <div class="completed-step">Пожалуйста, заполните необходимые поля. Это займёт не более пары минут</div>
 
               <div class="completed-step">
-                <span class="fw-medium">Филиал:</span>
-                <span>г. Минеральные Воды, пр. XXII Партсъезда, 32А</span>
-              </div>
-
-              <div class="completed-step">
                 <span class="fw-medium">Услуга:</span>
-                <a href="service.html" target="_blank" class="link-secondary text-decoration-none">
+                <a href="service.html" target="_blank" class="link-secondary">
                   Скрининговое УЗИ 2-го триместра многоплодной беременности (18-21 неделя) с допплеровской оценкой показателей кровотока
                 </a>
               </div>
@@ -40,12 +35,17 @@
                   </div>
 
                   <div class="my-auto">
-                    <a href="doctor.html" target="_blank" class="doc-xs-name d-inline-block link-secondary text-decoration-none f-2 fw-semibold mb-1">
+                    <a href="doctor.html" target="_blank" class="doc-xs-name d-inline-block link-secondary fw-semibold mb-1">
                       Гамдуллаев Кямран Дашдамирович
                     </a>
                     <div class="doc-xs-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
                   </div>
                 </div>
+              </div>
+
+              <div class="completed-step">
+                <span class="fw-medium">Филиал:</span>
+                <span>г. Минеральные Воды, пр. XXII Партсъезда, 32А</span>
               </div>
 
               <div class="completed-step">
@@ -57,58 +57,15 @@
 
           <div class="col-lg-8 col-xxl-9">
             <div class="bg-white rounded-3 shadow p-3 p-sm-4 p-xl-5">
-              <div class="steps-status f-2 fw-semibold mb-2">
+              <div class="steps-status fw-semibold mb-2">
                 Шаг:
                 <span class="current-step">1</span>
                 из
                 <span class="total-steps">5</span>
               </div>
 
-              <form action="javascript:demoSubmit()" class="form-wizard">
+              <form action="appointment-success.html" class="form-wizard">
                 <fieldset class="form-wizard-step">
-                  <h2 class="form-wizard-step-title">Выберите филиал</h2>
-
-                  <div class="mb-4">
-                    <div class="row gy-2">
-                      <div class="col-xl-6">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="appointmentFilial1" />
-                          <label class="form-check-label" for="appointmentFilial1">Любой филиал</label>
-                        </div>
-                      </div>
-
-                      <div class="col-xl-6">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="appointmentFilial2" />
-                          <label class="form-check-label" for="appointmentFilial2">г. Пятигорск, ул. Кузнечная, 26</label>
-                        </div>
-                      </div>
-
-                      <div class="col-xl-6">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="appointmentFilial3" />
-                          <label class="form-check-label" for="appointmentFilial3">г. Пятигорск, пр. Калинина, 107</label>
-                        </div>
-                      </div>
-
-                      <div class="col-xl-6">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="appointmentFilial4" />
-                          <label class="form-check-label" for="appointmentFilial4">г. Ессентуки, ул. Володарского, 25/2</label>
-                        </div>
-                      </div>
-
-                      <div class="col-xl-6">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="appointmentFilial5" />
-                          <label class="form-check-label" for="appointmentFilial5">г. Минеральные Воды, пр. XXII Партсъезда, 32А</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-
-                <fieldset class="form-wizard-step hidden">
                   <h2 class="form-wizard-step-title">Выберите услугу</h2>
 
                   <input type="text" class="form-control mb-3" placeholder="Найти..." />
@@ -183,15 +140,93 @@
                 </fieldset>
 
                 <fieldset class="form-wizard-step hidden">
-                  <h2 class="form-wizard-step-title">Выберите врача</h2>
+                  <div class="d-flex flex-wrap align-items-center mb-2">
+                    <h2 class="form-wizard-step-title pe-3 mb-2 me-auto">Выберите врача</h2>
 
-                  <input type="text" class="form-control mb-3" placeholder="Найти..." />
+                    <div class="dropdown no-hover filial-filter">
+                      <a
+                        class="dropdown-toggle link-secondary fs-8 py-2"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        data-bs-config='{"autoClose":"outside" }'
+                        aria-expanded="false">
+                        <span class="filial-filter-val">Любой филиал</span>
+
+                        <span class="caret ms-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                            <path
+                              d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                          </svg>
+                        </span>
+                      </a>
+
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="appointmentFilialFilter1" checked />
+                            <label class="form-check-label" for="appointmentFilialFilter1">Любой филиал</label>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="appointmentFilialFilter2" />
+                            <label class="form-check-label" for="appointmentFilialFilter2">г. Пятигорск, ул. Кузнечная, 26</label>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="appointmentFilialFilter3" />
+                            <label class="form-check-label" for="appointmentFilialFilter3">г. Пятигорск, пр. Калинина, 107</label>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="appointmentFilialFilter4" />
+                            <label class="form-check-label" for="appointmentFilialFilter4">г. Ессентуки, ул. Володарского, 25/2</label>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="appointmentFilialFilter5" disabled />
+                            <label class="form-check-label" for="appointmentFilialFilter5">г. Минеральные Воды, пр. XXII Партсъезда, 32А</label>
+
+                            <div class="filial-filter-disabled-caption">Выбранная услуга недоступна в этом филиале</div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <input type="text" class="form-control mb-3" placeholder="Найти врача..." />
 
                   <div class="form-wizard-step-scroll border rounded py-2 mb-4">
                     <div>
+                      <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor0" autocomplete="off" />
+                      <label class="doc-sm doc-radio" for="appointmentDoctor0">
+                        <div class="d-flex px-3 py-2 py-md-3">
+                          <div class="img position-relative me-3">
+                            <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
+                              <img src="@img/any-doctor.svg" alt="" class="img-image" />
+                            </div>
+                          </div>
+
+                          <div class="my-auto">
+                            <div class="doc-sm-name d-inline-block text-secondary fw-semibold mb-1">Любой свободный врач</div>
+                            <div class="doc-sm-job text-muted">Мы подберём вам врача с ближайшим временем приёма</div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div>
                       <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor1" autocomplete="off" />
                       <label class="doc-sm doc-radio" for="appointmentDoctor1">
-                        <div class="d-flex p-3">
+                        <div class="d-flex px-3 py-2 py-md-3">
                           <div class="img position-relative me-3">
                             <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
                               <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
@@ -199,10 +234,7 @@
                           </div>
 
                           <div class="my-auto">
-                            <a
-                              href="doctor.html"
-                              target="_blank"
-                              class="doc-sm-name d-inline-block text-decoration-none link-secondary f-2 fw-semibold mb-1">
+                            <a href="doctor.html" target="_blank" class="doc-sm-name d-inline-block link-secondary fw-semibold mb-1">
                               Гамдуллаев Кямран Дашдамирович
                             </a>
                             <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
@@ -216,7 +248,7 @@
                     <div>
                       <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor2" autocomplete="off" />
                       <label class="doc-sm doc-radio" for="appointmentDoctor2">
-                        <div class="d-flex p-3">
+                        <div class="d-flex px-3 py-2 py-md-3">
                           <div class="img position-relative me-3">
                             <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
                               <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
@@ -224,10 +256,7 @@
                           </div>
 
                           <div class="my-auto">
-                            <a
-                              href="doctor.html"
-                              target="_blank"
-                              class="doc-sm-name d-inline-block text-decoration-none link-secondary f-2 fw-semibold mb-1">
+                            <a href="doctor.html" target="_blank" class="doc-sm-name d-inline-block link-secondary fw-semibold mb-1">
                               Гамдуллаев Кямран Дашдамирович
                             </a>
                             <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
@@ -241,7 +270,7 @@
                     <div>
                       <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor3" autocomplete="off" />
                       <label class="doc-sm doc-radio" for="appointmentDoctor3">
-                        <div class="d-flex p-3">
+                        <div class="d-flex px-3 py-2 py-md-3">
                           <div class="img position-relative me-3">
                             <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
                               <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
@@ -249,10 +278,7 @@
                           </div>
 
                           <div class="my-auto">
-                            <a
-                              href="doctor.html"
-                              target="_blank"
-                              class="doc-sm-name d-inline-block text-decoration-none link-secondary f-2 fw-semibold mb-1">
+                            <a href="doctor.html" target="_blank" class="doc-sm-name d-inline-block link-secondary fw-semibold mb-1">
                               Гамдуллаев Кямран Дашдамирович
                             </a>
                             <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
@@ -266,7 +292,7 @@
                     <div>
                       <input type="radio" class="btn-check" name="appointmentDoctors" id="appointmentDoctor4" autocomplete="off" />
                       <label class="doc-sm doc-radio" for="appointmentDoctor4">
-                        <div class="d-flex p-3">
+                        <div class="d-flex px-3 py-2 py-md-3">
                           <div class="img position-relative me-3">
                             <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
                               <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
@@ -274,10 +300,7 @@
                           </div>
 
                           <div class="my-auto">
-                            <a
-                              href="doctor.html"
-                              target="_blank"
-                              class="doc-sm-name d-inline-block text-decoration-none link-secondary f-2 fw-semibold mb-1">
+                            <a href="doctor.html" target="_blank" class="doc-sm-name d-inline-block link-secondary fw-semibold mb-1">
                               Гамдуллаев Кямран Дашдамирович
                             </a>
                             <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
@@ -291,63 +314,457 @@
                 </fieldset>
 
                 <fieldset class="form-wizard-step hidden">
-                  <div class="d-flex flex-wrap align-items-center mb-2">
-                    <h2 class="form-wizard-step-title pe-3 mb-3 me-auto">Выберите дату и время приёма</h2>
+                  <h2 class="form-wizard-step-title mb-3">Выберите филиал и время записи</h2>
 
-                    <button type="button" class="btn btn-sm btn-secondary text-nowrap mb-3">Найти ближайшее время</button>
+                  <div class="row gx-lg-4">
+                    <div class="col-md-6">
+                      <div class="accordion position-relative border rounded mb-4">
+                        <div class="accordion-header position-relative align-items-center d-flex px-3 py-2">
+                          <div>
+                            <a href="#" class="accordion-title stretched-link fw-medium link-dark fw-medium">Любой филиал</a>
+
+                            <span class="accordion-header-caption text-muted">Ближайшая запись: понедельник, 7 августа, 9:00</span>
+                          </div>
+
+                          <span class="caret flex-shrink-0 ps-2 ms-auto">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </div>
+
+                        <div class="accordion-body collapse">
+                          <div class="appointment-filial px-3 py-2">
+                            <select class="appointment-filial-date form-select mb-2">
+                              <option selected disabled>Выберите дату</option>
+                              <option value="1">понедельник, 7 августа 2023 г.</option>
+                              <option value="2">вторник, 8 августа 2023 г.</option>
+                              <option value="3">среда, 9 августа 2023 г.</option>
+                              <option value="4">четверг, 10 августа 2023 г.</option>
+                              <option value="5">пятница, 11 августа 2023 г.</option>
+                            </select>
+
+                            <div class="appointment-filial-time mb-2 pt-3">
+                              <div class="row g-2 hours">
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime0" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime0">9:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime1">11:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime2">11:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime3" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime3">12:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime4" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime4">12:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime5" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime5">13:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime6" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime6">13:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime7" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime7">14:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime8" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime8">14:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime9" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime9">15:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime10" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime10">15:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime11" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime11">16:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime12" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime12">16:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime13" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime13">17:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour-more">
+                                  <div class="d-flex justify-content-center h-100">
+                                    <span class="hour-more-dots text-muted me-2">...</span>
+                                    <button type="button" class="show-more-hours spaced-link">
+                                      <span class="caret">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                                          <path
+                                            d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                                        </svg>
+                                      </span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion position-relative border rounded mb-4">
+                        <div class="accordion-header position-relative align-items-center d-flex px-3 py-2">
+                          <div>
+                            <a href="#" class="accordion-title stretched-link fw-medium link-dark fw-medium">г. Пятигорск, пр. Калинина, 107</a>
+
+                            <span class="accordion-header-caption text-muted">Ближайшая запись: вторник, 8 августа, 9:00</span>
+                          </div>
+
+                          <span class="caret flex-shrink-0 ps-2 ms-auto">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </div>
+
+                        <div class="accordion-body collapse">
+                          <div class="appointment-filial px-3 py-2">
+                            <select class="appointment-filial-date form-select mb-2">
+                              <option selected disabled>Выберите дату</option>
+                              <option value="1">вторник, 8 августа 2023 г.</option>
+                              <option value="2">среда, 9 августа 2023 г.</option>
+                              <option value="3">четверг, 10 августа 2023 г.</option>
+                              <option value="4">пятница, 11 августа 2023 г.</option>
+                              <option value="5">пятница, 11 августа 2023 г.</option>
+                            </select>
+
+                            <div class="appointment-filial-time mb-2 pt-3">
+                              <div class="row g-2 hours">
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime0_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime0_1">9:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime1_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime1_1">11:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime2_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime2_1">11:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime3_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime3_1">12:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime4_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime4_1">12:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime5_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime5_1">13:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime6_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime6_1">13:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime7_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime7_1">14:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime8_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime8_1">14:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime9_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime9_1">15:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime10_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime10_1">15:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime11_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime11_1">16:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime12_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime12_1">16:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime1" id="appointmentTime13_1" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime13_1">17:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour-more">
+                                  <div class="d-flex justify-content-center h-100">
+                                    <span class="hour-more-dots text-muted me-2">...</span>
+                                    <button type="button" class="show-more-hours spaced-link">
+                                      <span class="caret">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                                          <path
+                                            d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                                        </svg>
+                                      </span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion position-relative border rounded mb-4">
+                        <div class="accordion-header position-relative align-items-center d-flex px-3 py-2">
+                          <div>
+                            <a href="#" class="accordion-title stretched-link fw-medium link-dark fw-medium">г. Пятигорск, ул. Кузнечная, 26</a>
+
+                            <span class="accordion-header-caption text-muted">Ближайшая запись: понедельник, 7 августа, 9:00</span>
+                          </div>
+
+                          <span class="caret flex-shrink-0 ps-2 ms-auto">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </div>
+
+                        <div class="accordion-body collapse">
+                          <div class="appointment-filial px-3 py-2">
+                            <select class="appointment-filial-date form-select mb-2">
+                              <option selected disabled>Выберите дату</option>
+                              <option value="1">понедельник, 7 августа 2023 г.</option>
+                              <option value="2">вторник, 8 августа 2023 г.</option>
+                              <option value="3">среда, 9 августа 2023 г.</option>
+                              <option value="4">четверг, 10 августа 2023 г.</option>
+                              <option value="5">пятница, 11 августа 2023 г.</option>
+                            </select>
+
+                            <div class="appointment-filial-time mb-2 pt-3">
+                              <div class="row g-2 hours">
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime2" id="appointmentTime0_2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime0_2">9:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime2" id="appointmentTime1_2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime1_2">11:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime2" id="appointmentTime2_2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime2_2">11:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime2" id="appointmentTime3_2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime3_2">12:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime2" id="appointmentTime4_2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime4_2">12:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime2" id="appointmentTime5_2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime5_2">13:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime2" id="appointmentTime6_2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime6_2">13:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime2" id="appointmentTime7_2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime7_2">14:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime2" id="appointmentTime8_2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime8_2">14:30</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour">
+                                  <input type="radio" class="btn-check" name="appointmentTime2" id="appointmentTime9_2" autocomplete="off" />
+                                  <label class="btn btn-sm btn-outline-secondary w-100" for="appointmentTime9_2">15:00</label>
+                                </div>
+
+                                <div class="col-4 col-sm-3 col-lg-4 col-xxl-2 hour-more">
+                                  <div class="d-flex justify-content-center h-100">
+                                    <span class="hour-more-dots text-muted me-2">...</span>
+                                    <button type="button" class="show-more-hours spaced-link">
+                                      <span class="caret">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                                          <path
+                                            d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                                        </svg>
+                                      </span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="accordion position-relative border rounded mb-4 disabled">
+                        <div class="accordion-header position-relative align-items-center d-flex px-3 py-2">
+                          <div>
+                            <a href="#" class="accordion-title stretched-link fw-medium link-dark fw-medium">Минеральные Воды, пр. XXII Партсъезда, 32А</a>
+
+                            <span class="accordion-header-caption text-muted">Выбранная услуга недоступна в этом филиале</span>
+                            <span class="accordion-header-caption text-muted">Выбранный врач не принимает в этом филиале</span>
+                          </div>
+
+                          <span class="caret flex-shrink-0 ps-2 ms-auto">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="accordion position-relative border rounded mb-4 disabled">
+                        <div class="accordion-header position-relative align-items-center d-flex px-3 py-2">
+                          <div>
+                            <a href="#" class="accordion-title stretched-link fw-medium link-dark fw-medium">г. Ессентуки, ул. Володарского, 25/2</a>
+
+                            <span class="accordion-header-caption text-muted">Выбранный врач не принимает в этом филиале</span>
+                          </div>
+
+                          <span class="caret flex-shrink-0 ps-2 ms-auto">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.07 52.25">
+                              <path
+                                d="M49.75,49.82c-3.29,3.25-8.58,3.24-11.85-.03L2.46,14.34C-.82,11.06-.82,5.74,2.46,2.46,5.74-.82,11.06-.82,14.34,2.46l29.7,29.7L73.73,2.46c3.28-3.28,8.6-3.28,11.88,0,3.28,3.28,3.28,8.6,0,11.88,0,0-24.32,24.07-35.86,35.48h0Z" />
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  <select class="form-select mb-3 mb-md-4">
-                    <option selected disabled>Выберите дату</option>
-                    <option value="1">понедельник, 7 августа 2023 г.</option>
-                    <option value="2">вторник, 8 августа 2023 г.</option>
-                    <option value="3">среда, 9 августа 2023 г.</option>
-                    <option value="4">четверг, 10 августа 2023 г..</option>
-                    <option value="5">пятница, 11 августа 2023 г.</option>
-                  </select>
+                  <div class="appointment-filial-result bg-light-blue rounded mb-4 p-3">
+                    <h3 class="fs-5 mb-2">Вы записываетесь:</h3>
 
-                  <div class="mb-4">
-                    <div class="row g-2">
-                      <div class="col-auto">
-                        <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime1" autocomplete="off" />
-                        <label class="btn btn-sm btn-outline-secondary" for="appointmentTime1">12:00</label>
-                      </div>
+                    <div class="mb-1">
+                      <span class="title fw-semibold">Филиал:</span>
+                      <span class="filial-result-name"></span>
+                    </div>
 
-                      <div class="col-auto">
-                        <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime2" autocomplete="off" />
-                        <label class="btn btn-sm btn-outline-secondary" for="appointmentTime2">12:30</label>
-                      </div>
+                    <div class="mb-1">
+                      <span class="title fw-semibold">Дата:</span>
+                      <span class="filial-result-date"></span>
+                    </div>
 
-                      <div class="col-auto">
-                        <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime3" autocomplete="off" />
-                        <label class="btn btn-sm btn-outline-secondary" for="appointmentTime3">13:00</label>
-                      </div>
-
-                      <div class="col-auto">
-                        <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime4" autocomplete="off" />
-                        <label class="btn btn-sm btn-outline-secondary" for="appointmentTime4">13:30</label>
-                      </div>
-
-                      <div class="col-auto">
-                        <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime5" autocomplete="off" />
-                        <label class="btn btn-sm btn-outline-secondary" for="appointmentTime5">14:00</label>
-                      </div>
-
-                      <div class="col-auto">
-                        <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime6" autocomplete="off" />
-                        <label class="btn btn-sm btn-outline-secondary" for="appointmentTime6">14:30</label>
-                      </div>
-
-                      <div class="col-auto">
-                        <input type="radio" class="btn-check" name="appointmentTime" id="appointmentTime7" autocomplete="off" />
-                        <label class="btn btn-sm btn-outline-secondary" for="appointmentTime7">15:00</label>
-                      </div>
+                    <div class="mb-1">
+                      <span class="title fw-semibold">Время:</span>
+                      <span class="filial-result-time"></span>
                     </div>
                   </div>
                 </fieldset>
 
+                <!-- НУЖНО УДАЛИТЬ. ЭТО ДЕМО ЗАПОЛНЕНИЯ ВЫБОРА ФИАЛА. -->
+                <script>
+                  const filialResult = document.querySelector(".appointment-filial-result");
+                  const filialNameResult = document.querySelector(".filial-result-name");
+                  const filialDateResult = document.querySelector(".filial-result-date");
+                  const filialTimeResult = document.querySelector(".filial-result-time");
+
+                  filialResult.style.display = "none";
+
+                  // Получаем все радиокнопки внутри аккордеонов
+                  const radioButtons = document.querySelectorAll('input[type="radio"]');
+
+                  // Функция для обработки клика на радиокнопке
+                  function handleRadioButtonClick(event) {
+                    const radio = event.target;
+                    const targetAccordion = radio.closest(".accordion");
+                    const accordionTitle = targetAccordion.querySelector(".accordion-title").textContent;
+                    const select = targetAccordion.querySelector(".appointment-filial-date");
+                    const selectedDate = select.options[select.selectedIndex].text;
+                    const selectedTime = radio.nextElementSibling.textContent;
+
+                    console.log("Заголовок аккордеона:", accordionTitle);
+                    console.log("Выбранная дата:", selectedDate);
+                    console.log("Выбранное время:", selectedTime);
+
+                    filialResult.style.display = "block";
+                    filialNameResult.innerHTML = accordionTitle;
+                    filialDateResult.innerHTML = selectedDate;
+                    filialTimeResult.innerHTML = selectedTime;
+
+                    // Снимаем выбор с радиокнопок в других аккордеонах
+                    radioButtons.forEach((button) => {
+                      if (button !== radio) {
+                        button.checked = false;
+                      }
+                    });
+                  }
+
+                  // Добавляем обработчик клика на каждую радиокнопку
+                  radioButtons.forEach((radio) => {
+                    radio.addEventListener("click", handleRadioButtonClick);
+                  });
+                </script>
+
                 <fieldset class="form-wizard-step hidden">
-                  <h2 class="form-wizard-step-title">Укажите ваши контактные данные</h2>
+                  <h2 class="form-wizard-step-title mb-3">Укажите ваши контактные данные</h2>
 
                   <div class="row gx-4">
                     <div class="col-12">
@@ -390,81 +807,73 @@
                   </div>
                 </fieldset>
 
+                <fieldset class="form-wizard-step hidden">
+                  <h2 class="form-wizard-step-title mb-3">Проверьте заполненные данные</h2>
+
+                  <span class="d-block fw-semibold mb-2">Выбранный врач:</span>
+                  <div class="mb-4">
+                    <div class="doc-sm">
+                      <div class="d-flex">
+                        <div class="img position-relative me-3">
+                          <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
+                            <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
+                          </div>
+                        </div>
+
+                        <div class="my-auto">
+                          <a href="doctor.html" target="_blank" class="doc-sm-name d-inline-block link-secondary fw-semibold mb-1">
+                            Гамдуллаев Кямран Дашдамирович
+                          </a>
+                          <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
+                          <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
+                          <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="appointment-total-item">
+                      <span class="fw-semibold">Услуга:</span>
+                      <a href="service.html" target="_blank" class="link-secondary">
+                        Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
+                      </a>
+                    </div>
+
+                    <div class="appointment-total-item">
+                      <span class="fw-semibold">Филиал:</span>
+                      г. Минеральные Воды, пр. XXII Партсъезда, 32А
+                    </div>
+
+                    <div class="appointment-total-item">
+                      <span class="fw-semibold">Дата и время приёма:</span>
+                      Понедельник, 7 августа 2023 г., 12:00
+                    </div>
+
+                    <div class="appointment-total-item">
+                      <span class="fw-semibold">Ваши ФИО:</span>
+                      Иванов Иван Ивнович
+                    </div>
+
+                    <div class="appointment-total-item">
+                      <span class="fw-semibold">Ваш телефон:</span>
+                      +7 999 888 77 66
+                    </div>
+
+                    <div class="appointment-total-item">
+                      <span class="fw-semibold">Ваша дата рождения:</span>
+                      12.06.1987
+                    </div>
+                  </div>
+                </fieldset>
+
                 <div class="d-flex">
                   <a class="btn btn-primary form-wizard-prev me-2 hidden">Назад</a>
                   <a class="btn btn-primary form-wizard-next ms-auto">Далее</a>
                   <button class="btn btn-primary form-wizard-submit ms-auto hidden">Записаться</button>
                 </div>
               </form>
-
-              <!-- ток для теста, удалить на проде -->
-
-              <script>
-                let demoSubmit = () => {
-                  let toHide = document.getElementById("toHide");
-                  let toShow = document.getElementById("toShow");
-                  toHide.style.display = "none";
-                  toShow.style.display = "block";
-                };
-              </script>
             </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-3 shadow p-3 p-sm-4 p-xl-5" id="toShow" style="display: none">
-          <h2 class="form-wizard-step-title mb-4">Вы успешно записались на приём</h2>
-
-          <div class="mb-4">
-            <div class="doc-sm">
-              <div class="d-flex">
-                <div class="img position-relative me-3">
-                  <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
-                    <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
-                  </div>
-                </div>
-
-                <div class="my-auto">
-                  <a href="doctor.html" target="_blank" class="doc-sm-name d-inline-block link-secondary text-decoration-none f-2 fw-semibold mb-1">
-                    Гамдуллаев Кямран Дашдамирович
-                  </a>
-                  <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
-                  <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
-                  <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="appointment-total-item">
-            <span class="fw-medium">Услуга:</span>
-            <a href="service.html" target="_blank" class="link-secondary text-decoration-none">
-              Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
-            </a>
-          </div>
-
-          <div class="appointment-total-item">
-            <span class="fw-medium">Филиал:</span>
-            г. Минеральные Воды, пр. XXII Партсъезда, 32А
-          </div>
-
-          <div class="appointment-total-item">
-            <span class="fw-medium">Дата и время приёма:</span>
-            Понедельник, 7 августа 2023 г., 12:00
-          </div>
-
-          <div class="appointment-total-item">
-            <span class="fw-medium">Ваши ФИО:</span>
-            Иванов Иван Ивнович
-          </div>
-
-          <div class="appointment-total-item">
-            <span class="fw-medium">Ваш телефон:</span>
-            +7 999 888 77 66
-          </div>
-
-          <div class="appointment-total-item">
-            <span class="fw-medium">Ваша дата рождения:</span>
-            12.06.1987
           </div>
         </div>
       </div>

@@ -6,23 +6,25 @@
     @@include('html/header.html', {}) @@include('html/offcanvas.html', {})
 
     <main role="main" class="flex-shrink-0">
-      <div class="container h-100 pt-md-5 pt-4">
-        <div class="h-100 row align-items-end">
-          <div class="col-lg-6">
-            <div class="mb-6">
-              <div class="f-2 fs-4 text-secondary text-uppercase">Ошибка</div>
-              <div class="error-code f-2 fw-black lh-1 text-danger mb-3">404</div>
-              <p class="error-text mb-4 mb-sm-5">
-                Запрашиваемая страница не существует. Возможно, она была удалена или в запросе был указан неверный адрес страницы.
-              </p>
+      <div class="overflow-hidden">
+        <div class="container h-100 pt-4 pt-md-5 pt-lg-6">
+          <div class="h-100 row align-items-end">
+            <div class="col-md-6">
+              <div class="mb-4 mb-sm-6">
+                <div class="fs-4 text-secondary text-uppercase">Ошибка</div>
+                <div class="error-code fw-black lh-1 text-danger mb-3">404</div>
+                <p class="error-text mb-4 mb-sm-5">
+                  Запрашиваемая страница не существует. Возможно, она была удалена или в запросе был указан неверный адрес страницы.
+                </p>
 
-              <a href="index.html" class="btn btn-primary">Перейти на главную</a>
+                <a href="index.html" class="btn btn-primary">Перейти на главную</a>
+              </div>
             </div>
-          </div>
 
-          <div class="col">
-            <div class="text-end">
-              <img src="@img/error-img.png" alt="" class="error-img" />
+            <div class="col">
+              <div class="text-end">
+                <img src="@img/error-img.png" alt="" class="error-img" />
+              </div>
             </div>
           </div>
         </div>

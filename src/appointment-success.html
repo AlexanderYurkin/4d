@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-100">
+  @@include('html/head.html', { "title": "appointment success" })
+
+  <body class="d-flex flex-column h-100">
+    @@include('html/header.html', {}) @@include('html/offcanvas.html', {})
+
+    <main role="main" class="flex-shrink-0">
+      <div class="container pt-md-5 pt-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active">Запись на приём</li>
+        </ol>
+
+        <h1 class="mb-md-5 mb-4">Вы успешно записались на приём</h1>
+
+        <div class="bg-white rounded shadow p-5 mb-5">
+          <span class="d-block fw-semibold mb-2">Ваш врач:</span>
+          <div class="mb-4">
+            <div class="doc-sm">
+              <div class="d-flex">
+                <div class="img position-relative me-3">
+                  <div class="ratio ratio-1x1 overflow-hidden rounded-circle">
+                    <img src="@img/dynamic-img/doctor-card-img_0.jpg" alt="" class="img-image" />
+                  </div>
+                </div>
+
+                <div class="my-auto">
+                  <a href="doctor.html" target="_blank" class="doc-sm-name d-inline-block link-secondary fw-semibold mb-1">
+                    Гамдуллаев Кямран Дашдамирович
+                  </a>
+                  <div class="doc-sm-achieve text-danger">Врач высшей категории, кандидат медицинских наук</div>
+                  <div class="doc-sm-job text-muted">Пластический хирург, хирург-онколог, маммолог, эндокринолог</div>
+                  <div class="doc-sm-exp text-muted">Стаж: 18 лет</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="appointment-total-item">
+              <span class="fw-semibold">Услуга:</span>
+              <a href="service.html" target="_blank" class="link-secondary">
+                Скрининговое УЗИ 1-го триместра беременности и расчет риска в программе Астрайя (11 - 13 недель 6 дней)
+              </a>
+            </div>
+
+            <div class="appointment-total-item">
+              <span class="fw-semibold">Филиал:</span>
+              г. Минеральные Воды, пр. XXII Партсъезда, 32А
+            </div>
+
+            <div class="appointment-total-item">
+              <span class="fw-semibold">Дата и время приёма:</span>
+              Понедельник, 7 августа 2023 г., 12:00
+            </div>
+
+            <div class="appointment-total-item">
+              <span class="fw-semibold">Ваши ФИО:</span>
+              Иванов Иван Ивнович
+            </div>
+
+            <div class="appointment-total-item">
+              <span class="fw-semibold">Ваш телефон:</span>
+              +7 999 888 77 66
+            </div>
+
+            <div class="appointment-total-item">
+              <span class="fw-semibold">Ваша дата рождения:</span>
+              12.06.1987
+            </div>
+          </div>
+        </div>
+      </div>
+
+      @@include('html/cta.html', {})
+    </main>
+
+    @@include('html/footer.html', {}) @@include('html/calc.html', {}) @@include('html/scroll-to-top.html', {})
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
